@@ -19,11 +19,26 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jVd-NA-9AC">
-                            <rect key="frame" x="20" y="20" width="374" height="736"/>
+                            <rect key="frame" x="20" y="20" width="374" height="696"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mjZ-0F-vfV">
+                                    <rect key="frame" x="155" y="28" width="64" height="21"/>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="21" id="CeW-oz-4Mq"/>
+                                        <constraint firstAttribute="width" constant="64" id="tsv-YA-s7H"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                    <color key="textColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
                             <animations/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="736" id="Xc7-Hw-Fzb"/>
+                                <constraint firstItem="mjZ-0F-vfV" firstAttribute="top" secondItem="jVd-NA-9AC" secondAttribute="top" constant="28" id="6Sq-xz-bji"/>
+                                <constraint firstAttribute="height" constant="696" id="ePS-iV-uDa"/>
+                                <constraint firstItem="mjZ-0F-vfV" firstAttribute="centerX" secondItem="jVd-NA-9AC" secondAttribute="centerX" id="h8h-K6-y1g"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -31,8 +46,8 @@
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="jVd-NA-9AC" secondAttribute="bottom" constant="20" id="1mk-sZ-NP7"/>
                         <constraint firstAttribute="trailing" secondItem="jVd-NA-9AC" secondAttribute="trailing" constant="20" id="O4A-2O-xAm"/>
-                        <constraint firstItem="jVd-NA-9AC" firstAttribute="centerX" secondItem="jUn-x8-88m" secondAttribute="centerX" id="aQZ-9E-q5p"/>
                         <constraint firstItem="jVd-NA-9AC" firstAttribute="top" secondItem="jUn-x8-88m" secondAttribute="top" constant="20" id="eUq-Uw-apc"/>
+                        <constraint firstItem="jVd-NA-9AC" firstAttribute="centerX" secondItem="jUn-x8-88m" secondAttribute="centerX" id="k5T-aN-7CL"/>
                         <constraint firstItem="jVd-NA-9AC" firstAttribute="leading" secondItem="jUn-x8-88m" secondAttribute="leading" constant="20" id="uMn-my-lYn"/>
                     </constraints>
                 </scrollView>
