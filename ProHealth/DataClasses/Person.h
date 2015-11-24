@@ -20,7 +20,7 @@
 @property (strong, nonatomic) NSDate *birthday;
 @property (strong, nonatomic) NSString *gender;
 
-- (instancetype) init __attribute__((unavailable("init not available")));
+- (instancetype) init __attribute__((unavailable("init is not available; use sharedPerson instead")));
 + (id)sharedPerson;
 
 @end
