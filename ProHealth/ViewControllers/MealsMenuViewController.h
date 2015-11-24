@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MealsMenuViewController.h
 //  ProHealth
 //
 //  Created by Admin on 24.11.15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface MealsMenuViewController : UIViewController
 
 @end
-
