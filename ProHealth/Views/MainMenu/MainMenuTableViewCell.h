@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+NSString * const kMainMenuTableViewCellReuseID = @"MainMenuTableViewCell";
+
 @interface MainMenuTableViewCell : UITableViewCell
+
+- (void)fillWithImageName:(NSString *)imageName text:(NSString *)text;
 
 @end
