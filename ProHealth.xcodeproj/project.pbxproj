@@ -87,6 +87,7 @@
 		C38E0E0A1C0464D7008FA999 /* menu@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C38E0DE01C0464D7008FA999 /* menu@3x.png */; };
 		C38E0E0B1C0464D7008FA999 /* play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C38E0DE11C0464D7008FA999 /* play@2x.png */; };
 		C38E0E0C1C0464D7008FA999 /* play@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C38E0DE21C0464D7008FA999 /* play@3x.png */; };
+		C38E0E0F1C0465F0008FA999 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = C38E0E0E1C0465F0008FA999 /* Person.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -201,6 +202,8 @@
 		C38E0DE01C0464D7008FA999 /* menu@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@3x.png"; sourceTree = "<group>"; };
 		C38E0DE11C0464D7008FA999 /* play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play@2x.png"; sourceTree = "<group>"; };
 		C38E0DE21C0464D7008FA999 /* play@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play@3x.png"; sourceTree = "<group>"; };
+		C38E0E0D1C0465F0008FA999 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		C38E0E0E1C0465F0008FA999 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,6 +281,8 @@
 		C34BC9161C044F59007E75CD /* DataClasses */ = {
 			isa = PBXGroup;
 			children = (
+				C38E0E0D1C0465F0008FA999 /* Person.h */,
+				C38E0E0E1C0465F0008FA999 /* Person.m */,
 			);
 			path = DataClasses;
 			sourceTree = "<group>";
@@ -616,6 +621,7 @@
 			files = (
 				C34BC9371C04505B007E75CD /* PersonalStatsViewController.m in Sources */,
 				C34BC91E1C044F88007E75CD /* MainMenuViewController.m in Sources */,
+				C38E0E0F1C0465F0008FA999 /* Person.m in Sources */,
 				C34BC92D1C045015007E75CD /* WaterViewController.m in Sources */,
 				C34BC9461C0450DE007E75CD /* SettingsViewController.m in Sources */,
 				C34BC96D1C0452C7007E75CD /* MainMenuTableViewCell.m in Sources */,
