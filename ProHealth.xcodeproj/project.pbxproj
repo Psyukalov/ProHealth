@@ -89,6 +89,7 @@
 		C38E0E131C047EDB008FA999 /* HistogramView.m in Sources */ = {isa = PBXBuildFile; fileRef = C38E0E121C047EDB008FA999 /* HistogramView.m */; };
 		C3F1BA9A1C04A03F005DF91B /* PersonalDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F1BA981C04A03F005DF91B /* PersonalDataViewController.m */; };
 		C3F1BA9B1C04A03F005DF91B /* PersonalDataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3F1BA991C04A03F005DF91B /* PersonalDataViewController.xib */; };
+		C72CD4BF1C04ADBB00DAE3D4 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C72CD4BE1C04ADBB00DAE3D4 /* DataManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -207,6 +208,8 @@
 		C3F1BA971C04A03F005DF91B /* PersonalDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalDataViewController.h; sourceTree = "<group>"; };
 		C3F1BA981C04A03F005DF91B /* PersonalDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalDataViewController.m; sourceTree = "<group>"; };
 		C3F1BA991C04A03F005DF91B /* PersonalDataViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonalDataViewController.xib; sourceTree = "<group>"; };
+		C72CD4BD1C04ADBB00DAE3D4 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
+		C72CD4BE1C04ADBB00DAE3D4 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,7 +257,7 @@
 				C34BC9161C044F59007E75CD /* DataClasses */,
 				C34BC8FC1C044E40007E75CD /* Info.plist */,
 				C34BC8F91C044E40007E75CD /* LaunchScreen.storyboard */,
-				C34BC96F1C045539007E75CD /* Managers */,
+				C72CD4BC1C04AD4400DAE3D4 /* Managers */,
 				C34BC9171C044F59007E75CD /* Resources */,
 				C34BC8E81C044E40007E75CD /* Supporting Files */,
 				C34BC9701C045539007E75CD /* Utils */,
@@ -443,13 +446,6 @@
 			path = MainMenu;
 			sourceTree = "<group>";
 		};
-		C34BC96F1C045539007E75CD /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Managers;
-			sourceTree = "<group>";
-		};
 		C34BC9701C045539007E75CD /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -472,6 +468,15 @@
 				C38E0E121C047EDB008FA999 /* HistogramView.m */,
 			);
 			path = PersonalDataHistogram;
+			sourceTree = "<group>";
+		};
+		C72CD4BC1C04AD4400DAE3D4 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				C72CD4BD1C04ADBB00DAE3D4 /* DataManager.h */,
+				C72CD4BE1C04ADBB00DAE3D4 /* DataManager.m */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -641,6 +646,7 @@
 				C34BC9501C04510F007E75CD /* RecipesViewController.m in Sources */,
 				C34BC9671C04528D007E75CD /* RecipesTableViewCell.m in Sources */,
 				C34BC9411C0450CE007E75CD /* TipsViewController.m in Sources */,
+				C72CD4BF1C04ADBB00DAE3D4 /* DataManager.m in Sources */,
 				C34BC9741C0455C9007E75CD /* ProHealth.xcdatamodeld in Sources */,
 				C3F1BA9A1C04A03F005DF91B /* PersonalDataViewController.m in Sources */,
 				C34BC9321C04502A007E75CD /* CaloriesViewController.m in Sources */,
