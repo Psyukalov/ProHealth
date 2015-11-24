@@ -10,17 +10,18 @@
 
 @interface MainMenuTableViewCell ()
 
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *cImgHeight;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *cImgWidth;
-
 @property (weak, nonatomic) IBOutlet UIImageView *imgMenu;
 @property (weak, nonatomic) IBOutlet UILabel *lblTitle;
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *cImgHeight;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *cImgWidth;
 
 @end
 
 @implementation MainMenuTableViewCell
 
 #pragma mark - Ligecycle
+
 - (void)awakeFromNib {
     // Initialization code
 }
@@ -29,10 +30,10 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+    
 }
 
-- (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated
-{
+- (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated {
     [super setHighlighted:highlighted animated:animated];
     
     // Highlight image
@@ -40,8 +41,8 @@
 }
 
 #pragma mark - Public methods
-- (void)fillWithImageName:(NSString *)imageName text:(NSString *)text
-{
+
+- (void)fillWithImageName:(NSString *)imageName text:(NSString *)text {
     // Set up UI
     UIImage *image = [UIImage imageNamed:imageName];
     UIImage *imageHighlighted = [UIImage imageNamed:[imageName stringByAppendingString:@"_highlighted"]];
