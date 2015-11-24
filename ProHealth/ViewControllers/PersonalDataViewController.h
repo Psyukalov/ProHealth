@@ -6,10 +6,7 @@
 //  Copyright © 2015 Natalia Zubareva. All rights reserved.
 //
 
-
 #import <UIKit/UIKit.h>
-#import "Person.h"
-
 
 @interface PersonalDataViewController : UIViewController
 

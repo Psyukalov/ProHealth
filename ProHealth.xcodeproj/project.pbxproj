@@ -28,14 +28,12 @@
 		C34BC93D1C045095007E75CD /* ExercisesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C34BC93B1C045095007E75CD /* ExercisesViewController.xib */; };
 		C34BC9411C0450CE007E75CD /* TipsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C34BC93F1C0450CE007E75CD /* TipsViewController.m */; };
 		C34BC9421C0450CE007E75CD /* TipsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C34BC9401C0450CE007E75CD /* TipsViewController.xib */; };
-		C34BC9461C0450DE007E75CD /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C34BC9441C0450DE007E75CD /* SettingsViewController.m */; };
-		C34BC9471C0450DE007E75CD /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C34BC9451C0450DE007E75CD /* SettingsViewController.xib */; };
 		C34BC94B1C045102007E75CD /* RecipeDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C34BC9491C045102007E75CD /* RecipeDetailsViewController.m */; };
 		C34BC94C1C045102007E75CD /* RecipeDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C34BC94A1C045102007E75CD /* RecipeDetailsViewController.xib */; };
 		C34BC9501C04510F007E75CD /* RecipesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C34BC94E1C04510F007E75CD /* RecipesViewController.m */; };
 		C34BC9511C04510F007E75CD /* RecipesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C34BC94F1C04510F007E75CD /* RecipesViewController.xib */; };
-		C34BC9551C04515D007E75CD /* PersonalDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C34BC9531C04515D007E75CD /* PersonalDataViewController.m */; };
-		C34BC9561C04515D007E75CD /* PersonalDataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C34BC9541C04515D007E75CD /* PersonalDataViewController.xib */; };
+		C34BC9551C04515D007E75CD /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C34BC9531C04515D007E75CD /* SettingsViewController.m */; };
+		C34BC9561C04515D007E75CD /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C34BC9541C04515D007E75CD /* SettingsViewController.xib */; };
 		C34BC95A1C045200007E75CD /* MealsMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C34BC9581C045200007E75CD /* MealsMenuViewController.m */; };
 		C34BC95B1C045200007E75CD /* MealsMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C34BC9591C045200007E75CD /* MealsMenuViewController.xib */; };
 		C34BC9621C04527F007E75CD /* MealsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C34BC9601C04527F007E75CD /* MealsTableViewCell.m */; };
@@ -89,6 +87,8 @@
 		C38E0E0C1C0464D7008FA999 /* play@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C38E0DE21C0464D7008FA999 /* play@3x.png */; };
 		C38E0E0F1C0465F0008FA999 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = C38E0E0E1C0465F0008FA999 /* Person.m */; };
 		C38E0E131C047EDB008FA999 /* HistogramView.m in Sources */ = {isa = PBXBuildFile; fileRef = C38E0E121C047EDB008FA999 /* HistogramView.m */; };
+		C3F1BA9A1C04A03F005DF91B /* PersonalDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F1BA981C04A03F005DF91B /* PersonalDataViewController.m */; };
+		C3F1BA9B1C04A03F005DF91B /* PersonalDataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3F1BA991C04A03F005DF91B /* PersonalDataViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,18 +136,15 @@
 		C34BC93E1C0450CE007E75CD /* TipsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipsViewController.h; sourceTree = "<group>"; };
 		C34BC93F1C0450CE007E75CD /* TipsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipsViewController.m; sourceTree = "<group>"; };
 		C34BC9401C0450CE007E75CD /* TipsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TipsViewController.xib; sourceTree = "<group>"; };
-		C34BC9431C0450DE007E75CD /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
-		C34BC9441C0450DE007E75CD /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
-		C34BC9451C0450DE007E75CD /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		C34BC9481C045102007E75CD /* RecipeDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeDetailsViewController.h; sourceTree = "<group>"; };
 		C34BC9491C045102007E75CD /* RecipeDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeDetailsViewController.m; sourceTree = "<group>"; };
 		C34BC94A1C045102007E75CD /* RecipeDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecipeDetailsViewController.xib; sourceTree = "<group>"; };
 		C34BC94D1C04510F007E75CD /* RecipesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipesViewController.h; sourceTree = "<group>"; };
 		C34BC94E1C04510F007E75CD /* RecipesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipesViewController.m; sourceTree = "<group>"; };
 		C34BC94F1C04510F007E75CD /* RecipesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecipesViewController.xib; sourceTree = "<group>"; };
-		C34BC9521C04515D007E75CD /* PersonalDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalDataViewController.h; sourceTree = "<group>"; };
-		C34BC9531C04515D007E75CD /* PersonalDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalDataViewController.m; sourceTree = "<group>"; };
-		C34BC9541C04515D007E75CD /* PersonalDataViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonalDataViewController.xib; sourceTree = "<group>"; };
+		C34BC9521C04515D007E75CD /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		C34BC9531C04515D007E75CD /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		C34BC9541C04515D007E75CD /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		C34BC9571C045200007E75CD /* MealsMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MealsMenuViewController.h; sourceTree = "<group>"; };
 		C34BC9581C045200007E75CD /* MealsMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MealsMenuViewController.m; sourceTree = "<group>"; };
 		C34BC9591C045200007E75CD /* MealsMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MealsMenuViewController.xib; sourceTree = "<group>"; };
@@ -207,6 +204,9 @@
 		C38E0E0E1C0465F0008FA999 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		C38E0E111C047EDB008FA999 /* HistogramView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistogramView.h; sourceTree = "<group>"; };
 		C38E0E121C047EDB008FA999 /* HistogramView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistogramView.m; sourceTree = "<group>"; };
+		C3F1BA971C04A03F005DF91B /* PersonalDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalDataViewController.h; sourceTree = "<group>"; };
+		C3F1BA981C04A03F005DF91B /* PersonalDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalDataViewController.m; sourceTree = "<group>"; };
+		C3F1BA991C04A03F005DF91B /* PersonalDataViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonalDataViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -374,9 +374,9 @@
 				C34BC9571C045200007E75CD /* MealsMenuViewController.h */,
 				C34BC9581C045200007E75CD /* MealsMenuViewController.m */,
 				C34BC9591C045200007E75CD /* MealsMenuViewController.xib */,
-				C34BC9521C04515D007E75CD /* PersonalDataViewController.h */,
-				C34BC9531C04515D007E75CD /* PersonalDataViewController.m */,
-				C34BC9541C04515D007E75CD /* PersonalDataViewController.xib */,
+				C3F1BA971C04A03F005DF91B /* PersonalDataViewController.h */,
+				C3F1BA981C04A03F005DF91B /* PersonalDataViewController.m */,
+				C3F1BA991C04A03F005DF91B /* PersonalDataViewController.xib */,
 				C34BC9341C04505B007E75CD /* PersonalStatsViewController.h */,
 				C34BC9351C04505B007E75CD /* PersonalStatsViewController.m */,
 				C34BC9361C04505B007E75CD /* PersonalStatsViewController.xib */,
@@ -386,9 +386,9 @@
 				C34BC94D1C04510F007E75CD /* RecipesViewController.h */,
 				C34BC94E1C04510F007E75CD /* RecipesViewController.m */,
 				C34BC94F1C04510F007E75CD /* RecipesViewController.xib */,
-				C34BC9431C0450DE007E75CD /* SettingsViewController.h */,
-				C34BC9441C0450DE007E75CD /* SettingsViewController.m */,
-				C34BC9451C0450DE007E75CD /* SettingsViewController.xib */,
+				C34BC9521C04515D007E75CD /* SettingsViewController.h */,
+				C34BC9531C04515D007E75CD /* SettingsViewController.m */,
+				C34BC9541C04515D007E75CD /* SettingsViewController.xib */,
 				C34BC9201C044FC7007E75CD /* StartViewController.h */,
 				C34BC9211C044FC7007E75CD /* StartViewController.m */,
 				C34BC9221C044FC7007E75CD /* StartViewController.xib */,
@@ -579,15 +579,15 @@
 				C38E0DF21C0464D7008FA999 /* icon_fire@3x.png in Resources */,
 				C34BC8FB1C044E40007E75CD /* LaunchScreen.storyboard in Resources */,
 				C38E0E0C1C0464D7008FA999 /* play@3x.png in Resources */,
-				C34BC9471C0450DE007E75CD /* SettingsViewController.xib in Resources */,
 				C38E0DFD1C0464D7008FA999 /* img_evening@2x.png in Resources */,
-				C34BC9561C04515D007E75CD /* PersonalDataViewController.xib in Resources */,
+				C34BC9561C04515D007E75CD /* SettingsViewController.xib in Resources */,
 				C38E0DEA1C0464D7008FA999 /* cancel@3x.png in Resources */,
 				C38E0E051C0464D7008FA999 /* info@2x.png in Resources */,
 				C34BC9381C04505B007E75CD /* PersonalStatsViewController.xib in Resources */,
 				C38E0DEC1C0464D7008FA999 /* chek@3x.png in Resources */,
 				C38E0DE61C0464D7008FA999 /* arrow_back@3x.png in Resources */,
 				C34BC95B1C045200007E75CD /* MealsMenuViewController.xib in Resources */,
+				C3F1BA9B1C04A03F005DF91B /* PersonalDataViewController.xib in Resources */,
 				C38E0DED1C0464D7008FA999 /* clip@2x.png in Resources */,
 				C38E0DF61C0464D7008FA999 /* icon_water@3x.png in Resources */,
 				C38E0E041C0464D7008FA999 /* img_night@3x.png in Resources */,
@@ -636,13 +636,13 @@
 				C34BC91E1C044F88007E75CD /* MainMenuViewController.m in Sources */,
 				C38E0E0F1C0465F0008FA999 /* Person.m in Sources */,
 				C34BC92D1C045015007E75CD /* WaterViewController.m in Sources */,
-				C34BC9461C0450DE007E75CD /* SettingsViewController.m in Sources */,
 				C34BC96D1C0452C7007E75CD /* MainMenuTableViewCell.m in Sources */,
 				C34BC9231C044FC7007E75CD /* StartViewController.m in Sources */,
 				C34BC9501C04510F007E75CD /* RecipesViewController.m in Sources */,
 				C34BC9671C04528D007E75CD /* RecipesTableViewCell.m in Sources */,
 				C34BC9411C0450CE007E75CD /* TipsViewController.m in Sources */,
 				C34BC9741C0455C9007E75CD /* ProHealth.xcdatamodeld in Sources */,
+				C3F1BA9A1C04A03F005DF91B /* PersonalDataViewController.m in Sources */,
 				C34BC9321C04502A007E75CD /* CaloriesViewController.m in Sources */,
 				C34BC93C1C045095007E75CD /* ExercisesViewController.m in Sources */,
 				C34BC95A1C045200007E75CD /* MealsMenuViewController.m in Sources */,
@@ -651,7 +651,7 @@
 				C34BC8EA1C044E40007E75CD /* main.m in Sources */,
 				C34BC9281C044FFA007E75CD /* GuideViewController.m in Sources */,
 				C38E0E131C047EDB008FA999 /* HistogramView.m in Sources */,
-				C34BC9551C04515D007E75CD /* PersonalDataViewController.m in Sources */,
+				C34BC9551C04515D007E75CD /* SettingsViewController.m in Sources */,
 				C34BC94B1C045102007E75CD /* RecipeDetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

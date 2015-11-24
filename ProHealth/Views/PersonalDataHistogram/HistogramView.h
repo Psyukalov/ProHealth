@@ -12,14 +12,14 @@
 
 @interface HistogramView : UIView
 
-@property (nonatomic) NSArray *values;
-@property (nonatomic) int maxValue;
-@property (nonatomic) int minTitleValue;
-@property (nonatomic) int barDelta;
+@property (strong, nonatomic) NSArray *values;
+@property (assign, nonatomic) int maxValue;
+@property (assign, nonatomic) int minTitleValue;
+@property (assign, nonatomic) int barDelta;
 @property (strong, nonatomic) UIColor *firstColor;
 @property (strong, nonatomic) UIColor *secondColor;
-@property (nonatomic) int upBorder;
-@property (nonatomic) int leftBorder;
+@property (assign, nonatomic) int upBorder;
+@property (assign, nonatomic) int leftBorder;
 
 - (HistogramView *)initWithFrame:(CGRect)frame
                           values:(NSArray *)values
