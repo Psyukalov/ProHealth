@@ -15,7 +15,7 @@ static const NSInteger kMenuItemsCount = 4;
 
 @property (weak, nonatomic) IBOutlet UITableView *tblMenu;
 @property (strong, nonatomic) NSMutableArray<NSString *> *menuItemNames;
-@property (strong, nonatomic) NSMutableArray<NSString *> *menuItemImages;
+@property (strong, nonatomic) NSArray<NSString *> *menuItemImages;
 @property (weak, nonatomic) IBOutlet UIVisualEffectView *blurView;
 
 @end
@@ -40,6 +40,7 @@ static const NSInteger kMenuItemsCount = 4;
         NSString *localizableKey = [NSString stringWithFormat:@"MainMenu.Item.%d", i];
         [self.menuItemNames addObject:NSLocalizedString(localizableKey, nil)];
     }
+    self.menuItemImages = @[@"menu_breakfast", @"menu_second_breakfast", @"menu_lunch", @"menu_dinner"];
 }
 
 #pragma mark - UITableViewDataSource, UITableViewDelegate
@@ -51,7 +52,7 @@ static const NSInteger kMenuItemsCount = 4;
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     MainMenuTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kMainMenuTableViewCellReuseID forIndexPath:indexPath];
-    [cell fillWithImageName:@"image" text:self.menuItemNames[indexPath.row]];
+    [cell fillWithImageName:self.menuItemImages[indexPath.row] text:self.menuItemNames[indexPath.row]];
     return cell;
 }
 

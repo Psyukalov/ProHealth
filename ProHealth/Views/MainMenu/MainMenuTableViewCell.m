@@ -26,19 +26,12 @@
     // Initialization code
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
-    self.lblTitle.textColor = selected ? RGB(0, 255, 255) : [UIColor whiteColor];
-    
-}
-
 - (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated {
     [super setHighlighted:highlighted animated:animated];
     
     // Highlight image
     self.imgMenu.highlighted = highlighted;
+    self.lblTitle.textColor = highlighted ? RGB(0, 255, 255) : [UIColor whiteColor];
 }
 
 #pragma mark - Public methods
