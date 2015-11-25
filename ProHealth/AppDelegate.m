@@ -54,4 +54,13 @@
     [[DataManager sharedManager] saveContext];
 }
 
+- (void)applyDesign
+{
+    [[UINavigationBar appearance] setBarTintColor:RGB(44, 62, 80)];
+    [[UINavigationBar appearance] setTranslucent:NO];
+    NSDictionary *navbarTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor],
+                                           NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue-Light" size:18]};
+    [[UINavigationBar appearance] setTitleTextAttributes:navbarTextAttributes];
+}
+
 @end

@@ -16,7 +16,7 @@
 @end
 
 @implementation MealsMenuViewController
-
+/* TODO: commented blur functionality
 #pragma mark - Lifecycle
 - (instancetype)initWithBlurredSnapshot:(UIImage *)blurredSnapshot {
     if (self = [super init]) {
@@ -29,5 +29,5 @@
     // Do any additional setup after loading the view from its nib.
     self.backgroundImageView.image = self.blurredSnapshot;
 }
-
+*/
 @end

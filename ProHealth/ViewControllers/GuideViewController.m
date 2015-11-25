@@ -8,9 +8,9 @@
 
 #import "GuideViewController.h"
 #import "Helper.h"
-
+#import "UIView+Snapshot.h"
 #import "MainMenuViewController.h"
-
+#import "MealsMenuViewController.h"
 @interface GuideViewController ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *imgBackground;
@@ -68,6 +68,10 @@
     MainMenuViewController *mainMenuVC = [[MainMenuViewController alloc] init];
     mainMenuVC.modalPresentationStyle = UIModalPresentationOverCurrentContext;
     [self presentViewController:mainMenuVC animated:YES completion:nil];
+//    UIImage *blurredSnapshot = [self.navigationController.view blurredSnapshot];
+//    MealsMenuViewController *mealsMenuVC = [[MealsMenuViewController alloc] initWithBlurredSnapshot:blurredSnapshot];
+//    mealsMenuVC.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+//    [self presentViewController:mealsMenuVC animated:YES completion:nil];
 }
 
 - (IBAction)swRecLeft_Swipe:(UISwipeGestureRecognizer *)sender {
