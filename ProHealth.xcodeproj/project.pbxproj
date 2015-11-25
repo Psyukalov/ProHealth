@@ -34,12 +34,8 @@
 		C34BC9511C04510F007E75CD /* RecipesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C34BC94F1C04510F007E75CD /* RecipesViewController.xib */; };
 		C34BC9551C04515D007E75CD /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C34BC9531C04515D007E75CD /* SettingsViewController.m */; };
 		C34BC9561C04515D007E75CD /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C34BC9541C04515D007E75CD /* SettingsViewController.xib */; };
-		C34BC9621C04527F007E75CD /* MealsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C34BC9601C04527F007E75CD /* MealsTableViewCell.m */; };
-		C34BC9631C04527F007E75CD /* MealsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C34BC9611C04527F007E75CD /* MealsTableViewCell.xib */; };
 		C34BC9671C04528D007E75CD /* RecipesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C34BC9651C04528D007E75CD /* RecipesTableViewCell.m */; };
 		C34BC9681C04528D007E75CD /* RecipesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C34BC9661C04528D007E75CD /* RecipesTableViewCell.xib */; };
-		C34BC96D1C0452C7007E75CD /* MainMenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C34BC96B1C0452C7007E75CD /* MainMenuTableViewCell.m */; };
-		C34BC96E1C0452C7007E75CD /* MainMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C34BC96C1C0452C7007E75CD /* MainMenuTableViewCell.xib */; };
 		C34BC9741C0455C9007E75CD /* ProHealth.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C34BC9721C0455C9007E75CD /* ProHealth.xcdatamodeld */; };
 		C38E0DE31C0464D7008FA999 /* add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C38E0DB91C0464D7008FA999 /* add@2x.png */; };
 		C38E0DE41C0464D7008FA999 /* add@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C38E0DBA1C0464D7008FA999 /* add@3x.png */; };
@@ -113,6 +109,8 @@
 		EA68B03A1C05E766008C22D2 /* menu_second_breakfast_highlighted@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA68B02A1C05E766008C22D2 /* menu_second_breakfast_highlighted@3x.png */; };
 		EA9F65F61C05F569009A8F23 /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9F65F41C05F569009A8F23 /* MainMenuViewController.m */; };
 		EA9F65F71C05F569009A8F23 /* MainMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA9F65F51C05F569009A8F23 /* MainMenuViewController.xib */; };
+		EA9F65FB1C05F88B009A8F23 /* MealsMenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9F65F91C05F88B009A8F23 /* MealsMenuTableViewCell.m */; };
+		EA9F65FC1C05F88B009A8F23 /* MealsMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA9F65FA1C05F88B009A8F23 /* MealsMenuTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -169,15 +167,9 @@
 		C34BC9521C04515D007E75CD /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		C34BC9531C04515D007E75CD /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		C34BC9541C04515D007E75CD /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
-		C34BC95F1C04527F007E75CD /* MealsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MealsTableViewCell.h; sourceTree = "<group>"; };
-		C34BC9601C04527F007E75CD /* MealsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MealsTableViewCell.m; sourceTree = "<group>"; };
-		C34BC9611C04527F007E75CD /* MealsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MealsTableViewCell.xib; sourceTree = "<group>"; };
 		C34BC9641C04528D007E75CD /* RecipesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipesTableViewCell.h; sourceTree = "<group>"; };
 		C34BC9651C04528D007E75CD /* RecipesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipesTableViewCell.m; sourceTree = "<group>"; };
 		C34BC9661C04528D007E75CD /* RecipesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecipesTableViewCell.xib; sourceTree = "<group>"; };
-		C34BC96A1C0452C7007E75CD /* MainMenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuTableViewCell.h; sourceTree = "<group>"; };
-		C34BC96B1C0452C7007E75CD /* MainMenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuTableViewCell.m; sourceTree = "<group>"; };
-		C34BC96C1C0452C7007E75CD /* MainMenuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenuTableViewCell.xib; sourceTree = "<group>"; };
 		C34BC9731C0455C9007E75CD /* ProHealth.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ProHealth.xcdatamodel; sourceTree = "<group>"; };
 		C38E0DB91C0464D7008FA999 /* add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add@2x.png"; sourceTree = "<group>"; };
 		C38E0DBA1C0464D7008FA999 /* add@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add@3x.png"; sourceTree = "<group>"; };
@@ -262,6 +254,9 @@
 		EA9F65F31C05F569009A8F23 /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
 		EA9F65F41C05F569009A8F23 /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
 		EA9F65F51C05F569009A8F23 /* MainMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenuViewController.xib; sourceTree = "<group>"; };
+		EA9F65F81C05F88B009A8F23 /* MealsMenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MealsMenuTableViewCell.h; sourceTree = "<group>"; };
+		EA9F65F91C05F88B009A8F23 /* MealsMenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MealsMenuTableViewCell.m; sourceTree = "<group>"; };
+		EA9F65FA1C05F88B009A8F23 /* MealsMenuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MealsMenuTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -477,9 +472,9 @@
 		C34BC95D1C045250007E75CD /* MealsMenu */ = {
 			isa = PBXGroup;
 			children = (
-				C34BC95F1C04527F007E75CD /* MealsTableViewCell.h */,
-				C34BC9601C04527F007E75CD /* MealsTableViewCell.m */,
-				C34BC9611C04527F007E75CD /* MealsTableViewCell.xib */,
+				EA9F65F81C05F88B009A8F23 /* MealsMenuTableViewCell.h */,
+				EA9F65F91C05F88B009A8F23 /* MealsMenuTableViewCell.m */,
+				EA9F65FA1C05F88B009A8F23 /* MealsMenuTableViewCell.xib */,
 			);
 			path = MealsMenu;
 			sourceTree = "<group>";
@@ -497,9 +492,6 @@
 		C34BC9691C0452B4007E75CD /* MainMenu */ = {
 			isa = PBXGroup;
 			children = (
-				C34BC96A1C0452C7007E75CD /* MainMenuTableViewCell.h */,
-				C34BC96B1C0452C7007E75CD /* MainMenuTableViewCell.m */,
-				C34BC96C1C0452C7007E75CD /* MainMenuTableViewCell.xib */,
 			);
 			path = MainMenu;
 			sourceTree = "<group>";
@@ -681,6 +673,7 @@
 				EA68B0301C05E766008C22D2 /* menu_dinner@3x.png in Resources */,
 				C38E0DEA1C0464D7008FA999 /* cancel@3x.png in Resources */,
 				C38E0E051C0464D7008FA999 /* info@2x.png in Resources */,
+				EA9F65FC1C05F88B009A8F23 /* MealsMenuTableViewCell.xib in Resources */,
 				C34BC9381C04505B007E75CD /* PersonalStatsViewController.xib in Resources */,
 				EA68B02D1C05E766008C22D2 /* menu_breakfast_highlighted@2x.png in Resources */,
 				EA68B0081C059FFF008C22D2 /* guide_3.png in Resources */,
@@ -703,7 +696,6 @@
 				C34BC91F1C044F88007E75CD /* MealsMenuViewController.xib in Resources */,
 				C38E0DFE1C0464D7008FA999 /* img_evening@3x.png in Resources */,
 				EA68B0311C05E766008C22D2 /* menu_dinner_highlighted@2x.png in Resources */,
-				C34BC96E1C0452C7007E75CD /* MainMenuTableViewCell.xib in Resources */,
 				C34BC9681C04528D007E75CD /* RecipesTableViewCell.xib in Resources */,
 				C34BC9291C044FFA007E75CD /* GuideViewController.xib in Resources */,
 				C38E0DF31C0464D7008FA999 /* icon_foot@2x.png in Resources */,
@@ -712,7 +704,6 @@
 				C38E0DE91C0464D7008FA999 /* cancel@2x.png in Resources */,
 				C38E0E061C0464D7008FA999 /* info@3x.png in Resources */,
 				C38E0E011C0464D7008FA999 /* img_morning@2x.png in Resources */,
-				C34BC9631C04527F007E75CD /* MealsTableViewCell.xib in Resources */,
 				C34BC9421C0450CE007E75CD /* TipsViewController.xib in Resources */,
 				EA68B02B1C05E766008C22D2 /* menu_breakfast@2x.png in Resources */,
 				EA9F65F71C05F569009A8F23 /* MainMenuViewController.xib in Resources */,
@@ -748,8 +739,8 @@
 				C34BC91E1C044F88007E75CD /* MealsMenuViewController.m in Sources */,
 				C38E0E0F1C0465F0008FA999 /* Person.m in Sources */,
 				C34BC92D1C045015007E75CD /* WaterViewController.m in Sources */,
-				C34BC96D1C0452C7007E75CD /* MainMenuTableViewCell.m in Sources */,
 				C34BC9231C044FC7007E75CD /* StartViewController.m in Sources */,
+				EA9F65FB1C05F88B009A8F23 /* MealsMenuTableViewCell.m in Sources */,
 				C34BC9501C04510F007E75CD /* RecipesViewController.m in Sources */,
 				C34BC9671C04528D007E75CD /* RecipesTableViewCell.m in Sources */,
 				C34BC9411C0450CE007E75CD /* TipsViewController.m in Sources */,
@@ -762,7 +753,6 @@
 				C34BC9321C04502A007E75CD /* CaloriesViewController.m in Sources */,
 				C34BC93C1C045095007E75CD /* ExercisesViewController.m in Sources */,
 				C34BC8ED1C044E40007E75CD /* AppDelegate.m in Sources */,
-				C34BC9621C04527F007E75CD /* MealsTableViewCell.m in Sources */,
 				C34BC8EA1C044E40007E75CD /* main.m in Sources */,
 				C34BC9281C044FFA007E75CD /* GuideViewController.m in Sources */,
 				EA68B0161C05D15D008C22D2 /* UIImageEffects.m in Sources */,

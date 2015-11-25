@@ -7,7 +7,7 @@
 //
 
 #import "MealsMenuViewController.h"
-#import "MainMenuTableViewCell.h"
+#import "MealsMenuTableViewCell.h"
 
 static const NSInteger kMenuItemsCount = 4;
 
@@ -28,7 +28,7 @@ static const NSInteger kMenuItemsCount = 4;
     
     // Do any additional setup after loading the view from its nib.
     [self loadResources];
-    [MainMenuTableViewCell registerFor:self.tblMenu];
+    [MealsMenuTableViewCell registerFor:self.tblMenu];
     [self.tblMenu reloadData];
 }
 
@@ -51,7 +51,7 @@ static const NSInteger kMenuItemsCount = 4;
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    MainMenuTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kMainMenuTableViewCellReuseID forIndexPath:indexPath];
+    MealsMenuTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kMealsMenuTableViewCellReuseID forIndexPath:indexPath];
     [cell fillWithImageName:self.menuItemImages[indexPath.row] text:self.menuItemNames[indexPath.row]];
     return cell;
 }

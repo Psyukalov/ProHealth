@@ -6,9 +6,9 @@
 //  Copyright © 2015 Natalia Zubareva. All rights reserved.
 //
 
-#import "MainMenuTableViewCell.h"
+#import "MealsMenuTableViewCell.h"
 
-@interface MainMenuTableViewCell ()
+@interface MealsMenuTableViewCell ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *imgMenu;
 @property (weak, nonatomic) IBOutlet UILabel *lblTitle;
@@ -18,7 +18,7 @@
 
 @end
 
-@implementation MainMenuTableViewCell
+@implementation MealsMenuTableViewCell
 
 #pragma mark - Ligecycle
 
@@ -50,7 +50,7 @@
 #pragma mark - Static methods
 
 + (void)registerFor:(UITableView *)tableView {
-    [tableView registerNib:[UINib nibWithNibName:NSStringFromClass([self class]) bundle:nil] forCellReuseIdentifier:kMainMenuTableViewCellReuseID];
+    [tableView registerNib:[UINib nibWithNibName:NSStringFromClass([self class]) bundle:nil] forCellReuseIdentifier:kMealsMenuTableViewCellReuseID];
 }
 
 @end
