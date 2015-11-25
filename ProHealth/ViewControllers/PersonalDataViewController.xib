@@ -7,6 +7,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PersonalDataViewController">
             <connections>
+                <outlet property="btnConfirm" destination="ous-y0-zHM" id="zga-yE-4tx"/>
+                <outlet property="contentView" destination="jVd-NA-9AC" id="qaP-8a-AZ7"/>
                 <outlet property="dpBirthday" destination="FKq-IX-Xcr" id="r6I-MC-BRh"/>
                 <outlet property="lblGrowth" destination="Nec-vj-krz" id="0Vx-1G-88b"/>
                 <outlet property="lblWeight" destination="JnD-PP-GB2" id="Tey-ma-oOC"/>
@@ -143,7 +145,7 @@
                                         <color key="titleColor" red="0.0039215686269999999" green="0.88235294119999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </state>
                                     <connections>
-                                        <action selector="btnConfirm_Tab:" destination="-1" eventType="touchUpInside" id="WSZ-Vf-ai1"/>
+                                        <action selector="btnConfirm_Tab:" destination="-1" eventType="touchUpInside" id="i30-wR-olJ"/>
                                     </connections>
                                 </button>
                                 <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="8P6-ws-RD9">

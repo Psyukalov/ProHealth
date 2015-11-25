@@ -10,11 +10,17 @@
 
 @implementation Helper
 
-+ (void)applyCornerRadius:(CGFloat)cornerRadius forViews:(NSArray<UIView *> *)views
-{
++ (void)applyCornerRadius:(CGFloat)cornerRadius forViews:(NSArray<UIView *> *)views {
     for (UIView *view in views) {
         view.layer.cornerRadius = cornerRadius;
         view.clipsToBounds = YES;
+    }
+}
+
++ (void)applyCornerRadius:(CGFloat)cornerRadius forButtons:(NSArray<UIButton *> *)buttons {
+    for (UIButton *button in buttons) {
+        button.layer.cornerRadius = cornerRadius;
+        button.clipsToBounds = YES;
     }
 }
 

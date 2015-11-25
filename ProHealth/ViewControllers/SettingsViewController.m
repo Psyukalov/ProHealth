@@ -12,6 +12,7 @@
 @interface SettingsViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (strong, nonatomic) Person *person;
+@property (weak, nonatomic) IBOutlet UIView *contentView;
 @property (weak, nonatomic) IBOutlet UIImageView *imageRectAvatar;
 @property (weak, nonatomic) IBOutlet UIImageView *imageCircleAvatar;
 @property (weak, nonatomic) IBOutlet UILabel *labelName;
@@ -20,6 +21,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelGrowth;
 @property (weak, nonatomic) IBOutlet UILabel *labelBirthday;
 @property (weak, nonatomic) IBOutlet UILabel *labelGender;
+@property (weak, nonatomic) IBOutlet UIButton *btnChangeAvatar;
+@property (weak, nonatomic) IBOutlet UIButton *btnEdit;
+@property (weak, nonatomic) IBOutlet UIButton *btnFullVersion;
 
 @end
 
@@ -28,7 +32,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.person = [Person sharedPerson];
-//    [Helper applyCornerRadius:6 forViews:@[self.view]];
+    [Helper applyCornerRadius:6 forViews:@[_contentView]];
+    [Helper applyCornerRadius:6 forButtons:@[_btnChangeAvatar, _btnEdit, _btnFullVersion]];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -63,7 +68,7 @@
     }
 }
 
-- (IBAction)btnConfirm_Tab:(UIButton *)sender {
+- (IBAction)btnEdit_Tab:(UIButton *)sender {
     PersonalDataViewController *personalDataVC = [[PersonalDataViewController alloc] initWithPerson:self.person];
     [self presentViewController:personalDataVC animated:YES completion:nil];
 }

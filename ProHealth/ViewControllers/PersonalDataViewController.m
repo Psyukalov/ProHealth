@@ -12,6 +12,7 @@
 
 @interface PersonalDataViewController () <UIPickerViewDataSource, UIPickerViewDelegate>
 
+@property (weak, nonatomic) IBOutlet UIView *contentView;
 @property (weak, nonatomic) IBOutlet UITextField *textName;
 @property (weak, nonatomic) IBOutlet UILabel *lblWeight;
 @property (weak, nonatomic) IBOutlet UILabel *lblGrowth;
@@ -20,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UIDatePicker *dpBirthday;
 @property (weak, nonatomic) IBOutlet UIPickerView *pickerGender;
 @property (strong, nonatomic) NSArray *gender;
+@property (weak, nonatomic) IBOutlet UIButton *btnConfirm;
 
 @end
 
@@ -37,12 +39,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    [Helper applyCornerRadius:6 forViews:@[self.view]];
+    [Helper applyCornerRadius:6 forViews:@[_contentView]];
+    [Helper applyCornerRadius:6 forButtons:@[_btnConfirm]];
     _textName.text = self.person.name;
     if (self.person.weight == 0) {
         self.person.weight = 80.0;
     }
-    if (self.person.growth ==0) {
+    if (self.person.growth == 0) {
         self.person.growth = 1.7;
     }
     _lblWeight.text = [NSString stringWithFormat:@"Вес %1.1f кг", self.person.weight];

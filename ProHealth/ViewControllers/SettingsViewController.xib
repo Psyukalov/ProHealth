@@ -7,6 +7,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingsViewController">
             <connections>
+                <outlet property="btnChangeAvatar" destination="JVp-Kb-cfz" id="Dl4-9H-cxv"/>
+                <outlet property="btnEdit" destination="ep3-7A-jgl" id="ukd-gx-dDT"/>
+                <outlet property="btnFullVersion" destination="Li2-2C-zf2" id="5KC-pX-GAX"/>
+                <outlet property="contentView" destination="6sS-Xr-epA" id="gm0-Q6-LBA"/>
                 <outlet property="imageCircleAvatar" destination="Zrz-p4-JQz" id="vvL-x7-tyu"/>
                 <outlet property="imageRectAvatar" destination="nSn-PO-Nuf" id="MVF-G2-sMH"/>
                 <outlet property="labelBirthday" destination="KGh-le-czl" id="ScN-lJ-n8v"/>
@@ -156,7 +160,7 @@
                                         <color key="titleColor" red="0.0039215686269999999" green="0.88235294119999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </state>
                                     <connections>
-                                        <action selector="btnConfirm_Tab:" destination="-1" eventType="touchUpInside" id="DwH-CU-I9D"/>
+                                        <action selector="btnEdit_Tab:" destination="-1" eventType="touchUpInside" id="BUK-Bk-sWD"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JVp-Kb-cfz">

@@ -13,4 +13,6 @@
 
 + (void)applyCornerRadius:(CGFloat)cornerRadius forViews:(nonnull NSArray<UIView *> *)views;
 
++ (void)applyCornerRadius:(CGFloat)cornerRadius forButtons:(nonnull NSArray<UIButton *> *)buttons;
+
 @end
