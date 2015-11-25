@@ -9,15 +9,17 @@
 #import "GuideViewController.h"
 #import "Helper.h"
 
+#import "MainMenuViewController.h"
+
 @interface GuideViewController ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *imgBackground;
 @property (weak, nonatomic) IBOutlet UILabel *lblCaption;
 @property (weak, nonatomic) IBOutlet UIButton *btnStart;
 
-@property (retain, nonatomic) NSArray<NSString *> *imageNames;
-@property (retain, nonatomic) NSArray<NSString *> *captions;
-@property (retain, nonatomic) NSArray<NSString *> *captionTexts;
+@property (strong, nonatomic) NSArray<NSString *> *imageNames;
+@property (strong, nonatomic) NSArray<NSString *> *captions;
+@property (strong, nonatomic) NSArray<NSString *> *captionTexts;
 
 @property (assign, nonatomic) NSInteger currentTipNumber;
 
@@ -63,6 +65,9 @@
 
 - (IBAction)btnStart_Tap:(UIButton *)sender {
     // TODO: load start screen
+    MainMenuViewController *mainMenuVC = [[MainMenuViewController alloc] init];
+    mainMenuVC.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+    [self presentViewController:mainMenuVC animated:YES completion:nil];
 }
 
 - (IBAction)swRecLeft_Swipe:(UISwipeGestureRecognizer *)sender {
@@ -72,6 +77,7 @@
         [self refreshViewWithTipNumber:self.currentTipNumber];
     }
 }
+
 - (IBAction)swRecRight_Swipe:(UISwipeGestureRecognizer *)sender {
     if (self.currentTipNumber > 0) {
         self.currentTipNumber -= 1;

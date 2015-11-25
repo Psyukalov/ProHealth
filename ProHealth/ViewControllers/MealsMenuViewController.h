@@ -10,4 +10,6 @@
 
 @interface MealsMenuViewController : UIViewController
 
+- (instancetype)initWithBlurredSnapshot:(UIImage *)blurredSnapshot;
+
 @end

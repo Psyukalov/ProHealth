@@ -20,3 +20,12 @@
 "Guide.Caption.ExperiencedDietitian.Text" = "непременно поможет вам";
 
 /* StartViewController */
+
+/* MainMenuViewController */
+"MainMenu.Item.1" = "ЗАВТРАК";
+"MainMenu.Item.2" = "ВТОРОЙ ЗАВТРАК";
+"MainMenu.Item.3" = "ОБЕД";
+"MainMenu.Item.4" = "УЖИН";
+
+
+

@@ -10,18 +10,24 @@
 
 @interface MealsMenuViewController ()
 
+@property (strong, nonatomic) UIImage *blurredSnapshot;
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
+
 @end
 
 @implementation MealsMenuViewController
 
+#pragma mark - Lifecycle
+- (instancetype)initWithBlurredSnapshot:(UIImage *)blurredSnapshot {
+    if (self = [super init]) {
+        self.blurredSnapshot = blurredSnapshot;
+    }
+    return self;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    self.backgroundImageView.image = self.blurredSnapshot;
 }
 
 @end

@@ -30,6 +30,7 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+    self.lblTitle.textColor = selected ? RGB(0, 255, 255) : [UIColor whiteColor];
     
 }
 
@@ -42,7 +43,7 @@
 
 #pragma mark - Public methods
 
-- (void)fillWithImageName:(NSString *)imageName text:(NSString *)text {
+- (void)fillWithImageName:(nonnull NSString *)imageName text:(nonnull NSString *)text {
     // Set up UI
     UIImage *image = [UIImage imageNamed:imageName];
     UIImage *imageHighlighted = [UIImage imageNamed:[imageName stringByAppendingString:@"_highlighted"]];
@@ -51,6 +52,12 @@
     self.imgMenu.image = image;
     self.imgMenu.highlightedImage = imageHighlighted;
     self.lblTitle.text = text;
+}
+
+#pragma mark - Static methods
+
++ (void)registerFor:(UITableView *)tableView {
+    [tableView registerNib:[UINib nibWithNibName:NSStringFromClass([self class]) bundle:nil] forCellReuseIdentifier:kMainMenuTableViewCellReuseID];
 }
 
 @end
