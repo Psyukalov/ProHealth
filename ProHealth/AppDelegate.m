@@ -7,9 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "MainMenuViewController.h"
-#import "SettingsViewController.h"
 #import "DataManager.h"
+#import "GuideViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,15 +16,16 @@
 
 @implementation AppDelegate
 
+#pragma mark - UIApplicationDelegate methods
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
 //    MainMenuViewController *mainMenuVC = [[MainMenuViewController alloc] init];
-    SettingsViewController *personalDataVC = [[SettingsViewController alloc] init];
+    [self applyDesign];
+    GuideViewController *personalDataVC = [[GuideViewController alloc] init];
     UINavigationController *navigationVC = [[UINavigationController alloc] initWithRootViewController:personalDataVC];
-    navigationVC.navigationBar.translucent = NO;
     self.window.rootViewController = navigationVC;
     [self.window makeKeyAndVisible];
     return YES;
@@ -55,4 +55,16 @@
     [[DataManager sharedManager] saveContext];
 }
 
+#pragma mark - UI
+- (void)applyDesign
+{
+    //44 62 80
+    NSDictionary *navbarTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor],
+                                           NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue-Light" size:18.0f]};
+    [[UINavigationBar appearance] setTitleTextAttributes:navbarTextAttributes];
+    UIColor *barTintColor = [UIColor colorWithRed:44/255.0f green:62.0f/255.0f blue:80.0f/255.0f alpha:1.0f];
+    [[UINavigationBar appearance] setBarTintColor:barTintColor];
+    [[UINavigationBar appearance] setTranslucent:NO];
+
+}
 @end

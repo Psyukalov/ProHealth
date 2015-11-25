@@ -90,6 +90,10 @@
 		C3F1BA9A1C04A03F005DF91B /* PersonalDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F1BA981C04A03F005DF91B /* PersonalDataViewController.m */; };
 		C3F1BA9B1C04A03F005DF91B /* PersonalDataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3F1BA991C04A03F005DF91B /* PersonalDataViewController.xib */; };
 		C72CD4BF1C04ADBB00DAE3D4 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C72CD4BE1C04ADBB00DAE3D4 /* DataManager.m */; };
+		EA68B0001C059905008C22D2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA68B0021C059905008C22D2 /* Localizable.strings */; };
+		EA68B0061C059FFF008C22D2 /* guide_1.png in Resources */ = {isa = PBXBuildFile; fileRef = EA68B0031C059FFF008C22D2 /* guide_1.png */; };
+		EA68B0071C059FFF008C22D2 /* guide_2.png in Resources */ = {isa = PBXBuildFile; fileRef = EA68B0041C059FFF008C22D2 /* guide_2.png */; };
+		EA68B0081C059FFF008C22D2 /* guide_3.png in Resources */ = {isa = PBXBuildFile; fileRef = EA68B0051C059FFF008C22D2 /* guide_3.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -210,6 +214,11 @@
 		C3F1BA991C04A03F005DF91B /* PersonalDataViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonalDataViewController.xib; sourceTree = "<group>"; };
 		C72CD4BD1C04ADBB00DAE3D4 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
 		C72CD4BE1C04ADBB00DAE3D4 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
+		EA68AFFD1C0598D2008C22D2 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		EA68B0031C059FFF008C22D2 /* guide_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guide_1.png; sourceTree = "<group>"; };
+		EA68B0041C059FFF008C22D2 /* guide_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guide_2.png; sourceTree = "<group>"; };
+		EA68B0051C059FFF008C22D2 /* guide_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guide_3.png; sourceTree = "<group>"; };
+		EA68B0091C05A6EE008C22D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -299,6 +308,7 @@
 				C34BC9711C0455C9007E75CD /* CoreData */,
 				C34BC9181C044F59007E75CD /* Images */,
 				C34BC9191C044F59007E75CD /* JSON */,
+				EA68B0021C059905008C22D2 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -320,6 +330,9 @@
 				C38E0DC41C0464D7008FA999 /* clip@3x.png */,
 				C38E0DC51C0464D7008FA999 /* gear@2x.png */,
 				C38E0DC61C0464D7008FA999 /* gear@3x.png */,
+				EA68B0031C059FFF008C22D2 /* guide_1.png */,
+				EA68B0041C059FFF008C22D2 /* guide_2.png */,
+				EA68B0051C059FFF008C22D2 /* guide_3.png */,
 				C38E0DC71C0464D7008FA999 /* icon_fire@2x.png */,
 				C38E0DC81C0464D7008FA999 /* icon_fire@3x.png */,
 				C38E0DC91C0464D7008FA999 /* icon_foot@2x.png */,
@@ -541,7 +554,6 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
 			);
 			mainGroup = C34BC8DC1C044E40007E75CD;
@@ -578,6 +590,7 @@
 				C38E0DF91C0464D7008FA999 /* img_afternoon@2x.png in Resources */,
 				C38E0DEF1C0464D7008FA999 /* gear@2x.png in Resources */,
 				C38E0E031C0464D7008FA999 /* img_night@2x.png in Resources */,
+				EA68B0071C059FFF008C22D2 /* guide_2.png in Resources */,
 				C38E0E021C0464D7008FA999 /* img_morning@3x.png in Resources */,
 				C38E0DF01C0464D7008FA999 /* gear@3x.png in Resources */,
 				C34BC94C1C045102007E75CD /* RecipeDetailsViewController.xib in Resources */,
@@ -589,8 +602,11 @@
 				C38E0DEA1C0464D7008FA999 /* cancel@3x.png in Resources */,
 				C38E0E051C0464D7008FA999 /* info@2x.png in Resources */,
 				C34BC9381C04505B007E75CD /* PersonalStatsViewController.xib in Resources */,
+				EA68B0081C059FFF008C22D2 /* guide_3.png in Resources */,
 				C38E0DEC1C0464D7008FA999 /* chek@3x.png in Resources */,
+				EA68B0061C059FFF008C22D2 /* guide_1.png in Resources */,
 				C38E0DE61C0464D7008FA999 /* arrow_back@3x.png in Resources */,
+				EA68B0001C059905008C22D2 /* Localizable.strings in Resources */,
 				C34BC95B1C045200007E75CD /* MealsMenuViewController.xib in Resources */,
 				C3F1BA9B1C04A03F005DF91B /* PersonalDataViewController.xib in Resources */,
 				C38E0DED1C0464D7008FA999 /* clip@2x.png in Resources */,
@@ -685,8 +701,17 @@
 			isa = PBXVariantGroup;
 			children = (
 				C34BC8FA1C044E40007E75CD /* Base */,
+				EA68AFFD1C0598D2008C22D2 /* ru */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		EA68B0021C059905008C22D2 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA68B0091C05A6EE008C22D2 /* Base */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

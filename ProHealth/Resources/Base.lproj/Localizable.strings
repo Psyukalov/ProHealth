@@ -1,0 +1,22 @@
+/* 
+  Localizable.strings
+  ProHealth
+
+  Created by Anton Yurichev on 25.11.15.
+  Copyright © 2015 Natalia Zubareva. All rights reserved.
+*/
+
+/* GuideViewController */
+
+"Guide.Title" = "NATALIA ZUBAREVA";
+
+"Guide.Caption.EffectiveHelper" = "ЭФФЕКТИВНЫЙ ПОМОЩНИК";
+"Guide.Caption.EffectiveHelper.Text" = "для вас и вашего тела";
+
+"Guide.Caption.ForgotHungry" = "ЗАБУДЬТЕ ПРО ГОЛОДАНИЕ";
+"Guide.Caption.ForgotHungry.Text" = "питайтесь правильно";
+
+"Guide.Caption.ExperiencedDietitian" = "ОПЫТНЫЙ ДИЕТОЛОГ";
+"Guide.Caption.ExperiencedDietitian.Text" = "непременно поможет вам";
+
+/* StartViewController */
