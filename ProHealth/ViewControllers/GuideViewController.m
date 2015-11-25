@@ -8,9 +8,9 @@
 
 #import "GuideViewController.h"
 #import "Helper.h"
-
-#import "MainMenuViewController.h"
-
+#import "UIView+Snapshot.h"
+#import "MealsMenuViewController.h"
+#import "MealsMenuViewController.h"
 @interface GuideViewController ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *imgBackground;
@@ -65,9 +65,13 @@
 
 - (IBAction)btnStart_Tap:(UIButton *)sender {
     // TODO: load start screen
-    MainMenuViewController *mainMenuVC = [[MainMenuViewController alloc] init];
-    mainMenuVC.modalPresentationStyle = UIModalPresentationOverCurrentContext;
-    [self presentViewController:mainMenuVC animated:YES completion:nil];
+    MealsMenuViewController *mealsMenuVC = [[MealsMenuViewController alloc] init];
+    mealsMenuVC.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+    [self presentViewController:mealsMenuVC animated:YES completion:nil];
+//    UIImage *blurredSnapshot = [self.navigationController.view blurredSnapshot];
+//    MealsMenuViewController *mealsMenuVC = [[MealsMenuViewController alloc] initWithBlurredSnapshot:blurredSnapshot];
+//    mealsMenuVC.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+//    [self presentViewController:mealsMenuVC animated:YES completion:nil];
 }
 
 - (IBAction)swRecLeft_Swipe:(UISwipeGestureRecognizer *)sender {
@@ -83,6 +87,7 @@
         self.currentTipNumber -= 1;
         [self playAnimationWithTransition:UIViewAnimationTransitionFlipFromRight];
         [self refreshViewWithTipNumber:self.currentTipNumber];
+        
     }
 }
 

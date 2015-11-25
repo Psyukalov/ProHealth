@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-#define kMainMenuTableViewCellReuseID @"MainMenuTableViewCell"
+static NSString * _Nonnull const kMealsMenuTableViewCellReuseID = @"MealsMenuTableViewCell";
 
-@interface MainMenuTableViewCell : UITableViewCell
+@interface MealsMenuTableViewCell : UITableViewCell
 
 - (void)fillWithImageName:(NSString * _Nonnull)imageName text: (NSString * _Nonnull)text;
 

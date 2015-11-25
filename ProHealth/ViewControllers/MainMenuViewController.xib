@@ -7,8 +7,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainMenuViewController">
             <connections>
-                <outlet property="blurView" destination="Z2j-sb-mGN" id="Wlh-z5-Oeh"/>
-                <outlet property="tblMenu" destination="dXs-ob-C1O" id="1pe-FX-MPS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,48 +14,10 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <subviews>
-                <visualEffectView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z2j-sb-mGN">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="zCy-YB-vVq">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dXs-ob-C1O">
-                                <rect key="frame" x="0.0" y="113" width="375" height="494"/>
-                                <animations/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="-1" id="Ro9-KX-tZV"/>
-                                    <outlet property="delegate" destination="-1" id="YFd-RE-QK9"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <animations/>
-                        <constraints>
-                            <constraint firstAttribute="bottom" secondItem="dXs-ob-C1O" secondAttribute="bottom" constant="60" id="DkV-PP-wbZ"/>
-                            <constraint firstItem="dXs-ob-C1O" firstAttribute="top" secondItem="zCy-YB-vVq" secondAttribute="top" constant="113" id="FdT-qZ-xGG"/>
-                            <constraint firstAttribute="trailing" secondItem="dXs-ob-C1O" secondAttribute="trailing" id="S80-Jn-bML"/>
-                            <constraint firstItem="dXs-ob-C1O" firstAttribute="leading" secondItem="zCy-YB-vVq" secondAttribute="leading" id="WoG-wr-E9O"/>
-                        </constraints>
-                    </view>
-                    <animations/>
-                    <blurEffect style="light"/>
-                </visualEffectView>
-            </subviews>
             <animations/>
-            <color key="backgroundColor" red="0.17254901960784313" green="0.24313725490196078" blue="0.31372549019607843" alpha="0.15433843085106383" colorSpace="calibratedRGB"/>
-            <constraints>
-                <constraint firstAttribute="bottom" secondItem="Z2j-sb-mGN" secondAttribute="bottom" id="JQn-R1-YLG"/>
-                <constraint firstAttribute="trailing" secondItem="Z2j-sb-mGN" secondAttribute="trailing" id="OSA-3b-sqP"/>
-                <constraint firstItem="Z2j-sb-mGN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="gul-z3-7Lm"/>
-                <constraint firstItem="Z2j-sb-mGN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="qbi-Zh-BU8"/>
-            </constraints>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-            <point key="canvasLocation" x="599.5" y="461.5"/>
+            <point key="canvasLocation" x="589" y="432"/>
         </view>
     </objects>
 </document>
