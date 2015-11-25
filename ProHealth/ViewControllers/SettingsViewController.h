@@ -1,5 +1,5 @@
 //
-//  PersonalDataViewController.h
+//  SettingsViewController.h
 //  ProHealth
 //
 //  Created by Admin on 24.11.15.
@@ -9,6 +9,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Person.h"
+#import "Helper.h"
 
 
 @interface SettingsViewController : UIViewController

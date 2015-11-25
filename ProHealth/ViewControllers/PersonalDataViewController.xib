@@ -7,6 +7,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PersonalDataViewController">
             <connections>
+                <outlet property="dpBirthday" destination="FKq-IX-Xcr" id="r6I-MC-BRh"/>
+                <outlet property="lblGrowth" destination="Nec-vj-krz" id="0Vx-1G-88b"/>
+                <outlet property="lblWeight" destination="JnD-PP-GB2" id="Tey-ma-oOC"/>
+                <outlet property="pickerGender" destination="ULk-3Y-Bxu" id="Kxv-0T-UWq"/>
+                <outlet property="stepperGrowth" destination="8P6-ws-RD9" id="8Gj-tK-nDt"/>
+                <outlet property="stepperWeight" destination="qGB-QB-e9n" id="e6F-aB-y98"/>
+                <outlet property="textName" destination="uPB-tA-kDD" id="gdn-Tu-I83"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,7 +25,7 @@
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jUn-x8-88m">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jVd-NA-9AC">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jVd-NA-9AC" userLabel="Content View">
                             <rect key="frame" x="20" y="20" width="374" height="696"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mjZ-0F-vfV">
@@ -32,18 +39,19 @@
                                     <color key="textColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uPB-tA-kDD">
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uPB-tA-kDD">
                                     <rect key="frame" x="59" y="65" width="256" height="30"/>
                                     <animations/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="256" id="2kk-N1-IOK"/>
                                         <constraint firstAttribute="height" constant="30" id="MqR-Fq-0eK"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вес 80.0 кг" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JnD-PP-GB2">
-                                    <rect key="frame" x="59" y="121" width="112" height="21"/>
+                                    <rect key="frame" x="16" y="121" width="112" height="21"/>
                                     <animations/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="112" id="5bC-wN-jrE"/>
@@ -54,7 +62,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Рост 170 см " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nec-vj-krz">
-                                    <rect key="frame" x="203" y="121" width="112" height="21"/>
+                                    <rect key="frame" x="246" y="121" width="112" height="21"/>
                                     <animations/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="112" id="55k-40-6Gg"/>
@@ -65,22 +73,16 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="qGB-QB-e9n">
-                                    <rect key="frame" x="59" y="158" width="94" height="29"/>
+                                    <rect key="frame" x="16" y="158" width="94" height="29"/>
                                     <animations/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="29" id="gAc-FV-In3"/>
                                         <constraint firstAttribute="width" constant="94" id="vbG-B3-TDf"/>
                                     </constraints>
                                     <color key="tintColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
-                                </stepper>
-                                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="8P6-ws-RD9">
-                                    <rect key="frame" x="221" y="158" width="94" height="29"/>
-                                    <animations/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="94" id="YC4-lg-tNd"/>
-                                        <constraint firstAttribute="height" constant="29" id="YXj-1x-F3D"/>
-                                    </constraints>
-                                    <color key="tintColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <connections>
+                                        <action selector="stepperChangeWeight:" destination="-1" eventType="valueChanged" id="twu-HB-oSe"/>
+                                    </connections>
                                 </stepper>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Дата рождения" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sva-1G-J1A">
                                     <rect key="frame" x="59" y="213" width="256" height="21"/>
@@ -93,7 +95,7 @@
                                     <color key="textColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="FKq-IX-Xcr">
+                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="FKq-IX-Xcr">
                                     <rect key="frame" x="0.0" y="250" width="374" height="216"/>
                                     <animations/>
                                     <constraints>
@@ -103,6 +105,7 @@
                                     <date key="date" timeIntervalSinceReferenceDate="470069511.92486101">
                                         <!--2015-11-24 14:51:51 +0000-->
                                     </date>
+                                    <locale key="locale" localeIdentifier="ru"/>
                                 </datePicker>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пол" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KyA-MC-9I6">
                                     <rect key="frame" x="155" y="490" width="64" height="21"/>
@@ -122,6 +125,10 @@
                                         <constraint firstAttribute="width" constant="374" id="gZ1-Fy-038"/>
                                         <constraint firstAttribute="height" constant="64" id="v48-2V-3jO"/>
                                     </constraints>
+                                    <connections>
+                                        <outlet property="dataSource" destination="-1" id="qPc-m3-sCE"/>
+                                        <outlet property="delegate" destination="-1" id="Zyy-gq-sDv"/>
+                                    </connections>
                                 </pickerView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ous-y0-zHM">
                                     <rect key="frame" x="107" y="626" width="160" height="30"/>
@@ -135,17 +142,32 @@
                                     <state key="normal" title="Подтвердить">
                                         <color key="titleColor" red="0.0039215686269999999" green="0.88235294119999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </state>
+                                    <connections>
+                                        <action selector="btnConfirm_Tab:" destination="-1" eventType="touchUpInside" id="WSZ-Vf-ai1"/>
+                                    </connections>
                                 </button>
+                                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="8P6-ws-RD9">
+                                    <rect key="frame" x="264" y="158" width="94" height="29"/>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="94" id="YC4-lg-tNd"/>
+                                        <constraint firstAttribute="height" constant="29" id="YXj-1x-F3D"/>
+                                    </constraints>
+                                    <color key="tintColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <connections>
+                                        <action selector="stepperChangeGrowth:" destination="-1" eventType="valueChanged" id="12R-HX-jiF"/>
+                                    </connections>
+                                </stepper>
                             </subviews>
                             <animations/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstItem="qGB-QB-e9n" firstAttribute="top" secondItem="JnD-PP-GB2" secondAttribute="bottom" constant="16" id="30E-hK-fTb"/>
-                                <constraint firstItem="qGB-QB-e9n" firstAttribute="leading" secondItem="jVd-NA-9AC" secondAttribute="leading" constant="59" id="5ko-yg-6m2"/>
+                                <constraint firstItem="qGB-QB-e9n" firstAttribute="leading" secondItem="jVd-NA-9AC" secondAttribute="leading" constant="16" id="5ko-yg-6m2"/>
                                 <constraint firstItem="mjZ-0F-vfV" firstAttribute="top" secondItem="jVd-NA-9AC" secondAttribute="top" constant="28" id="6Sq-xz-bji"/>
                                 <constraint firstItem="uPB-tA-kDD" firstAttribute="top" secondItem="mjZ-0F-vfV" secondAttribute="bottom" constant="16" id="6x6-Jq-jaq"/>
                                 <constraint firstItem="KyA-MC-9I6" firstAttribute="centerX" secondItem="jVd-NA-9AC" secondAttribute="centerX" id="Ahu-J3-buL"/>
-                                <constraint firstAttribute="trailing" secondItem="8P6-ws-RD9" secondAttribute="trailing" constant="59" id="B4D-Ot-b4u"/>
+                                <constraint firstAttribute="trailing" secondItem="8P6-ws-RD9" secondAttribute="trailing" constant="16" id="B4D-Ot-b4u"/>
                                 <constraint firstItem="ULk-3Y-Bxu" firstAttribute="centerX" secondItem="jVd-NA-9AC" secondAttribute="centerX" id="BSl-U6-Pwf"/>
                                 <constraint firstItem="ULk-3Y-Bxu" firstAttribute="top" secondItem="KyA-MC-9I6" secondAttribute="bottom" constant="16" id="CH2-cV-9kD"/>
                                 <constraint firstItem="JnD-PP-GB2" firstAttribute="top" secondItem="uPB-tA-kDD" secondAttribute="bottom" constant="26" id="Gqm-9F-33y"/>
@@ -159,9 +181,9 @@
                                 <constraint firstItem="mjZ-0F-vfV" firstAttribute="centerX" secondItem="jVd-NA-9AC" secondAttribute="centerX" id="h8h-K6-y1g"/>
                                 <constraint firstItem="uPB-tA-kDD" firstAttribute="centerX" secondItem="jVd-NA-9AC" secondAttribute="centerX" id="iu7-Qb-b4A"/>
                                 <constraint firstItem="ous-y0-zHM" firstAttribute="centerX" secondItem="jVd-NA-9AC" secondAttribute="centerX" id="jmK-vB-iZt"/>
-                                <constraint firstAttribute="trailing" secondItem="Nec-vj-krz" secondAttribute="trailing" constant="59" id="oxQ-Qd-vlL"/>
+                                <constraint firstAttribute="trailing" secondItem="Nec-vj-krz" secondAttribute="trailing" constant="16" id="oxQ-Qd-vlL"/>
                                 <constraint firstAttribute="bottom" secondItem="ous-y0-zHM" secondAttribute="bottom" constant="40" id="tCI-mB-SDs"/>
-                                <constraint firstItem="JnD-PP-GB2" firstAttribute="leading" secondItem="jVd-NA-9AC" secondAttribute="leading" constant="59" id="trC-tk-MB3"/>
+                                <constraint firstItem="JnD-PP-GB2" firstAttribute="leading" secondItem="jVd-NA-9AC" secondAttribute="leading" constant="16" id="trC-tk-MB3"/>
                                 <constraint firstItem="8P6-ws-RD9" firstAttribute="top" secondItem="Nec-vj-krz" secondAttribute="bottom" constant="16" id="whA-Hd-gX8"/>
                             </constraints>
                         </view>
