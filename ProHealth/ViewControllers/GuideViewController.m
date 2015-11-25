@@ -9,7 +9,7 @@
 #import "GuideViewController.h"
 #import "Helper.h"
 #import "UIView+Snapshot.h"
-#import "MainMenuViewController.h"
+#import "MealsMenuViewController.h"
 #import "MealsMenuViewController.h"
 @interface GuideViewController ()
 
@@ -65,9 +65,9 @@
 
 - (IBAction)btnStart_Tap:(UIButton *)sender {
     // TODO: load start screen
-    MainMenuViewController *mainMenuVC = [[MainMenuViewController alloc] init];
-    mainMenuVC.modalPresentationStyle = UIModalPresentationOverCurrentContext;
-    [self presentViewController:mainMenuVC animated:YES completion:nil];
+    MealsMenuViewController *mealsMenuVC = [[MealsMenuViewController alloc] init];
+    mealsMenuVC.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+    [self presentViewController:mealsMenuVC animated:YES completion:nil];
 //    UIImage *blurredSnapshot = [self.navigationController.view blurredSnapshot];
 //    MealsMenuViewController *mealsMenuVC = [[MealsMenuViewController alloc] initWithBlurredSnapshot:blurredSnapshot];
 //    mealsMenuVC.modalPresentationStyle = UIModalPresentationOverCurrentContext;
@@ -87,6 +87,7 @@
         self.currentTipNumber -= 1;
         [self playAnimationWithTransition:UIViewAnimationTransitionFlipFromRight];
         [self refreshViewWithTipNumber:self.currentTipNumber];
+        
     }
 }
 

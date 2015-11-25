@@ -1,5 +1,5 @@
 //
-//  MealsMenuViewController.h
+//  MainMenuViewController.h
 //  ProHealth
 //
 //  Created by Admin on 24.11.15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MealsMenuViewController : UIViewController
-
-- (instancetype)initWithBlurredSnapshot:(UIImage *)blurredSnapshot;
+@interface MealsMenuViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @end

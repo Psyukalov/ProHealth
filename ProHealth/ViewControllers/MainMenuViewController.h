@@ -2,13 +2,12 @@
 //  MainMenuViewController.h
 //  ProHealth
 //
-//  Created by Admin on 24.11.15.
+//  Created by Anton Yurichev on 25.11.15.
 //  Copyright © 2015 Natalia Zubareva. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface MainMenuViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
-
+@interface MainMenuViewController : UIViewController
 
 @end
