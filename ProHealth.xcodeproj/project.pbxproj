@@ -111,6 +111,16 @@
 		EA9F65F71C05F569009A8F23 /* MainMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA9F65F51C05F569009A8F23 /* MainMenuViewController.xib */; };
 		EA9F65FB1C05F88B009A8F23 /* MealsMenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9F65F91C05F88B009A8F23 /* MealsMenuTableViewCell.m */; };
 		EA9F65FC1C05F88B009A8F23 /* MealsMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA9F65FA1C05F88B009A8F23 /* MealsMenuTableViewCell.xib */; };
+		EA9F66081C05FCB4009A8F23 /* btn_foot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA9F65FE1C05FCB4009A8F23 /* btn_foot@2x.png */; };
+		EA9F66091C05FCB4009A8F23 /* btn_foot@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA9F65FF1C05FCB4009A8F23 /* btn_foot@3x.png */; };
+		EA9F660A1C05FCB4009A8F23 /* btn_kkal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA9F66001C05FCB4009A8F23 /* btn_kkal@2x.png */; };
+		EA9F660B1C05FCB4009A8F23 /* btn_kkal@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA9F66011C05FCB4009A8F23 /* btn_kkal@3x.png */; };
+		EA9F660C1C05FCB4009A8F23 /* btn_menu_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA9F66021C05FCB4009A8F23 /* btn_menu_close@2x.png */; };
+		EA9F660D1C05FCB4009A8F23 /* btn_menu_close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA9F66031C05FCB4009A8F23 /* btn_menu_close@3x.png */; };
+		EA9F660E1C05FCB4009A8F23 /* btn_ok@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA9F66041C05FCB4009A8F23 /* btn_ok@1x.png */; };
+		EA9F660F1C05FCB4009A8F23 /* btn_ok@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA9F66051C05FCB4009A8F23 /* btn_ok@3x.png */; };
+		EA9F66101C05FCB4009A8F23 /* btn_water@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA9F66061C05FCB4009A8F23 /* btn_water@2x.png */; };
+		EA9F66111C05FCB4009A8F23 /* btn_water@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA9F66071C05FCB4009A8F23 /* btn_water@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -257,6 +267,16 @@
 		EA9F65F81C05F88B009A8F23 /* MealsMenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MealsMenuTableViewCell.h; sourceTree = "<group>"; };
 		EA9F65F91C05F88B009A8F23 /* MealsMenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MealsMenuTableViewCell.m; sourceTree = "<group>"; };
 		EA9F65FA1C05F88B009A8F23 /* MealsMenuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MealsMenuTableViewCell.xib; sourceTree = "<group>"; };
+		EA9F65FE1C05FCB4009A8F23 /* btn_foot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_foot@2x.png"; sourceTree = "<group>"; };
+		EA9F65FF1C05FCB4009A8F23 /* btn_foot@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_foot@3x.png"; sourceTree = "<group>"; };
+		EA9F66001C05FCB4009A8F23 /* btn_kkal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_kkal@2x.png"; sourceTree = "<group>"; };
+		EA9F66011C05FCB4009A8F23 /* btn_kkal@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_kkal@3x.png"; sourceTree = "<group>"; };
+		EA9F66021C05FCB4009A8F23 /* btn_menu_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_menu_close@2x.png"; sourceTree = "<group>"; };
+		EA9F66031C05FCB4009A8F23 /* btn_menu_close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_menu_close@3x.png"; sourceTree = "<group>"; };
+		EA9F66041C05FCB4009A8F23 /* btn_ok@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_ok@1x.png"; sourceTree = "<group>"; };
+		EA9F66051C05FCB4009A8F23 /* btn_ok@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_ok@3x.png"; sourceTree = "<group>"; };
+		EA9F66061C05FCB4009A8F23 /* btn_water@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_water@2x.png"; sourceTree = "<group>"; };
+		EA9F66071C05FCB4009A8F23 /* btn_water@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_water@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -355,13 +375,13 @@
 		C34BC9181C044F59007E75CD /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				EA68B01A1C05E766008C22D2 /* menu */,
 				C38E0DB91C0464D7008FA999 /* add@2x.png */,
 				C38E0DBA1C0464D7008FA999 /* add@3x.png */,
 				C38E0DBB1C0464D7008FA999 /* arrow_back@2x.png */,
 				C38E0DBC1C0464D7008FA999 /* arrow_back@3x.png */,
 				C38E0DBD1C0464D7008FA999 /* back@2x.png */,
 				C38E0DBE1C0464D7008FA999 /* back@3x.png */,
+				EA9F65FD1C05FCB4009A8F23 /* buttons */,
 				C38E0DBF1C0464D7008FA999 /* cancel@2x.png */,
 				C38E0DC01C0464D7008FA999 /* cancel@3x.png */,
 				C38E0DC11C0464D7008FA999 /* chek@2x.png */,
@@ -397,6 +417,7 @@
 				C38E0DDC1C0464D7008FA999 /* info@3x.png */,
 				C38E0DDD1C0464D7008FA999 /* mail@2x.png */,
 				C38E0DDE1C0464D7008FA999 /* mail@3x.png */,
+				EA68B01A1C05E766008C22D2 /* menu */,
 				C38E0DDF1C0464D7008FA999 /* menu@2x.png */,
 				C38E0DE01C0464D7008FA999 /* menu@3x.png */,
 				C38E0DE11C0464D7008FA999 /* play@2x.png */,
@@ -559,6 +580,23 @@
 			path = menu;
 			sourceTree = "<group>";
 		};
+		EA9F65FD1C05FCB4009A8F23 /* buttons */ = {
+			isa = PBXGroup;
+			children = (
+				EA9F65FE1C05FCB4009A8F23 /* btn_foot@2x.png */,
+				EA9F65FF1C05FCB4009A8F23 /* btn_foot@3x.png */,
+				EA9F66001C05FCB4009A8F23 /* btn_kkal@2x.png */,
+				EA9F66011C05FCB4009A8F23 /* btn_kkal@3x.png */,
+				EA9F66021C05FCB4009A8F23 /* btn_menu_close@2x.png */,
+				EA9F66031C05FCB4009A8F23 /* btn_menu_close@3x.png */,
+				EA9F66041C05FCB4009A8F23 /* btn_ok@1x.png */,
+				EA9F66051C05FCB4009A8F23 /* btn_ok@3x.png */,
+				EA9F66061C05FCB4009A8F23 /* btn_water@2x.png */,
+				EA9F66071C05FCB4009A8F23 /* btn_water@3x.png */,
+			);
+			path = buttons;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -648,6 +686,7 @@
 				C38E0DE81C0464D7008FA999 /* back@3x.png in Resources */,
 				C38E0DF71C0464D7008FA999 /* img_add_glass@2x.png in Resources */,
 				C38E0DEB1C0464D7008FA999 /* chek@2x.png in Resources */,
+				EA9F66111C05FCB4009A8F23 /* btn_water@3x.png in Resources */,
 				C38E0DE71C0464D7008FA999 /* back@2x.png in Resources */,
 				C38E0DEE1C0464D7008FA999 /* clip@3x.png in Resources */,
 				C38E0DFB1C0464D7008FA999 /* img_empty_glass@2x.png in Resources */,
@@ -658,15 +697,18 @@
 				C38E0DF91C0464D7008FA999 /* img_afternoon@2x.png in Resources */,
 				C38E0DEF1C0464D7008FA999 /* gear@2x.png in Resources */,
 				EA68B0381C05E766008C22D2 /* menu_second_breakfast@3x.png in Resources */,
+				EA9F66101C05FCB4009A8F23 /* btn_water@2x.png in Resources */,
 				C38E0E031C0464D7008FA999 /* img_night@2x.png in Resources */,
 				EA68B0071C059FFF008C22D2 /* guide_2.png in Resources */,
 				C38E0E021C0464D7008FA999 /* img_morning@3x.png in Resources */,
 				C38E0DF01C0464D7008FA999 /* gear@3x.png in Resources */,
+				EA9F66081C05FCB4009A8F23 /* btn_foot@2x.png in Resources */,
 				C34BC94C1C045102007E75CD /* RecipeDetailsViewController.xib in Resources */,
 				C38E0DF21C0464D7008FA999 /* icon_fire@3x.png in Resources */,
 				EA68B0331C05E766008C22D2 /* menu_lunch@2x.png in Resources */,
 				C34BC8FB1C044E40007E75CD /* LaunchScreen.storyboard in Resources */,
 				C38E0E0C1C0464D7008FA999 /* play@3x.png in Resources */,
+				EA9F66091C05FCB4009A8F23 /* btn_foot@3x.png in Resources */,
 				C38E0DFD1C0464D7008FA999 /* img_evening@2x.png in Resources */,
 				EA68B0351C05E766008C22D2 /* menu_lunch_highlighted@2x.png in Resources */,
 				C34BC9561C04515D007E75CD /* SettingsViewController.xib in Resources */,
@@ -687,10 +729,12 @@
 				EA68B02E1C05E766008C22D2 /* menu_breakfast_highlighted@3x.png in Resources */,
 				C38E0DED1C0464D7008FA999 /* clip@2x.png in Resources */,
 				C38E0DF61C0464D7008FA999 /* icon_water@3x.png in Resources */,
+				EA9F660F1C05FCB4009A8F23 /* btn_ok@3x.png in Resources */,
 				C38E0E041C0464D7008FA999 /* img_night@3x.png in Resources */,
 				C34BC9331C04502A007E75CD /* CaloriesViewController.xib in Resources */,
 				C34BC93D1C045095007E75CD /* ExercisesViewController.xib in Resources */,
 				C38E0DE31C0464D7008FA999 /* add@2x.png in Resources */,
+				EA9F660A1C05FCB4009A8F23 /* btn_kkal@2x.png in Resources */,
 				C38E0E0A1C0464D7008FA999 /* menu@3x.png in Resources */,
 				C34BC9241C044FC7007E75CD /* StartViewController.xib in Resources */,
 				C34BC91F1C044F88007E75CD /* MealsMenuViewController.xib in Resources */,
@@ -703,9 +747,11 @@
 				EA68B02C1C05E766008C22D2 /* menu_breakfast@3x.png in Resources */,
 				C38E0DE91C0464D7008FA999 /* cancel@2x.png in Resources */,
 				C38E0E061C0464D7008FA999 /* info@3x.png in Resources */,
+				EA9F660C1C05FCB4009A8F23 /* btn_menu_close@2x.png in Resources */,
 				C38E0E011C0464D7008FA999 /* img_morning@2x.png in Resources */,
 				C34BC9421C0450CE007E75CD /* TipsViewController.xib in Resources */,
 				EA68B02B1C05E766008C22D2 /* menu_breakfast@2x.png in Resources */,
+				EA9F660D1C05FCB4009A8F23 /* btn_menu_close@3x.png in Resources */,
 				EA9F65F71C05F569009A8F23 /* MainMenuViewController.xib in Resources */,
 				EA68B0321C05E766008C22D2 /* menu_dinner_highlighted@3x.png in Resources */,
 				C38E0E001C0464D7008FA999 /* img_full_glass@3x.png in Resources */,
@@ -713,6 +759,8 @@
 				C38E0DF11C0464D7008FA999 /* icon_fire@2x.png in Resources */,
 				EA68B0371C05E766008C22D2 /* menu_second_breakfast@2x.png in Resources */,
 				C38E0E081C0464D7008FA999 /* mail@3x.png in Resources */,
+				EA9F660B1C05FCB4009A8F23 /* btn_kkal@3x.png in Resources */,
+				EA9F660E1C05FCB4009A8F23 /* btn_ok@1x.png in Resources */,
 				C38E0DFA1C0464D7008FA999 /* img_afternoon@3x.png in Resources */,
 				EA68B0391C05E766008C22D2 /* menu_second_breakfast_highlighted@2x.png in Resources */,
 				C38E0E071C0464D7008FA999 /* mail@2x.png in Resources */,
