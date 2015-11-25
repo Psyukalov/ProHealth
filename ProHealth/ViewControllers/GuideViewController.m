@@ -14,6 +14,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblCaption;
 @property (weak, nonatomic) IBOutlet UIButton *btnStart;
 
+@property (retain, nonatomic) NSArray<NSString *> *imageNames;
+@property (retain, nonatomic) NSArray<NSString *> *captions;
+
 @end
 
 @implementation GuideViewController
@@ -25,7 +28,8 @@
     // Do any additional setup after loading the view from its nib.
     
     [self loadLocalization];
-    
+    self.imageNames = @[@"pr1.png", @"pr2.png", @"pr3.png"];
+    //self.captions = @[, @"ЗАБУДЬТЕ ПРО ГОЛОДАНИЕ", @"ОПЫТНЫЙ ДИЕТОЛОГ"];
 }
 
 - (void)loadLocalization {

@@ -58,11 +58,10 @@
 #pragma mark - UI
 - (void)applyDesign
 {
-    //44 62 80
     NSDictionary *navbarTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor],
                                            NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue-Light" size:18.0f]};
     [[UINavigationBar appearance] setTitleTextAttributes:navbarTextAttributes];
-    UIColor *barTintColor = [UIColor colorWithRed:44/255.0f green:62.0f/255.0f blue:80.0f/255.0f alpha:1.0f];
+    UIColor *barTintColor = RGB(44, 62, 80);
     [[UINavigationBar appearance] setBarTintColor:barTintColor];
     [[UINavigationBar appearance] setTranslucent:NO];
 
