@@ -94,6 +94,7 @@
 		EA68B0061C059FFF008C22D2 /* guide_1.png in Resources */ = {isa = PBXBuildFile; fileRef = EA68B0031C059FFF008C22D2 /* guide_1.png */; };
 		EA68B0071C059FFF008C22D2 /* guide_2.png in Resources */ = {isa = PBXBuildFile; fileRef = EA68B0041C059FFF008C22D2 /* guide_2.png */; };
 		EA68B0081C059FFF008C22D2 /* guide_3.png in Resources */ = {isa = PBXBuildFile; fileRef = EA68B0051C059FFF008C22D2 /* guide_3.png */; };
+		EA68B0131C05AC9E008C22D2 /* Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = EA68B0121C05AC9E008C22D2 /* Helper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -221,6 +222,8 @@
 		EA68B0091C05A6EE008C22D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EA68B00A1C05A8D4008C22D2 /* ProHealth.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProHealth.pch; sourceTree = "<group>"; };
 		EA68B0101C05AA94008C22D2 /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
+		EA68B0111C05AC9E008C22D2 /* Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helper.h; sourceTree = "<group>"; };
+		EA68B0121C05AC9E008C22D2 /* Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -492,6 +495,8 @@
 			isa = PBXGroup;
 			children = (
 				EA68B0101C05AA94008C22D2 /* Macros.h */,
+				EA68B0111C05AC9E008C22D2 /* Helper.h */,
+				EA68B0121C05AC9E008C22D2 /* Helper.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -666,6 +671,7 @@
 				C34BC9501C04510F007E75CD /* RecipesViewController.m in Sources */,
 				C34BC9671C04528D007E75CD /* RecipesTableViewCell.m in Sources */,
 				C34BC9411C0450CE007E75CD /* TipsViewController.m in Sources */,
+				EA68B0131C05AC9E008C22D2 /* Helper.m in Sources */,
 				C72CD4BF1C04ADBB00DAE3D4 /* DataManager.m in Sources */,
 				C34BC9741C0455C9007E75CD /* ProHealth.xcdatamodeld in Sources */,
 				C3F1BA9A1C04A03F005DF91B /* PersonalDataViewController.m in Sources */,

@@ -22,7 +22,7 @@
                     <rect key="frame" x="20" y="20" width="374" height="522"/>
                     <animations/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2y9-Uk-Wr9" userLabel="Label - Caption">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2y9-Uk-Wr9" userLabel="Label - Caption">
                     <rect key="frame" x="20" y="415" width="374" height="128"/>
                     <animations/>
                     <color key="backgroundColor" red="0.0039215686269999999" green="0.88235294119999996" blue="1" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
@@ -51,6 +51,7 @@
             </subviews>
             <animations/>
             <color key="backgroundColor" red="0.17254901960784313" green="0.24313725490196078" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
+            <gestureRecognizers/>
             <constraints>
                 <constraint firstItem="XkP-Go-Aom" firstAttribute="top" secondItem="2y9-Uk-Wr9" secondAttribute="bottom" constant="-19" id="1I7-Db-ZIs"/>
                 <constraint firstAttribute="bottom" secondItem="XkP-Go-Aom" secondAttribute="bottom" constant="20" id="LDQ-mu-7KO"/>
@@ -65,8 +66,24 @@
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="S0u-h9-IDG" appends="YES" id="cze-Yi-8hD"/>
+                <outletCollection property="gestureRecognizers" destination="bkB-6l-gxu" appends="YES" id="7tD-yC-bjc"/>
+            </connections>
             <point key="canvasLocation" x="413" y="436"/>
         </view>
+        <swipeGestureRecognizer direction="left" id="S0u-h9-IDG">
+            <connections>
+                <action selector="swRecLeft_Swipe:" destination="-1" id="drZ-no-R6g"/>
+                <outlet property="delegate" destination="-1" id="QXM-hQ-6Mh"/>
+            </connections>
+        </swipeGestureRecognizer>
+        <swipeGestureRecognizer direction="right" id="bkB-6l-gxu">
+            <connections>
+                <action selector="swRecRight_Swipe:" destination="-1" id="uXt-Rv-fsJ"/>
+                <outlet property="delegate" destination="-1" id="geR-RJ-MH6"/>
+            </connections>
+        </swipeGestureRecognizer>
     </objects>
     <resources>
         <image name="guide_3.png" width="334" height="443"/>
