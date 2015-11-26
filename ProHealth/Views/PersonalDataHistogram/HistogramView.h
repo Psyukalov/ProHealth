@@ -13,6 +13,7 @@
 @interface HistogramView : UIView
 
 @property (strong, nonatomic) NSArray *values;
+@property (assign, nonatomic) float width;
 @property (assign, nonatomic) int maxValue;
 @property (assign, nonatomic) int minTitleValue;
 @property (assign, nonatomic) int barDelta;
@@ -22,6 +23,7 @@
 @property (assign, nonatomic) int leftBorder;
 
 - (HistogramView *)initWithFrame:(CGRect)frame
+                  histogramWidth:(float)width
                           values:(NSArray *)values
                         maxValue:(int)maxValue
                    minTitleValue:(int)minTitleValue
@@ -30,5 +32,7 @@
                      secondColor:(UIColor *)secondColor
                     withUpBorder:(int)upBorder
                    andLeftBorder:(int)leftBorder;
+
+//- (void)drawWithValues:(NSArray *)values;
 
 @end

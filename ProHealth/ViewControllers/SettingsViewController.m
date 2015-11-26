@@ -29,10 +29,13 @@
 
 @implementation SettingsViewController
 
+#pragma mark - Lifecycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.person = [Person sharedPerson];
     [Helper applyCornerRadius:6 forViews:@[_contentView, _btnChangeAvatar, _btnEdit, _btnFullVersion]];
+    [Helper applyShadowForViews:@[_contentView]];
     [Helper applyTransparentLayerFormImage:_imageRectAvatar withColor:RGB(0, 0, 0)];
     [Helper applyCornerRadius:_imageCircleAvatar.frame.size.width / 2 forViews:@[_imageCircleAvatar]];
 }
@@ -41,14 +44,15 @@
     _imageRectAvatar.image = [UIImage imageWithData:self.person.avatar];
     _imageCircleAvatar.image = [UIImage imageWithData:self.person.avatar];
     _labelName.text = self.person.name;
-    _labelStartDate.text = [NSString stringWithFormat:@"Мы вместе с %@", self.person.startDate];
+    NSString *startDate = [Helper applyRussianStyleForDate:self.person.startDate];
+    _labelStartDate.text = [NSString stringWithFormat:@"Мы вместе с %@", startDate];
     _labelWeight.text = [NSString stringWithFormat:@"%1.1f кг", self.person.weight];
     _labelGrowth.text = [NSString stringWithFormat:@"%1.2f кг", self.person.growth];
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"dd.MM.yyyy"];
-    _labelBirthday.text = [formatter stringFromDate:self.person.birthday];
+    _labelBirthday.text = [Helper applyRussianStyleForDate:self.person.birthday];
     _labelGender.text = self.person.gender;
 }
+
+#pragma mark - Image Picker Controller
 
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     UIImage *image = [info objectForKey:UIImagePickerControllerEditedImage];
@@ -58,6 +62,8 @@
     [self dismissViewControllerAnimated:true completion:nil];
     
 }
+
+#pragma mark - Actions
 
 - (IBAction)btnChangeAvatar_Tab:(UIButton *)sender {
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {

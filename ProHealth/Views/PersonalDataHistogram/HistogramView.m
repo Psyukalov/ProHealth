@@ -21,18 +21,20 @@
 @synthesize upBorder = _upBorder;
 @synthesize leftBorder = _leftBorder;
 
-- (HistogramView * )initWithFrame:(CGRect)frame
-                            values:(NSArray *)values
-                          maxValue:(int)maxValue
-                     minTitleValue:(int)minTitleValue
-                          barDelta:(int)barDelta
-                        firstColor:(UIColor *)firstColor
-                       secondColor:(UIColor *)secondColor
-                      withUpBorder:(int)upBorder
-                     andLeftBorder:(int)leftBorder {
+- (HistogramView *)initWithFrame:(CGRect)frame
+                  histogramWidth:(float)width
+                          values:(NSArray *)values
+                        maxValue:(int)maxValue
+                   minTitleValue:(int)minTitleValue
+                        barDelta:(int)barDelta
+                      firstColor:(UIColor *)firstColor
+                     secondColor:(UIColor *)secondColor
+                    withUpBorder:(int)upBorder
+                   andLeftBorder:(int)leftBorder {
     self = [super initWithFrame:frame];
     if (self) {
         _values = values;
+        _width = width;
         _maxValue = maxValue;
         _minTitleValue = minTitleValue;
         _barDelta = barDelta;
@@ -44,6 +46,10 @@
     return self;
 }
 
+//- (void)drawWithValues:(NSArray *)values {
+//    self.values = values;
+//}
+
 - (void)drawRect:(CGRect)rect {
     // Заливка фона белым цветом
     CGContextRef context = UIGraphicsGetCurrentContext();
@@ -51,7 +57,7 @@
     CGContextFillRect(context, rect);
     double pointSize = 4;
     double lineLength = self.frame.size.height - (self.frame.size.height - self.upBorder) * self.minTitleValue / self.maxValue;
-    double width = self.frame.size.width / self.values.count - self.barDelta;
+    double width = self.width / self.values.count - self.barDelta;
     for (int i = 0; i <= self.values.count - 1; i++) {
         double height = (self.frame.size.height - self.upBorder) * [[self.values objectAtIndex:i] integerValue] / self.maxValue;
         CGRect newRect = CGRectMake(i * width + i * self.barDelta,

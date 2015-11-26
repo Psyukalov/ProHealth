@@ -6,7 +6,12 @@
 //  Copyright © 2015 Natalia Zubareva. All rights reserved.
 //
 
+
 #import <UIKit/UIKit.h>
+#import "Helper.h"
+#import "HistogramView.h"
+#import "Person.h"
+
 
 @interface PersonalStatsViewController : UIViewController
 

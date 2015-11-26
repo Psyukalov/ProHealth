@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MainMenuViewController.h"
+#import "PersonalStatsViewController.h"
 #import "SettingsViewController.h"
 #import "DataManager.h"
 
@@ -22,8 +23,8 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
 //    MainMenuViewController *mainMenuVC = [[MainMenuViewController alloc] init];
-    SettingsViewController *personalDataVC = [[SettingsViewController alloc] init];
-    UINavigationController *navigationVC = [[UINavigationController alloc] initWithRootViewController:personalDataVC];
+    PersonalStatsViewController *personalStatsVC = [[PersonalStatsViewController alloc] init];
+    UINavigationController *navigationVC = [[UINavigationController alloc] initWithRootViewController:personalStatsVC];
     navigationVC.navigationBar.translucent = NO;
     self.window.rootViewController = navigationVC;
     [self.window makeKeyAndVisible];

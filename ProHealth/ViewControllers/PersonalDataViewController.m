@@ -28,6 +28,8 @@
 
 @implementation PersonalDataViewController
 
+#pragma mark - Lifecycle
+
 - (id)initWithPerson:(Person *)person {
     self = [super init];
     if (self) {
@@ -40,6 +42,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [Helper applyCornerRadius:6 forViews:@[_contentView, _btnConfirm]];
+    [Helper applyShadowForViews:@[_contentView]];
     _textName.text = self.person.name;
     if (self.person.weight == 0) {
         self.person.weight = 80.0;
@@ -66,6 +69,8 @@
     }
 }
 
+#pragma mark - Picker View
+
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
     return 1;
 }
@@ -77,6 +82,8 @@
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
     return [self.gender objectAtIndex:row];
 }
+
+#pragma mark - Actions
 
 - (IBAction)btnConfirm_Tab:(UIButton *)sender {
     self.person.name = _textName.text;

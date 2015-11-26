@@ -15,4 +15,8 @@
 
 + (void)applyTransparentLayerFormImage:(nonnull UIImageView *)image withColor:(nonnull UIColor *)color;
 
++ (nonnull NSString *)applyRussianStyleForDate:(nonnull NSDate *)date;
+
++ (void)applyShadowForViews:(nonnull NSArray<UIView *> *)views;
+
 @end
