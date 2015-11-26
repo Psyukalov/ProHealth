@@ -39,8 +39,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [Helper applyCornerRadius:6 forViews:@[_contentView]];
-    [Helper applyCornerRadius:6 forButtons:@[_btnConfirm]];
+    [Helper applyCornerRadius:6 forViews:@[_contentView, _btnConfirm]];
     _textName.text = self.person.name;
     if (self.person.weight == 0) {
         self.person.weight = 80.0;

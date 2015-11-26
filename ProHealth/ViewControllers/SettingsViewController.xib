@@ -40,7 +40,7 @@
                                         <constraint firstAttribute="height" constant="188" id="Mem-K7-6qZ"/>
                                     </constraints>
                                 </imageView>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zrz-p4-JQz" userLabel="circle avatar">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zrz-p4-JQz" userLabel="circle avatar">
                                     <rect key="frame" x="141" y="16" width="92" height="92"/>
                                     <animations/>
                                     <constraints>

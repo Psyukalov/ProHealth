@@ -32,8 +32,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.person = [Person sharedPerson];
-    [Helper applyCornerRadius:6 forViews:@[_contentView]];
-    [Helper applyCornerRadius:6 forButtons:@[_btnChangeAvatar, _btnEdit, _btnFullVersion]];
+    [Helper applyCornerRadius:6 forViews:@[_contentView, _btnChangeAvatar, _btnEdit, _btnFullVersion]];
+    [Helper applyTransparentLayerFormImage:_imageRectAvatar withColor:RGB(0, 0, 0)];
+    [Helper applyCornerRadius:_imageCircleAvatar.frame.size.width / 2 forViews:@[_imageCircleAvatar]];
 }
 
 - (void)viewWillAppear:(BOOL)animated {

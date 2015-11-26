@@ -84,6 +84,8 @@
 		C3F1BA9A1C04A03F005DF91B /* PersonalDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F1BA981C04A03F005DF91B /* PersonalDataViewController.m */; };
 		C3F1BA9B1C04A03F005DF91B /* PersonalDataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3F1BA991C04A03F005DF91B /* PersonalDataViewController.xib */; };
 		C72CD4BF1C04ADBB00DAE3D4 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C72CD4BE1C04ADBB00DAE3D4 /* DataManager.m */; };
+		C76B5B231C06F2600035FDD9 /* Eating+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = C76B5B201C06F2600035FDD9 /* Eating+CoreDataProperties.m */; };
+		C76B5B241C06F2600035FDD9 /* Eating.m in Sources */ = {isa = PBXBuildFile; fileRef = C76B5B221C06F2600035FDD9 /* Eating.m */; };
 		EA68B0001C059905008C22D2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA68B0021C059905008C22D2 /* Localizable.strings */; };
 		EA68B0061C059FFF008C22D2 /* guide_1.png in Resources */ = {isa = PBXBuildFile; fileRef = EA68B0031C059FFF008C22D2 /* guide_1.png */; };
 		EA68B0071C059FFF008C22D2 /* guide_2.png in Resources */ = {isa = PBXBuildFile; fileRef = EA68B0041C059FFF008C22D2 /* guide_2.png */; };
@@ -232,6 +234,10 @@
 		C3F1BA991C04A03F005DF91B /* PersonalDataViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonalDataViewController.xib; sourceTree = "<group>"; };
 		C72CD4BD1C04ADBB00DAE3D4 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
 		C72CD4BE1C04ADBB00DAE3D4 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
+		C76B5B1F1C06F2600035FDD9 /* Eating+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Eating+CoreDataProperties.h"; sourceTree = "<group>"; };
+		C76B5B201C06F2600035FDD9 /* Eating+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Eating+CoreDataProperties.m"; sourceTree = "<group>"; };
+		C76B5B211C06F2600035FDD9 /* Eating.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Eating.h; sourceTree = "<group>"; };
+		C76B5B221C06F2600035FDD9 /* Eating.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Eating.m; sourceTree = "<group>"; };
 		EA68AFFD1C0598D2008C22D2 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		EA68B0031C059FFF008C22D2 /* guide_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guide_1.png; sourceTree = "<group>"; };
 		EA68B0041C059FFF008C22D2 /* guide_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guide_2.png; sourceTree = "<group>"; };
@@ -355,6 +361,10 @@
 		C34BC9161C044F59007E75CD /* DataClasses */ = {
 			isa = PBXGroup;
 			children = (
+				C76B5B1F1C06F2600035FDD9 /* Eating+CoreDataProperties.h */,
+				C76B5B201C06F2600035FDD9 /* Eating+CoreDataProperties.m */,
+				C76B5B211C06F2600035FDD9 /* Eating.h */,
+				C76B5B221C06F2600035FDD9 /* Eating.m */,
 				C38E0E0D1C0465F0008FA999 /* Person.h */,
 				C38E0E0E1C0465F0008FA999 /* Person.m */,
 			);
@@ -786,8 +796,10 @@
 				C34BC9371C04505B007E75CD /* PersonalStatsViewController.m in Sources */,
 				C34BC91E1C044F88007E75CD /* MealsMenuViewController.m in Sources */,
 				C38E0E0F1C0465F0008FA999 /* Person.m in Sources */,
+				C76B5B241C06F2600035FDD9 /* Eating.m in Sources */,
 				C34BC92D1C045015007E75CD /* WaterViewController.m in Sources */,
 				C34BC9231C044FC7007E75CD /* StartViewController.m in Sources */,
+				C76B5B231C06F2600035FDD9 /* Eating+CoreDataProperties.m in Sources */,
 				EA9F65FB1C05F88B009A8F23 /* MealsMenuTableViewCell.m in Sources */,
 				C34BC9501C04510F007E75CD /* RecipesViewController.m in Sources */,
 				C34BC9671C04528D007E75CD /* RecipesTableViewCell.m in Sources */,

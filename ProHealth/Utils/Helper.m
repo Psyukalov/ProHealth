@@ -17,11 +17,13 @@
     }
 }
 
-+ (void)applyCornerRadius:(CGFloat)cornerRadius forButtons:(NSArray<UIButton *> *)buttons {
-    for (UIButton *button in buttons) {
-        button.layer.cornerRadius = cornerRadius;
-        button.clipsToBounds = YES;
-    }
++ (void)applyTransparentLayerFormImage:(nonnull UIImageView *)image withColor:(nonnull UIColor *)color {
+    CALayer *transparentLayer = [CALayer layer];
+    transparentLayer.frame = image.bounds;
+    transparentLayer.cornerRadius = 2;
+    transparentLayer.backgroundColor = [color CGColor];
+    transparentLayer.opacity = 0.5;
+    [image.layer addSublayer:transparentLayer];
 }
 
 @end
