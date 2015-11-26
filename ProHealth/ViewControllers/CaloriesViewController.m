@@ -14,9 +14,22 @@
 
 @implementation CaloriesViewController
 
+#pragma mark - Lifecycle
+
+- (instancetype)initWithCalories:(NSInteger)calories protein:(NSInteger)protein carbohydrate:(NSInteger)carbohydrate fat:(NSInteger)fat {
+    if (self = [super init]) {
+        _calories = calories;
+        _protein = protein;
+        _carbohydrate = carbohydrate;
+        _fat = fat;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib
+    
 }
+
 
 @end

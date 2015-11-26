@@ -125,6 +125,7 @@
 		EAD91D8C1C071CDF005BAB68 /* PieElement.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD91D881C071CDF005BAB68 /* PieElement.m */; };
 		EAD91D8D1C071CDF005BAB68 /* PieLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD91D8A1C071CDF005BAB68 /* PieLayer.m */; };
 		EAD91D911C073272005BAB68 /* UICountingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD91D901C073272005BAB68 /* UICountingLabel.m */; };
+		EAD91D951C073749005BAB68 /* CaloriesPieChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD91D941C073749005BAB68 /* CaloriesPieChartView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -290,6 +291,8 @@
 		EAD91D8A1C071CDF005BAB68 /* PieLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieLayer.m; sourceTree = "<group>"; };
 		EAD91D8F1C073272005BAB68 /* UICountingLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICountingLabel.h; sourceTree = "<group>"; };
 		EAD91D901C073272005BAB68 /* UICountingLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICountingLabel.m; sourceTree = "<group>"; };
+		EAD91D931C073749005BAB68 /* CaloriesPieChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaloriesPieChartView.h; sourceTree = "<group>"; };
+		EAD91D941C073749005BAB68 /* CaloriesPieChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaloriesPieChartView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -496,6 +499,7 @@
 		C34BC95C1C045250007E75CD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EAD91D921C0736C3005BAB68 /* Calories */,
 				C38E0E101C047EAD008FA999 /* PersonalDataHistogram */,
 				C34BC9691C0452B4007E75CD /* MainMenu */,
 				C34BC95D1C045250007E75CD /* MealsMenu */,
@@ -641,6 +645,15 @@
 				EAD91D901C073272005BAB68 /* UICountingLabel.m */,
 			);
 			path = UICountingLabel;
+			sourceTree = "<group>";
+		};
+		EAD91D921C0736C3005BAB68 /* Calories */ = {
+			isa = PBXGroup;
+			children = (
+				EAD91D931C073749005BAB68 /* CaloriesPieChartView.h */,
+				EAD91D941C073749005BAB68 /* CaloriesPieChartView.m */,
+			);
+			path = Calories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -834,6 +847,7 @@
 				C34BC91E1C044F88007E75CD /* MealsMenuViewController.m in Sources */,
 				C38E0E0F1C0465F0008FA999 /* Person.m in Sources */,
 				C34BC92D1C045015007E75CD /* WaterViewController.m in Sources */,
+				EAD91D951C073749005BAB68 /* CaloriesPieChartView.m in Sources */,
 				C34BC9231C044FC7007E75CD /* StartViewController.m in Sources */,
 				EAD91D8D1C071CDF005BAB68 /* PieLayer.m in Sources */,
 				EA9F65FB1C05F88B009A8F23 /* MealsMenuTableViewCell.m in Sources */,
