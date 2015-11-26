@@ -55,13 +55,17 @@
     _stepperWeight.minimumValue = 10;
     _stepperWeight.maximumValue = 250;
     _stepperWeight.stepValue = 0.1;
-    _stepperWeight.value = _person.weight;
+    _stepperWeight.value = self.person.weight;
     _stepperGrowth.minimumValue = 1;
     _stepperGrowth.maximumValue = 2.20;
     _stepperGrowth.stepValue = 0.01;
-    _stepperGrowth.value = _person.growth;
+    _stepperGrowth.value = self.person.growth;
     _dpBirthday.maximumDate = [NSDate date];
-    _dpBirthday.date = self.person.birthday;
+    if (self.person.birthday != nil) {
+        _dpBirthday.date = self.person.birthday;
+    } else {
+        _dpBirthday.date = [NSDate date];
+    }
     if ([self.person.gender isEqualToString:@"Мужской"]) {
         [_pickerGender selectRow:0 inComponent:0 animated:YES];
     } else {
