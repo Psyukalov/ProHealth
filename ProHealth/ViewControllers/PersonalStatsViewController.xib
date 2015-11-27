@@ -13,7 +13,6 @@
                 <outlet property="imageRectAvatar" destination="GX9-wg-dh1" id="2eM-d3-c3n"/>
                 <outlet property="lblName" destination="QO5-Ce-Ghe" id="CQD-ni-aGk"/>
                 <outlet property="lblStartDate" destination="obf-RL-j2W" id="TsH-G6-hXn"/>
-                <outlet property="txt" destination="WYS-NL-N1E" id="kmZ-1l-S5M"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -73,20 +72,6 @@
                                         <constraint firstAttribute="height" constant="492" id="vLI-aQ-kbG"/>
                                     </constraints>
                                 </view>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WYS-NL-N1E">
-                                    <rect key="frame" x="8" y="8" width="97" height="30"/>
-                                    <animations/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <textInputTraits key="textInputTraits"/>
-                                </textField>
-                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="baR-9C-EQv">
-                                    <rect key="frame" x="8" y="46" width="46" height="30"/>
-                                    <animations/>
-                                    <state key="normal" title="Button"/>
-                                    <connections>
-                                        <action selector="add:" destination="-1" eventType="touchUpInside" id="G9r-fi-6XU"/>
-                                    </connections>
-                                </button>
                             </subviews>
                             <animations/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
