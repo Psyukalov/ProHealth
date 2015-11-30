@@ -83,6 +83,7 @@
 		C38E0E131C047EDB008FA999 /* HistogramView.m in Sources */ = {isa = PBXBuildFile; fileRef = C38E0E121C047EDB008FA999 /* HistogramView.m */; };
 		C3F1BA9A1C04A03F005DF91B /* PersonalDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F1BA981C04A03F005DF91B /* PersonalDataViewController.m */; };
 		C3F1BA9B1C04A03F005DF91B /* PersonalDataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3F1BA991C04A03F005DF91B /* PersonalDataViewController.xib */; };
+		C703300F1C0C52D3007A4734 /* Recipes.m in Sources */ = {isa = PBXBuildFile; fileRef = C703300E1C0C52D3007A4734 /* Recipes.m */; };
 		C72CD4BF1C04ADBB00DAE3D4 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C72CD4BE1C04ADBB00DAE3D4 /* DataManager.m */; };
 		C76B5B231C06F2600035FDD9 /* Eating+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = C76B5B201C06F2600035FDD9 /* Eating+CoreDataProperties.m */; };
 		C76B5B241C06F2600035FDD9 /* Eating.m in Sources */ = {isa = PBXBuildFile; fileRef = C76B5B221C06F2600035FDD9 /* Eating.m */; };
@@ -237,6 +238,8 @@
 		C3F1BA971C04A03F005DF91B /* PersonalDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalDataViewController.h; sourceTree = "<group>"; };
 		C3F1BA981C04A03F005DF91B /* PersonalDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalDataViewController.m; sourceTree = "<group>"; };
 		C3F1BA991C04A03F005DF91B /* PersonalDataViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonalDataViewController.xib; sourceTree = "<group>"; };
+		C703300D1C0C52D3007A4734 /* Recipes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recipes.h; sourceTree = "<group>"; };
+		C703300E1C0C52D3007A4734 /* Recipes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recipes.m; sourceTree = "<group>"; };
 		C72CD4BD1C04ADBB00DAE3D4 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
 		C72CD4BE1C04ADBB00DAE3D4 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
 		C76B5B1F1C06F2600035FDD9 /* Eating+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Eating+CoreDataProperties.h"; sourceTree = "<group>"; };
@@ -384,6 +387,8 @@
 				C76B5B221C06F2600035FDD9 /* Eating.m */,
 				C38E0E0D1C0465F0008FA999 /* Person.h */,
 				C38E0E0E1C0465F0008FA999 /* Person.m */,
+				C703300D1C0C52D3007A4734 /* Recipes.h */,
+				C703300E1C0C52D3007A4734 /* Recipes.m */,
 			);
 			path = DataClasses;
 			sourceTree = "<group>";
@@ -867,6 +872,7 @@
 				EA9F65F61C05F569009A8F23 /* MainMenuViewController.m in Sources */,
 				EA68B0131C05AC9E008C22D2 /* Helper.m in Sources */,
 				C72CD4BF1C04ADBB00DAE3D4 /* DataManager.m in Sources */,
+				C703300F1C0C52D3007A4734 /* Recipes.m in Sources */,
 				C34BC9741C0455C9007E75CD /* ProHealth.xcdatamodeld in Sources */,
 				EA68B0191C05D5E1008C22D2 /* UIView+Snapshot.m in Sources */,
 				EAB43A451C0C51FF000F83F0 /* UICountingLabel.m in Sources */,
