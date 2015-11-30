@@ -7,7 +7,7 @@
 //
 
 #import "CaloriesPieChartView.h"
-
+#import "PieElement.h"
 @interface CaloriesPieChartView ()
 
 @end
@@ -15,46 +15,29 @@
 @implementation CaloriesPieChartView
 
 #pragma mark - Lifecycle
-
-- (id)init
-{
-    self = [super init];
-    if(self){
-        [self setup];
-    }
-    return self;
-}
-
-- (id)initWithCoder:(NSCoder *)aDecoder
-{
-    self = [super initWithCoder:aDecoder];
-    if(self){
-        [self setup];
-    }
-    return self;
-}
-
-- (id)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if(self){
-        [self setup];
+- (instancetype)initWithCaloriesValue:(NSInteger)caloriesValue normalValue:(NSInteger)normalValue viewWidth:(CGFloat)viewWidth {
+    if (self = [super init]) {
+        [self setupWithCaloriesValue:caloriesValue normalValue:normalValue viewWidth:viewWidth];
     }
     return self;
 }
 
 #pragma mark - Setup 
 
-- (void)setup
+- (void)setupWithCaloriesValue:(NSInteger)caloriesValue normalValue:(NSInteger)normalValue viewWidth:(CGFloat)viewWidth
 {
-    self.layer.maxRadius = 220;
-    self.layer.minRadius = 220 - kCaloriesPieChartViewDefaultCircleWidth;
-    self.layer.animationDuration = 0.6;
+    self.layer.maxRadius = viewWidth - kCaloriesPieChartViewMargins;
+    self.layer.minRadius = self.layer.maxRadius - kCaloriesPieChartViewDefaultCircleWidth;
+    self.layer.animationDuration = kCaloriesPieChartViewAnimationDuration;
     self.layer.showTitles = ShowTitlesNever;
     if ([self.layer.self respondsToSelector:@selector(setContentsScale:)])
     {
         self.layer.contentsScale = [[UIScreen mainScreen] scale];
     }
+    PieElement *calories = [PieElement pieElementWithValue:20 color:kCaloriesPieChartViewFillColor];
+    PieElement *full = [PieElement pieElementWithValue:30 color:kCaloriesPieChartViewResultColor];
+    
+    [self.layer insertValues:@[calories, full] atIndexes:@[@(0), @(1)] animated:YES];
 }
 
 

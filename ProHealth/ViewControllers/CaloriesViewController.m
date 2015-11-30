@@ -7,8 +7,11 @@
 //
 
 #import "CaloriesViewController.h"
+#import "CaloriesPieChartView.h"
 
 @interface CaloriesViewController ()
+
+@property (assign, nonatomic) BOOL hasViewSize;
 
 @end
 
@@ -28,8 +31,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    if (!self.hasViewSize) {
+        [self.view layoutIfNeeded];
+        NSLog(@"calories frame::%@", NSStringFromCGRect(self.view.frame));
+        CaloriesPieChartView *caloriesPieChartView = [[CaloriesPieChartView alloc] initWithCaloriesValue:10 normalValue:20 viewWidth:314];
+        caloriesPieChartView.translatesAutoresizingMaskIntoConstraints = NO;
+        [self.view addSubview:caloriesPieChartView];
+        [self.view addConstraints:@[[NSLayoutConstraint constraintWithItem:caloriesPieChartView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterX multiplier:1 constant:0]]];
+        self.hasViewSize = YES;
+    }
+}
 
 @end

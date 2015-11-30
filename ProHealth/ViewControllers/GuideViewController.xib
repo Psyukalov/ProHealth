@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GuideViewController">
             <connections>
                 <outlet property="btnStart" destination="XkP-Go-Aom" id="xUb-Eq-V2Y"/>
+                <outlet property="countingLabel" destination="FCC-8m-SFr" id="DjX-Wy-Tzd"/>
                 <outlet property="imgBackground" destination="deq-gj-PaK" id="2d0-DA-Ygo"/>
                 <outlet property="lblCaption" destination="2y9-Uk-Wr9" id="R2i-Mj-Jkx"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -48,6 +49,14 @@
                         <action selector="btnStart_Tap:" destination="-1" eventType="touchUpInside" id="OHh-1o-yfN"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FCC-8m-SFr" customClass="UICountingLabel">
+                    <rect key="frame" x="42" y="124" width="331" height="184"/>
+                    <animations/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="40"/>
+                    <color key="textColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <animations/>
             <color key="backgroundColor" red="0.17254901960784313" green="0.24313725490196078" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
