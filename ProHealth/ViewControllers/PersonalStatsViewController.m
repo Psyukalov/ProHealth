@@ -34,6 +34,8 @@
 
 @implementation PersonalStatsViewController
 
+#pragma mark - Lifecycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.context = [DataManager sharedManager];
@@ -75,14 +77,7 @@
     [self drawHistogram:[self getArrayFromTag:0]];
 }
 
-- (void)btnSettings_Tab:(UIBarButtonItem *)sender {
-    SettingsViewController *settingsVC = [[SettingsViewController alloc] init];
-    [self.navigationController pushViewController:settingsVC animated:YES];
-}
-
-- (void)btnRequestFromButtonTag:(UIButton *)button {
-    [self drawHistogram:[self getArrayFromTag:button.tag]];
-}
+#pragma mark - Custom methods
 
 - (NSArray *)getArrayFromTag:(int)tag {
     NSDateComponents *dateComponent = [[NSDateComponents alloc] init];
@@ -134,6 +129,17 @@
                                                        withUpBorder:8
                                                       andLeftBorder:8];
     [_histogramView insertSubview:histogram atIndex:0];
+}
+
+#pragma mark - Actions
+
+- (void)btnSettings_Tab:(UIBarButtonItem *)sender {
+    SettingsViewController *settingsVC = [[SettingsViewController alloc] init];
+    [self.navigationController pushViewController:settingsVC animated:YES];
+}
+
+- (void)btnRequestFromButtonTag:(UIButton *)button {
+    [self drawHistogram:[self getArrayFromTag:button.tag]];
 }
 
 @end

@@ -6,8 +6,17 @@
 //  Copyright © 2015 Natalia Zubareva. All rights reserved.
 //
 
+
 #import <Foundation/Foundation.h>
 
+
 @interface Recipes : NSObject
+
+@property (assign, nonatomic) NSInteger identifier;
+@property (strong, nonatomic) NSString *name;
+@property (strong, nonatomic) NSString *imagePathURL;
+@property (strong, nonatomic) NSString *formula;
+@property (strong, nonatomic) NSMutableDictionary *ingredients;
+@property (strong, nonatomic) NSMutableDictionary *nutritional;
 
 @end
