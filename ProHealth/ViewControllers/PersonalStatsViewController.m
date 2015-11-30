@@ -19,6 +19,7 @@
 @property (strong, nonatomic) Person *person;
 @property (strong, nonatomic) DataManager *context;
 @property (strong, nonatomic) NSCalendar *calendar;
+@property (strong, nonatomic) NSDate *date;
 @property (strong, nonatomic) NSMutableArray *calories;
 @property (weak, nonatomic) IBOutlet UIView *contentView;
 @property (weak, nonatomic) IBOutlet UIView *histogramView;
@@ -26,6 +27,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageCircleAvatar;
 @property (weak, nonatomic) IBOutlet UILabel *lblName;
 @property (weak, nonatomic) IBOutlet UILabel *lblStartDate;
+@property (weak, nonatomic) IBOutlet UILabel *lblEmptyDB;
 
 @end
 
@@ -37,6 +39,8 @@
     self.context = [DataManager sharedManager];
     [self.context managedObjectContext];
     self.calendar = [NSCalendar currentCalendar];
+    NSDateComponents *components = [[NSCalendar currentCalendar] components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:[NSDate date]];
+    self.date = [[NSCalendar currentCalendar] dateFromComponents:components];
     UIBarButtonItem *btnSetting = [[UIBarButtonItem alloc] init];
     [btnSetting setImage:[UIImage imageNamed:@"gear.png"]];
     [btnSetting setAction:@selector(btnSettings_Tab:)];
@@ -68,63 +72,8 @@
         [newButton setTitleColor:RGB(44, 62, 80) forState:UIControlStateNormal];
         [_histogramView insertSubview:newButton atIndex:1];
     }
-    
-//    NSArray *values = @[@3200, @3300, @3400, @3255, @3600, @3200, @2900, @3100, @3000, @3200, @3350, @3150];
-////    HistogramView *histogram = [[HistogramView alloc] initWithFrame:_histogramView.bounds];
-////    histogram.width = [UIScreen mainScreen].bounds.size.width - 40;
-////    histogram.minTitleValue = 1200;
-////    histogram.barDelta = 0;
-////    histogram.firstColor = RGB(1, 225, 255);
-////    histogram.secondColor = RGB(0, 209, 239);
-////    histogram.upBorder = 8;
-////    histogram.leftBorder = 8;
-//    HistogramView *histogram = [[HistogramView alloc] initWithFrame:_histogramView.bounds
-//                                                     histogramWidth:[UIScreen mainScreen].bounds.size.width - 40
-//                                                             values:values maxValue:5000
-//                                                      minTitleValue:1200
-//                                                           barDelta:0
-//                                                         firstColor:RGB(1, 225, 255)
-//                                                        secondColor:RGB(0, 209, 239)
-//                                                       withUpBorder:8
-//                                                      andLeftBorder:8];
-////    [histogram drawWithValues:values];
-//    [_histogramView insertSubview:histogram atIndex:0];
+    [self drawHistogram:[self getArrayFromTag:0]];
 }
-
-//- (IBAction)add:(id)sender {
-//    NSManagedObject *newCal = [NSEntityDescription insertNewObjectForEntityForName:@"Eating" inManagedObjectContext:self.context.managedObjectContext];
-//    
-//    NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
-//    f.numberStyle = NSNumberFormatterDecimalStyle;
-//    NSNumber *myNumber = [f numberFromString:_txt.text];
-//    
-//    [newCal setValue:myNumber forKey:@"calories"];
-//    [newCal setValue:[NSDate date] forKey:@"date"];
-//    [self.context saveContext];
-//    NSFetchRequest *req = [[NSFetchRequest alloc] initWithEntityName:@"Eating"];
-//    self.calories = [[self.context.managedObjectContext executeFetchRequest:req error:nil] mutableCopy];
-//    NSMutableArray *res = [[NSMutableArray alloc] init];
-//    for (int i = 0; i <= self.calories.count - 1; i++) {
-//        Eating *getCal = [self.calories objectAtIndex:i];
-//        [getCal valueForKey:@"calories"];
-//        [res addObject:getCal];
-//    }
-//    NSLog(@"%@", res);
-////    if (res.count > 0 ) {
-////    HistogramView *histogram = [[HistogramView alloc] initWithFrame:_histogramView.bounds
-////                                                     histogramWidth:[UIScreen mainScreen].bounds.size.width - 40
-////                                                             values:res
-////                                                           maxValue:5000
-////                                                      minTitleValue:1200
-////                                                           barDelta:0
-////                                                         firstColor:RGB(1, 225, 255)
-////                                                        secondColor:RGB(0, 209, 239)
-////                                                       withUpBorder:8
-////                                                      andLeftBorder:8];
-////    //    [histogram drawWithValues:values];
-////    [_histogramView insertSubview:histogram atIndex:0];
-////    }
-//}
 
 - (void)btnSettings_Tab:(UIBarButtonItem *)sender {
     SettingsViewController *settingsVC = [[SettingsViewController alloc] init];
@@ -132,9 +81,13 @@
 }
 
 - (void)btnRequestFromButtonTag:(UIButton *)button {
+    [self drawHistogram:[self getArrayFromTag:button.tag]];
+}
+
+- (NSArray *)getArrayFromTag:(int)tag {
     NSDateComponents *dateComponent = [[NSDateComponents alloc] init];
     NSDate *newDate;
-    switch (button.tag) {
+    switch (tag) {
         case 0:
             dateComponent.day = 0;
             break;
@@ -150,20 +103,37 @@
         default:
             break;
     }
-    NSLog(@"%@ %@", self.calories, newDate);
     NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Eating"];
-    newDate = [self.calendar dateByAddingComponents:dateComponent toDate:[NSDate date] options:0];
+    newDate = [self.calendar dateByAddingComponents:dateComponent toDate:self.date options:0];
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"date >= %@", newDate];
     [request setPredicate:predicate];
     self.calories = [[self.context.managedObjectContext executeFetchRequest:request error:nil] mutableCopy];
-    
-    NSMutableArray *res = [[NSMutableArray alloc] init];
-    for (int i = 0; i <= self.calories.count - 1; i++) {
-        Eating *getCal = [self.calories objectAtIndex:i];
-        [getCal valueForKey:@"calories"];
-        [res addObject:getCal];
+    NSMutableArray *result = [[NSMutableArray alloc] init];
+    if (self.calories.count > 0) {
+        for (int i = 0; i <= self.calories.count - 1; i++) {
+            Eating *getCal = self.calories[i];
+            [result addObject:getCal.calories];
+        }
     }
-    NSLog(@"%@", res);
+    return result;
+}
+
+- (void)drawHistogram:(NSArray *)values {
+    if (values.count == 0) {
+        [_lblEmptyDB setText:@"Данных еще нет"];
+        return;
+    }
+    HistogramView *histogram = [[HistogramView alloc] initWithFrame:_histogramView.bounds
+                                                     histogramWidth:[UIScreen mainScreen].bounds.size.width - 40
+                                                             values:values
+                                                           maxValue:600
+                                                      minTitleValue:100
+                                                           barDelta:0
+                                                         firstColor:RGB(1, 225, 255)
+                                                        secondColor:RGB(0, 209, 239)
+                                                       withUpBorder:8
+                                                      andLeftBorder:8];
+    [_histogramView insertSubview:histogram atIndex:0];
 }
 
 @end

@@ -11,6 +11,7 @@
                 <outlet property="histogramView" destination="zXa-xO-Vx3" id="H7O-Jw-xTr"/>
                 <outlet property="imageCircleAvatar" destination="rtb-o1-Goc" id="tw3-3g-VFY"/>
                 <outlet property="imageRectAvatar" destination="GX9-wg-dh1" id="2eM-d3-c3n"/>
+                <outlet property="lblEmptyDB" destination="otw-y3-XoT" id="VtZ-AO-iTW"/>
                 <outlet property="lblName" destination="QO5-Ce-Ghe" id="CQD-ni-aGk"/>
                 <outlet property="lblStartDate" destination="obf-RL-j2W" id="TsH-G6-hXn"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -66,9 +67,24 @@
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zXa-xO-Vx3" userLabel="Histogram View">
                                     <rect key="frame" x="0.0" y="204" width="374" height="492"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="otw-y3-XoT">
+                                            <rect key="frame" x="123" y="235" width="128" height="21"/>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="128" id="2jl-aR-wdH"/>
+                                                <constraint firstAttribute="height" constant="21" id="o0h-AW-IAi"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                     <animations/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
+                                        <constraint firstItem="otw-y3-XoT" firstAttribute="centerX" secondItem="zXa-xO-Vx3" secondAttribute="centerX" id="J1c-i3-jK6"/>
+                                        <constraint firstItem="otw-y3-XoT" firstAttribute="top" secondItem="zXa-xO-Vx3" secondAttribute="top" constant="235" id="ar4-PK-bLh"/>
                                         <constraint firstAttribute="height" constant="492" id="vLI-aQ-kbG"/>
                                     </constraints>
                                 </view>
