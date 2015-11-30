@@ -13,6 +13,10 @@
 
 + (void)applyCornerRadius:(CGFloat)cornerRadius forViews:(nonnull NSArray<UIView *> *)views;
 
-+ (void)applyCornerRadius:(CGFloat)cornerRadius forButtons:(nonnull NSArray<UIButton *> *)buttons;
++ (void)applyTransparentLayerFormImage:(nonnull UIImageView *)image withColor:(nonnull UIColor *)color;
+
++ (nonnull NSString *)applyRussianStyleForDate:(nonnull NSDate *)date;
+
++ (void)applyShadowForViews:(nonnull NSArray<UIView *> *)views;
 
 @end

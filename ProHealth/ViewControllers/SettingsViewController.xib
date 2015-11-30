@@ -40,7 +40,7 @@
                                         <constraint firstAttribute="height" constant="188" id="Mem-K7-6qZ"/>
                                     </constraints>
                                 </imageView>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zrz-p4-JQz" userLabel="circle avatar">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zrz-p4-JQz" userLabel="circle avatar">
                                     <rect key="frame" x="141" y="16" width="92" height="92"/>
                                     <animations/>
                                     <constraints>
@@ -56,6 +56,17 @@
                                         <constraint firstAttribute="height" constant="21" id="u3n-iL-1S7"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Мы вместе с 01.01.2000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1JD-Ge-pWS">
+                                    <rect key="frame" x="106" y="145" width="162" height="21"/>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="21" id="QMO-yC-eED"/>
+                                        <constraint firstAttribute="width" constant="162" id="hRL-pT-Dt7"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="14"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -179,17 +190,6 @@
                                         <action selector="btnChangeAvatar_Tab:" destination="-1" eventType="touchUpInside" id="XMI-hR-iwW"/>
                                     </connections>
                                 </button>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Мы вместе с 01.01.2000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1JD-Ge-pWS">
-                                    <rect key="frame" x="106" y="145" width="162" height="21"/>
-                                    <animations/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="21" id="QMO-yC-eED"/>
-                                        <constraint firstAttribute="width" constant="162" id="hRL-pT-Dt7"/>
-                                    </constraints>
-                                    <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="14"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Li2-2C-zf2">
                                     <rect key="frame" x="30" y="574" width="314" height="82"/>
                                     <animations/>

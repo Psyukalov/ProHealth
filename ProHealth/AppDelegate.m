@@ -7,11 +7,10 @@
 //
 
 #import "AppDelegate.h"
-#import "MealsMenuViewController.h"
+#import "MainMenuViewController.h"
+#import "PersonalStatsViewController.h"
 #import "SettingsViewController.h"
 #import "DataManager.h"
-#import "GuideViewController.h"
-#import "CaloriesViewController.h"
 
 @interface AppDelegate ()
 
@@ -23,11 +22,11 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
-    CaloriesViewController *guideVC = [[CaloriesViewController alloc] init];
-    UINavigationController *navigationVC = [[UINavigationController alloc] initWithRootViewController:guideVC];
-    //navigationVC.navigationBar.translucent = NO;
+//    MainMenuViewController *mainMenuVC = [[MainMenuViewController alloc] init];
+    PersonalStatsViewController *personalStatsVC = [[PersonalStatsViewController alloc] init];
+    UINavigationController *navigationVC = [[UINavigationController alloc] initWithRootViewController:personalStatsVC];
+    navigationVC.navigationBar.translucent = NO;
     self.window.rootViewController = navigationVC;
-    [self applyDesign];
     [self.window makeKeyAndVisible];
     return YES;
 }
