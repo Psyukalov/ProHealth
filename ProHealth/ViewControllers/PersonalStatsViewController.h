@@ -15,7 +15,7 @@
 
 @interface PersonalStatsViewController : UIViewController
 
-- (NSArray *)getArrayFromTag:(int)tag;
+- (NSArray *)getArrayFromTag:(NSInteger)tag;
 - (void)drawHistogram:(NSArray *)values;
 
 @end
