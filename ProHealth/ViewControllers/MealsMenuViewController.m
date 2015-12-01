@@ -37,7 +37,7 @@ static const NSInteger kMenuItemsCount = 4;
     if (!self.menuItemNames)
         self.menuItemNames = [NSMutableArray array];
     for (int i = 1; i <= kMenuItemsCount; ++i) {
-        NSString *localizableKey = [NSString stringWithFormat:@"MainMenu.Item.%d", i];
+        NSString *localizableKey = [NSString stringWithFormat:@"MealsMenu.Item.%d", i];
         [self.menuItemNames addObject:NSLocalizedString(localizableKey, nil)];
     }
     self.menuItemImages = @[@"menu_breakfast", @"menu_second_breakfast", @"menu_lunch", @"menu_dinner"];

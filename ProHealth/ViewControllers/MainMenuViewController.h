@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MainMenuViewController : UIViewController
+static const NSInteger kMainMenuItemsCount = 6;
 
+@interface MainMenuViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
+@property (strong, nonatomic) UIImage *snapshotImage;
 @end

@@ -11,5 +11,6 @@
 @interface UIView (Snapshot)
 
 - (UIImage *)takeSnapshot;
-- (UIImage *)blurredSnapshot;
+- (UIImage *)blurredSnapshotWithRadius:(CGFloat)radius tintColor:(UIColor *)tintColor;
+
 @end

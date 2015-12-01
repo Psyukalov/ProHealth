@@ -8,16 +8,33 @@
 
 #import "MainMenuTableViewCell.h"
 
+@interface MainMenuTableViewCell ()
+
+@property (weak, nonatomic) IBOutlet UILabel *labelTitle;
+
+@end
+
 @implementation MainMenuTableViewCell
 
-- (void)awakeFromNib {
-    // Initialization code
+#pragma mark - Lifecycle
+
+- (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated {
+    [super setHighlighted:highlighted animated:animated];
+    
+    self.contentView.backgroundColor = highlighted ? [UIColor whiteColor] : [UIColor clearColor];
+    self.labelTitle.textColor = highlighted ? RGB(44, 80, 62) : [UIColor whiteColor];
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
+- (void)setTitle:(NSString *)title {
+    _title = title;
+    
+    // Setup UI
+    self.labelTitle.text = title;
+}
 
-    // Configure the view for the selected state
+#pragma mark - Static methods
++ (void)registerFor:(UITableView *)tableView {
+    [tableView registerNib:[UINib nibWithNibName:NSStringFromClass([self class]) bundle:nil] forCellReuseIdentifier:kMainMenuTableViewCellReuseID];
 }
 
 @end

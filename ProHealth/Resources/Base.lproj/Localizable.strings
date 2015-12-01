@@ -21,11 +21,16 @@
 
 /* StartViewController */
 
+/* MealsMenuViewController */
+"MealsMenu.Item.1" = "ЗАВТРАК";
+"MealsMenu.Item.2" = "ВТОРОЙ ЗАВТРАК";
+"MealsMenu.Item.3" = "ОБЕД";
+"MealsMenu.Item.4" = "УЖИН";
+
 /* MainMenuViewController */
-"MainMenu.Item.1" = "ЗАВТРАК";
-"MainMenu.Item.2" = "ВТОРОЙ ЗАВТРАК";
-"MainMenu.Item.3" = "ОБЕД";
-"MainMenu.Item.4" = "УЖИН";
-
-
-
+"MainMenu.Item.1" = "РЕЦЕПТЫ";
+"MainMenu.Item.2" = "УПРАЖНЕНИЯ";
+"MainMenu.Item.3" = "СОВЕТЫ";
+"MainMenu.Item.4" = "КОНСУЛЬТАЦИЯ";
+"MainMenu.Item.5" = "ЛИЧНЫЙ КАБИНЕТ";
+"MainMenu.Item.6" = "ПОМОЩЬ";

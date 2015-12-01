@@ -7,6 +7,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainMenuViewController">
             <connections>
+                <outlet property="buttonClose" destination="TSa-uX-8ia" id="xBd-kh-5oc"/>
+                <outlet property="imgSnapshotView" destination="ulj-sh-hfI" id="0jd-fv-Qf5"/>
+                <outlet property="tableMenu" destination="9QA-3x-R8o" id="okO-42-R6S"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -14,10 +17,55 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ulj-sh-hfI">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <animations/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TSa-uX-8ia" userLabel="Button - Close">
+                    <rect key="frame" x="317" y="40" width="44" height="44"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="F68-e1-au6"/>
+                        <constraint firstAttribute="height" constant="44" id="U8L-YE-gun"/>
+                    </constraints>
+                    <state key="normal" image="cancel.png"/>
+                    <connections>
+                        <action selector="buttonClose_Tap:" destination="-1" eventType="touchUpInside" id="f8G-1l-u0O"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="67" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9QA-3x-R8o" userLabel="Table View - Menu">
+                    <rect key="frame" x="77" y="163" width="298" height="474"/>
+                    <animations/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="luK-En-gET"/>
+                        <outlet property="delegate" destination="-1" id="mh5-mw-vff"/>
+                    </connections>
+                </tableView>
+            </subviews>
             <animations/>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="9QA-3x-R8o" secondAttribute="bottom" constant="30" id="2ZK-ek-Gfe"/>
+                <constraint firstAttribute="bottom" secondItem="ulj-sh-hfI" secondAttribute="bottom" id="6Md-sI-6OC"/>
+                <constraint firstItem="9QA-3x-R8o" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="163" id="8gj-Xc-4fr"/>
+                <constraint firstItem="TSa-uX-8ia" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="F6E-Hk-ond"/>
+                <constraint firstAttribute="trailing" secondItem="9QA-3x-R8o" secondAttribute="trailing" id="ZTo-Yp-N34"/>
+                <constraint firstAttribute="trailing" secondItem="ulj-sh-hfI" secondAttribute="trailing" id="ca5-0Q-ibB"/>
+                <constraint firstItem="ulj-sh-hfI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="cnF-ON-mjl"/>
+                <constraint firstItem="9QA-3x-R8o" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="77" id="q0A-Yq-dSh"/>
+                <constraint firstItem="ulj-sh-hfI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="xAT-Cn-3Qw"/>
+                <constraint firstAttribute="trailing" secondItem="TSa-uX-8ia" secondAttribute="trailing" constant="14" id="xaO-dH-9k7"/>
+            </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
             <point key="canvasLocation" x="589" y="432"/>
         </view>
     </objects>
+    <resources>
+        <image name="cancel.png" width="25" height="25"/>
+    </resources>
 </document>

@@ -10,12 +10,16 @@
 #import "CaloriesPieChartView.h"
 #import "PieElement.h"
 #import "UICountingLabel.h"
+#import "Helper.h"
+#import "MainMenuViewController.h"
+#import "UIView+Snapshot.h"
 
 @interface CaloriesViewController ()
 
 @property (assign, nonatomic) BOOL hasViewSize;
 @property (strong, nonatomic) IBOutlet CaloriesPieChartView *caloriesPieChartView;
 @property (weak, nonatomic) IBOutlet UICountingLabel *labelCalories;
+@property (weak, nonatomic) IBOutlet UIButton *buttonAdd;
 
 @end
 
@@ -38,6 +42,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [Helper applyCornerRadius:self.buttonAdd.bounds.size.width / 2 forViews:@[self.buttonAdd]];
     self.labelCalories.format = @"%d\nккал";
     self.labelCalories.method = UILabelCountingMethodLinear;
     self.caloriesPieChartView.alpha = 0.0f;
@@ -54,23 +59,15 @@
 
 }
 
-- (void)viewDidLayoutSubviews {
-    [super viewDidLayoutSubviews];
-    if (!self.hasViewSize) {
-        self.hasViewSize = YES;
-
-        
-    }
-
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
- 
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
+- (IBAction)buttonAdd_Tap:(UIButton *)sender {
+    UIWindow *mainWindow = [[UIApplication sharedApplication].delegate window];
+    UIColor *tintColor = RGBAlpha(44, 62, 80, 0.84);//[UIColor colorWithRed:44/255.0f green:62/255.0f blue:80/255.0f alpha:0.84];
+    UIImage *snapshot = [mainWindow blurredSnapshotWithRadius:4.0f tintColor:tintColor];
+    MainMenuViewController *mainMenuVC = [[MainMenuViewController alloc] init];
+    mainMenuVC.snapshotImage = snapshot;
+    mainMenuVC.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+    mainMenuVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    [self presentViewController:mainMenuVC animated:YES completion:nil];
 }
 
 @end

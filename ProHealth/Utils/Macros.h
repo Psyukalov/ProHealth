@@ -19,6 +19,10 @@
 	#define RGB(r, g, b) [UIColor colorWithRed:(r)/255.f green:(g)/255.f blue:(b)/255.f  alpha:1.0]
 #endif
 
+#ifndef RGBAlpha
+    #define RGBAlpha(r, g, b, a) [UIColor colorWithRed:(r)/255.f green:(g)/255.f blue:(b)/255.f  alpha:(a)]
+#endif
+
 #ifndef resizableImage
 /**
  Resize image to container size by using fixed offsets (top, left, bottom, right)

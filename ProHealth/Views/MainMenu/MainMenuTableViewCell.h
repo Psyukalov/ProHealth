@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+#define kMainMenuTableViewCellReuseID @"MainMenuTableViewCell"
+
 @interface MainMenuTableViewCell : UITableViewCell
+
+@property (strong, nonatomic) NSString *title;
+
++ (void)registerFor:(UITableView *)tableView;
+
 
 @end
