@@ -23,9 +23,9 @@
     return image;
 }
 
-- (UIImage *)blurredSnapshot {
+- (UIImage *)blurredSnapshotWithRadius:(CGFloat)radius tintColor:(UIColor *)tintColor {
     UIImage *snapshotImage = [self takeSnapshot];
-    UIImage *blurredSnapshot = [UIImageEffects imageByApplyingBlurToImage:snapshotImage withRadius:10.0f tintColor:RGBA(44, 62, 80, 0.5) saturationDeltaFactor:1.0f maskImage:nil];
+    UIImage *blurredSnapshot = [UIImageEffects imageByApplyingBlurToImage:snapshotImage withRadius:radius tintColor:tintColor saturationDeltaFactor:1.0f maskImage:nil];
     return blurredSnapshot;
 }
 @end
