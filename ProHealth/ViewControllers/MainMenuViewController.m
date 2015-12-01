@@ -56,7 +56,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // TODO: go to other controller
+    // there will be routing code for loading controllers
 }
+
 #pragma mark - Actions
 
 - (IBAction)buttonClose_Tap:(UIButton *)sender {
