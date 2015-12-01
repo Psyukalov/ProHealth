@@ -6,8 +6,14 @@
 //  Copyright © 2015 Natalia Zubareva. All rights reserved.
 //
 
+
 #import <UIKit/UIKit.h>
+#import "Recipes.h"
+
 
 @interface RecipeDetailsViewController : UIViewController
+
+- (void)playAnimationForView:(UIView *)view
+              WithTransition:(UIViewAnimationTransition)transition;
 
 @end
