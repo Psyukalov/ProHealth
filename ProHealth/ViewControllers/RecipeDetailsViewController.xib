@@ -87,10 +87,10 @@
                                     <rect key="frame" x="0.0" y="421" width="374" height="128"/>
                                     <animations/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <mutableString key="text"> Фасоль, нут, чечевицу, киноа для салатовтиспользуйте каждый день, особенно в пост.
+                                    <string key="text"> Фасоль, нут, чечевицу, киноа для салатовтиспользуйте каждый день, особенно в пост.
 
  Фасоль фонсервированную использовать не рекомендую, желательно отваривать бобы самим. Кукурузу не использовать, горошек консервированный очень редко. 
- Огурцы малосольные, квашеную капусту, по настроению.</mutableString>
+ Огурцы малосольные, квашеную капусту, по настроению.</string>
                                     <color key="textColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>

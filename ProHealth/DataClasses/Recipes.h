@@ -16,7 +16,7 @@
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSString *imagePathURL;
 @property (strong, nonatomic) NSString *formula;
-@property (strong, nonatomic) NSMutableDictionary *ingredients;
-@property (strong, nonatomic) NSMutableDictionary *nutritional;
+@property (strong, nonatomic) NSMutableArray <NSDictionary *> *ingredients;
+@property (strong, nonatomic) NSMutableArray <NSDictionary *> *nutritional;
 
 @end

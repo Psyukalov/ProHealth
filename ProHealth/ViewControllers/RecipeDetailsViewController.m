@@ -41,12 +41,11 @@
     self.recipe.name = @"САЛАТ С МОРКОВКОЙ";
     self.recipe.imagePathURL = @"https://semseo.md/images/https2210.jpg";
     self.recipe.formula = @"Фасоль, нут, чечевицу, киноа для салатовтиспользуйте каждый день, особенно в пост.";
-    self.recipe.nutritional = [[NSMutableDictionary alloc] init];
-    [self.recipe.nutritional setObject:[NSNumber numberWithInt:100] forKey:@"Калории"];
-    [self.recipe.nutritional setObject:[NSNumber numberWithInt:200] forKey:@"Жиры"];
-    [self.recipe.nutritional setObject:[NSNumber numberWithInt:300] forKey:@"Углеводы"];
-    //
-    
+    self.recipe.nutritional = [[NSMutableArray alloc] init];
+    [self.recipe.nutritional addObject:[NSDictionary dictionaryWithObject:[NSNumber numberWithInt:100] forKey:@"Калории"]];
+    [self.recipe.nutritional addObject:[NSDictionary dictionaryWithObject:[NSNumber numberWithInt:200] forKey:@"Жиры"]];
+    [self.recipe.nutritional addObject:[NSDictionary dictionaryWithObject:[NSNumber numberWithInt:300] forKey:@"Углеводы"]];
+    [self.recipe.nutritional addObject:[NSDictionary dictionaryWithObject:[NSNumber numberWithInt:400] forKey:@"Белки"]];
     [Helper applyCornerRadius:6 forViews:@[_contentView]];
     [Helper applyCornerRadius:_btnMoreInfo.frame.size.width / 2 forViews:@[_btnMoreInfo, _btnAcceptRecipe]];
     [_lblName setText:self.recipe.name];
@@ -68,11 +67,11 @@
         UILabel *newLblIngridient = [[UILabel alloc] initWithFrame:self.nutritionalView.bounds];
         [newLblIngridient setTextColor:RGB(255, 255, 255)];
         [newLblIngridient setFrame:CGRectMake(x, i * y + (i - 1) * height, width, height)];
-        [newLblIngridient setText:self.recipe.nutritional.allKeys[i - 1]];
+        [newLblIngridient setText:self.recipe.nutritional[i - 1].allKeys[0]];
         UILabel *newLblIngridientWeight = [[UILabel alloc] initWithFrame:self.nutritionalView.bounds];
         [newLblIngridientWeight setTextColor:RGB(255, 255, 255)];
         [newLblIngridientWeight setFrame:CGRectMake(SCREEN_WIDTH - 16 - width, i * y + (i - 1) * height, width, height)];
-        [newLblIngridientWeight setText:[NSString stringWithFormat:@"%@ г", self.recipe.nutritional.allValues[i - 1]]];
+        [newLblIngridientWeight setText:[NSString stringWithFormat:@"%@ г", self.recipe.nutritional[i - 1].allValues[0]]];
         [self.nutritionalView insertSubview:newLblIngridient atIndex:0];
         [self.nutritionalView insertSubview:newLblIngridientWeight atIndex:1];
     }
@@ -117,7 +116,7 @@
 - (IBAction)btnAcceptRecipe_Tab:(id)sender {
     NSManagedObject *newCalories = [NSEntityDescription insertNewObjectForEntityForName:@"Eating"
                                                                  inManagedObjectContext:self.context.managedObjectContext];
-    [newCalories setValue:self.recipe.nutritional[@"Калории"] forKey:@"calories"];
+    [newCalories setValue:self.recipe.nutritional[0][@"Калории"] forKey:@"calories"];
     [newCalories setValue:[NSDate date] forKey:@"date"];
     [self.context saveContext];
 }
