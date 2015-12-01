@@ -10,11 +10,13 @@
                 <outlet property="btnAcceptRecipe" destination="IMv-A8-TqS" id="aV8-Gi-gAt"/>
                 <outlet property="btnMoreInfo" destination="mxr-eX-cJc" id="f39-jc-js5"/>
                 <outlet property="contentImageView" destination="9pM-fI-Rcq" id="kfa-7L-UJA"/>
-                <outlet property="contentIngridientView" destination="dMo-KG-hbH" id="ewe-fz-Wz2"/>
+                <outlet property="contentIngridientView" destination="439-Xi-ja7" id="k3v-qv-pKi"/>
                 <outlet property="contentView" destination="8ep-zl-ghp" id="bzF-jr-YAn"/>
+                <outlet property="heightConstrIngridientsView" destination="z6f-eF-DPm" id="WHu-gs-9iQ"/>
+                <outlet property="heigntConstrMainContentView" destination="GFG-ol-TgZ" id="jVh-45-LeO"/>
                 <outlet property="imageRecipe" destination="Wy9-UQ-qd3" id="Mfk-CV-pj3"/>
                 <outlet property="lblName" destination="a7B-kH-5Ms" id="Bwl-ky-FZN"/>
-                <outlet property="textFormula" destination="G2E-1L-aOS" id="iCR-rL-0dG"/>
+                <outlet property="textFormula" destination="BVq-Zv-BMk" id="Fu7-7t-eoH"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -76,23 +78,32 @@
                                         <constraint firstItem="Wy9-UQ-qd3" firstAttribute="leading" secondItem="9pM-fI-Rcq" secondAttribute="leading" id="z7F-T7-Uvw"/>
                                     </constraints>
                                 </view>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="РЕЦЕПТ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6y-fe-rWT">
-                                    <rect key="frame" x="139" y="392" width="96" height="21"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="439-Xi-ja7" userLabel="Content View - Ingridients">
+                                    <rect key="frame" x="0.0" y="248" width="374" height="100"/>
                                     <animations/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="100" id="z6f-eF-DPm"/>
+                                    </constraints>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="РЕЦЕПТ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcr-Mn-mci">
+                                    <rect key="frame" x="150" y="356" width="74" height="21"/>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="74" id="E2c-ew-SDY"/>
+                                        <constraint firstAttribute="height" constant="21" id="lvT-v4-40u"/>
+                                    </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                     <color key="textColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="G2E-1L-aOS">
-                                    <rect key="frame" x="0.0" y="421" width="374" height="128"/>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" verticalHuggingPriority="750" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BVq-Zv-BMk">
+                                    <rect key="frame" x="0.0" y="385" width="374" height="157"/>
                                     <animations/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <string key="text"> Фасоль, нут, чечевицу, киноа для салатовтиспользуйте каждый день, особенно в пост.
-
- Фасоль фонсервированную использовать не рекомендую, желательно отваривать бобы самим. Кукурузу не использовать, горошек консервированный очень редко. 
- Огурцы малосольные, квашеную капусту, по настроению.</string>
+                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                     <color key="textColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 </textView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IMv-A8-TqS">
@@ -108,22 +119,30 @@
                                         <action selector="btnAcceptRecipe_Tab:" destination="-1" eventType="touchUpInside" id="BJV-OS-Cn0"/>
                                     </connections>
                                 </button>
-                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dMo-KG-hbH" userLabel="Content View - Ingridients">
-                                    <rect key="frame" x="0.0" y="248" width="374" height="128"/>
-                                    <animations/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </view>
                             </subviews>
                             <animations/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstItem="9pM-fI-Rcq" firstAttribute="top" secondItem="8ep-zl-ghp" secondAttribute="top" id="0X1-3O-HUU"/>
+                                <constraint firstItem="439-Xi-ja7" firstAttribute="top" secondItem="9pM-fI-Rcq" secondAttribute="bottom" constant="8" id="5Fh-cf-IWI"/>
                                 <constraint firstAttribute="trailing" secondItem="9pM-fI-Rcq" secondAttribute="trailing" id="7re-cO-koa"/>
+                                <constraint firstItem="BVq-Zv-BMk" firstAttribute="centerX" secondItem="8ep-zl-ghp" secondAttribute="centerX" id="8Od-w9-0Mq"/>
+                                <constraint firstItem="hcr-Mn-mci" firstAttribute="centerX" secondItem="8ep-zl-ghp" secondAttribute="centerX" id="8no-3W-nBT"/>
                                 <constraint firstAttribute="height" constant="696" id="GFG-ol-TgZ"/>
                                 <constraint firstItem="9pM-fI-Rcq" firstAttribute="centerX" secondItem="8ep-zl-ghp" secondAttribute="centerX" id="Mhi-v3-cMo"/>
                                 <constraint firstItem="9pM-fI-Rcq" firstAttribute="leading" secondItem="8ep-zl-ghp" secondAttribute="leading" id="NCp-fc-k2t"/>
+                                <constraint firstItem="BVq-Zv-BMk" firstAttribute="top" secondItem="hcr-Mn-mci" secondAttribute="bottom" constant="8" id="VB3-K0-Gqe"/>
+                                <constraint firstAttribute="trailing" secondItem="439-Xi-ja7" secondAttribute="trailing" id="WNP-Pb-MdA"/>
+                                <constraint firstAttribute="trailing" secondItem="BVq-Zv-BMk" secondAttribute="trailing" id="Wnr-7j-42Z"/>
+                                <constraint firstItem="IMv-A8-TqS" firstAttribute="top" secondItem="BVq-Zv-BMk" secondAttribute="bottom" constant="32" id="a35-0H-VDS"/>
                                 <constraint firstItem="IMv-A8-TqS" firstAttribute="centerX" secondItem="8ep-zl-ghp" secondAttribute="centerX" id="bAw-XV-NMo"/>
+                                <constraint firstItem="BVq-Zv-BMk" firstAttribute="top" secondItem="hcr-Mn-mci" secondAttribute="bottom" constant="8" id="c3e-8u-2Ig"/>
+                                <constraint firstItem="hcr-Mn-mci" firstAttribute="top" secondItem="439-Xi-ja7" secondAttribute="bottom" constant="8" id="kD0-0y-vwG"/>
                                 <constraint firstAttribute="bottom" secondItem="IMv-A8-TqS" secondAttribute="bottom" constant="60" id="kY1-WD-ZEP"/>
+                                <constraint firstItem="hcr-Mn-mci" firstAttribute="top" secondItem="439-Xi-ja7" secondAttribute="bottom" constant="8" id="nnP-SV-WNO"/>
+                                <constraint firstItem="BVq-Zv-BMk" firstAttribute="leading" secondItem="8ep-zl-ghp" secondAttribute="leading" id="qlz-8W-AJH"/>
+                                <constraint firstItem="439-Xi-ja7" firstAttribute="leading" secondItem="8ep-zl-ghp" secondAttribute="leading" id="yYW-7E-HdN"/>
+                                <constraint firstItem="439-Xi-ja7" firstAttribute="centerX" secondItem="8ep-zl-ghp" secondAttribute="centerX" id="z8W-MP-AwW"/>
                             </constraints>
                         </view>
                     </subviews>

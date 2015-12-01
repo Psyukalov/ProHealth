@@ -79,7 +79,7 @@
 
 #pragma mark - Custom methods
 
-- (NSArray *)getArrayFromTag:(int)tag {
+- (NSArray *)getArrayFromTag:(NSInteger)tag {
     NSDateComponents *dateComponent = [[NSDateComponents alloc] init];
     NSDate *newDate;
     switch (tag) {
