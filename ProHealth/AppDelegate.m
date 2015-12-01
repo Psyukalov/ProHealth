@@ -11,6 +11,7 @@
 #import "PersonalStatsViewController.h"
 #import "SettingsViewController.h"
 #import "DataManager.h"
+#import "CaloriesViewController.h"
 
 @interface AppDelegate ()
 
@@ -23,7 +24,7 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
 //    MainMenuViewController *mainMenuVC = [[MainMenuViewController alloc] init];
-    PersonalStatsViewController *personalStatsVC = [[PersonalStatsViewController alloc] init];
+    CaloriesViewController *personalStatsVC = [[CaloriesViewController alloc] init];
     UINavigationController *navigationVC = [[UINavigationController alloc] initWithRootViewController:personalStatsVC];
     navigationVC.navigationBar.translucent = NO;
     self.window.rootViewController = navigationVC;
