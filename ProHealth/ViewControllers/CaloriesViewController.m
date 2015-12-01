@@ -8,10 +8,14 @@
 
 #import "CaloriesViewController.h"
 #import "CaloriesPieChartView.h"
+#import "PieElement.h"
+#import "UICountingLabel.h"
 
 @interface CaloriesViewController ()
 
 @property (assign, nonatomic) BOOL hasViewSize;
+@property (strong, nonatomic) IBOutlet CaloriesPieChartView *caloriesPieChartView;
+@property (weak, nonatomic) IBOutlet UICountingLabel *labelCalories;
 
 @end
 
@@ -25,27 +29,48 @@
         _protein = protein;
         _carbohydrate = carbohydrate;
         _fat = fat;
+        
+        // TODO:
     }
     return self;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.labelCalories.format = @"%d\nккал";
+    self.labelCalories.method = UILabelCountingMethodLinear;
+    self.caloriesPieChartView.alpha = 0.0f;
+    [UIView animateKeyframesWithDuration:1.0f delay:0 options:kNilOptions animations:^{
+        self.caloriesPieChartView.alpha = 1.0f;
+    } completion:nil];
+    
+    NSLog(@"pie chart frame: %@", NSStringFromCGRect(self.caloriesPieChartView.frame));
+    PieElement *full = [PieElement pieElementWithValue:30 color:kCaloriesPieChartViewFillColor];
+    [self.caloriesPieChartView.layer insertValues:@[full] atIndexes:@[@(0)] animated:NO];
+    PieElement *calories = [PieElement pieElementWithValue:20 color:kCaloriesPieChartViewResultColor];
+    [self.caloriesPieChartView.layer insertValues:@[calories] atIndexes:@[@(0)] animated:YES];
+    [self.labelCalories countFrom:0 to:2345 withDuration:1.5f];
+
+}
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    if (!self.hasViewSize) {
+        self.hasViewSize = YES;
+
+        
+    }
 
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
-    if (!self.hasViewSize) {
-        [self.view layoutIfNeeded];
-        NSLog(@"calories frame::%@", NSStringFromCGRect(self.view.frame));
-        CaloriesPieChartView *caloriesPieChartView = [[CaloriesPieChartView alloc] initWithCaloriesValue:10 normalValue:20 viewWidth:314];
-        caloriesPieChartView.translatesAutoresizingMaskIntoConstraints = NO;
-        [self.view addSubview:caloriesPieChartView];
-        [self.view addConstraints:@[[NSLayoutConstraint constraintWithItem:caloriesPieChartView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterX multiplier:1 constant:0]]];
-        self.hasViewSize = YES;
-    }
+ 
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
 }
 
 @end

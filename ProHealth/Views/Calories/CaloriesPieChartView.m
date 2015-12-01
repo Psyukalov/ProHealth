@@ -15,29 +15,34 @@
 @implementation CaloriesPieChartView
 
 #pragma mark - Lifecycle
-- (instancetype)initWithCaloriesValue:(NSInteger)caloriesValue normalValue:(NSInteger)normalValue viewWidth:(CGFloat)viewWidth {
-    if (self = [super init]) {
-        [self setupWithCaloriesValue:caloriesValue normalValue:normalValue viewWidth:viewWidth];
+- (instancetype)initWithFrame:(CGRect)frame {
+    if (self = [super initWithFrame:frame]) {
+        [self setup];
+    }
+    return self;
+}
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    if (self = [super initWithCoder:aDecoder]) {
+        [self setup];
     }
     return self;
 }
 
 #pragma mark - Setup 
 
-- (void)setupWithCaloriesValue:(NSInteger)caloriesValue normalValue:(NSInteger)normalValue viewWidth:(CGFloat)viewWidth
+- (void)setup
 {
-    self.layer.maxRadius = viewWidth - kCaloriesPieChartViewMargins;
-    self.layer.minRadius = self.layer.maxRadius - kCaloriesPieChartViewDefaultCircleWidth;
+    self.layer.maxRadius = 110;
+    self.layer.minRadius = 100;
     self.layer.animationDuration = kCaloriesPieChartViewAnimationDuration;
     self.layer.showTitles = ShowTitlesNever;
+    self.layer.startAngle = 90;
+    self.layer.endAngle = 450;
     if ([self.layer.self respondsToSelector:@selector(setContentsScale:)])
     {
         self.layer.contentsScale = [[UIScreen mainScreen] scale];
     }
-    PieElement *calories = [PieElement pieElementWithValue:20 color:kCaloriesPieChartViewFillColor];
-    PieElement *full = [PieElement pieElementWithValue:30 color:kCaloriesPieChartViewResultColor];
-    
-    [self.layer insertValues:@[calories, full] atIndexes:@[@(0), @(1)] animated:YES];
 }
 
 
