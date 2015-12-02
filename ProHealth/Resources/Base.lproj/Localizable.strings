@@ -50,6 +50,25 @@
 "Start.BtnFoot" = "ШАГИ";
 
 /* WaterViewController */
-"WaterVC.Tip.1" = "Вы не достигли суточной нормы воды!"
-"WaterVC.Tip.2" = "Вы почти достигли суточной нормы воды!"
-"WaterVC.Tip.3" = "Вы достигли суточной нормы воды!"
+"WaterVC.Tip.1" = "Вы не достигли суточной нормы воды!";
+"WaterVC.Tip.2" = "Вы почти достигли суточной нормы воды!";
+"WaterVC.Tip.3" = "Вы достигли суточной нормы воды!";
+
+/* CaloriesViewController */
+"Calories.Title" = "КАЛОРИИ";
+"Calories.Fat.Title" = "ЖИРЫ";
+"Calories.Carbo.Title" = " УГЛЕВОДЫ";
+"Calories.Protein.Title" = "БЕЛКИ";
+"Calories.Calories.Title" = "ккал";
+
+
+
+
+
+
+
+
+
+
+
+
