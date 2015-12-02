@@ -1,9 +1,9 @@
 //
-//  AppDelegate.m
-//  ProHealth
+// AppDelegate.m
+// ProHealth
 //
-//  Created by Admin on 24.11.15.
-//  Copyright © 2015 Natalia Zubareva. All rights reserved.
+// Created by Admin on 24.11.15.
+// Copyright © 2015 Natalia Zubareva. All rights reserved.
 //
 
 #import "AppDelegate.h"
@@ -15,7 +15,6 @@
 #import "GuideViewController.h"
 #import "StartViewController.h"
 
-//tmp
 #import "RecipeDetailsViewController.h"
 #import "UIImage+Color.h"
 
@@ -24,7 +23,6 @@ NSString *const isNotFirstRun = @"YES";
 @interface AppDelegate ()
 
 @end
-
 
 @implementation AppDelegate
 
@@ -41,8 +39,10 @@ NSString *const isNotFirstRun = @"YES";
         [[NSUserDefaults standardUserDefaults] setObject:isNotFirstRun forKey:@"isNotFirstRun"];
         viewController = guideVC;
     }
-    UINavigationController *navigationVC = [[UINavigationController alloc] initWithRootViewController:viewController];
-    navigationVC.navigationBar.translucent = NO;
+    RecipeDetailsViewController *recipeDetailVC = [[RecipeDetailsViewController alloc] init];
+    UINavigationController *navigationVC = [[UINavigationController alloc] initWithRootViewController:recipeDetailVC];
+    [self applyDesign];
+    //navigationVC.navigationBar.translucent = NO;
     self.window.rootViewController = navigationVC;
     [self.window makeKeyAndVisible];
     return YES;
@@ -76,9 +76,23 @@ NSString *const isNotFirstRun = @"YES";
 {
     //[[UINavigationBar appearance] setBarTintColor:RGB(44, 62, 80)];
     [[UINavigationBar appearance] setTranslucent:NO];
+    NSShadow *shadow = [NSShadow new];
+    shadow.shadowColor = [UIColor clearColor];
+    shadow.shadowBlurRadius = .0f;
+    shadow.shadowOffset = CGSizeZero;
     NSDictionary *navbarTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor],
-                                           NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue-Light" size:18]};
+                                           NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue-Light" size:18],
+                                           NSShadowAttributeName : shadow};
     [[UINavigationBar appearance] setTitleTextAttributes:navbarTextAttributes];
+    [[UINavigationBar appearance] setShadowImage:[UIImage new]];
+    UIColor *navbarBackgroundColor = RGBAlpha(44, 62, 80, 1.0f);
+    UIImage *navbarBackgroundImage = [UIImage imageWithColor:navbarBackgroundColor height:44.0f];
+    UIImage *navbarBackgroundImage64 = [UIImage imageWithColor:navbarBackgroundColor height:64.0f];
+    [[UINavigationBar appearance] setBackgroundImage:navbarBackgroundImage forBarPosition:UIBarPositionTop barMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance] setBackgroundImage:navbarBackgroundImage64 forBarPosition:UIBarPositionTopAttached barMetrics:UIBarMetricsDefault];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
+    
 }
 
 @end
