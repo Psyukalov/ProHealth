@@ -87,6 +87,7 @@
 		C72CD4BF1C04ADBB00DAE3D4 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C72CD4BE1C04ADBB00DAE3D4 /* DataManager.m */; };
 		C76B5B231C06F2600035FDD9 /* Eating+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = C76B5B201C06F2600035FDD9 /* Eating+CoreDataProperties.m */; };
 		C76B5B241C06F2600035FDD9 /* Eating.m in Sources */ = {isa = PBXBuildFile; fileRef = C76B5B221C06F2600035FDD9 /* Eating.m */; };
+		C7FEDAC81C0F30AA002B81BE /* WaterGlassButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C7FEDAC71C0F30AA002B81BE /* WaterGlassButton.m */; };
 		EA4ED95E1C0F1A61008CE79D /* dot_blue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA4ED95A1C0F1A61008CE79D /* dot_blue@2x.png */; };
 		EA4ED95F1C0F1A61008CE79D /* dot_blue@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA4ED95B1C0F1A61008CE79D /* dot_blue@3x.png */; };
 		EA4ED9601C0F1A61008CE79D /* dot_red@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA4ED95C1C0F1A61008CE79D /* dot_red@2x.png */; };
@@ -253,6 +254,8 @@
 		C76B5B201C06F2600035FDD9 /* Eating+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Eating+CoreDataProperties.m"; sourceTree = "<group>"; };
 		C76B5B211C06F2600035FDD9 /* Eating.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Eating.h; sourceTree = "<group>"; };
 		C76B5B221C06F2600035FDD9 /* Eating.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Eating.m; sourceTree = "<group>"; };
+		C7FEDAC61C0F30AA002B81BE /* WaterGlassButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterGlassButton.h; sourceTree = "<group>"; };
+		C7FEDAC71C0F30AA002B81BE /* WaterGlassButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterGlassButton.m; sourceTree = "<group>"; };
 		EA4ED95A1C0F1A61008CE79D /* dot_blue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dot_blue@2x.png"; sourceTree = "<group>"; };
 		EA4ED95B1C0F1A61008CE79D /* dot_blue@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dot_blue@3x.png"; sourceTree = "<group>"; };
 		EA4ED95C1C0F1A61008CE79D /* dot_red@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dot_red@2x.png"; sourceTree = "<group>"; };
@@ -539,6 +542,8 @@
 				C34BC9691C0452B4007E75CD /* MainMenu */,
 				C34BC95D1C045250007E75CD /* MealsMenu */,
 				C34BC95E1C045250007E75CD /* Recipes */,
+				C7FEDAC61C0F30AA002B81BE /* WaterGlassButton.h */,
+				C7FEDAC71C0F30AA002B81BE /* WaterGlassButton.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -904,6 +909,7 @@
 				EA68B0131C05AC9E008C22D2 /* Helper.m in Sources */,
 				C72CD4BF1C04ADBB00DAE3D4 /* DataManager.m in Sources */,
 				C703300F1C0C52D3007A4734 /* Recipes.m in Sources */,
+				C7FEDAC81C0F30AA002B81BE /* WaterGlassButton.m in Sources */,
 				C34BC9741C0455C9007E75CD /* ProHealth.xcdatamodeld in Sources */,
 				EA68B0191C05D5E1008C22D2 /* UIView+Snapshot.m in Sources */,
 				EAB43A451C0C51FF000F83F0 /* UICountingLabel.m in Sources */,
