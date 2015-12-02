@@ -131,6 +131,7 @@
 		EAB43A491C0C521F000F83F0 /* CaloriesPieChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB43A481C0C521F000F83F0 /* CaloriesPieChartView.m */; };
 		EAECB7DB1C0D8841002D8D06 /* MainMenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAECB7D91C0D8841002D8D06 /* MainMenuTableViewCell.m */; };
 		EAECB7DC1C0D8841002D8D06 /* MainMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAECB7DA1C0D8841002D8D06 /* MainMenuTableViewCell.xib */; };
+		EAF619181C0ED57A00537F75 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF619171C0ED57A00537F75 /* UIImage+Color.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -307,6 +308,8 @@
 		EAECB7D81C0D8841002D8D06 /* MainMenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuTableViewCell.h; sourceTree = "<group>"; };
 		EAECB7D91C0D8841002D8D06 /* MainMenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuTableViewCell.m; sourceTree = "<group>"; };
 		EAECB7DA1C0D8841002D8D06 /* MainMenuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenuTableViewCell.xib; sourceTree = "<group>"; };
+		EAF619161C0ED57A00537F75 /* UIImage+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Color.h"; sourceTree = "<group>"; };
+		EAF619171C0ED57A00537F75 /* UIImage+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Color.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -594,6 +597,8 @@
 				EA68B0121C05AC9E008C22D2 /* Helper.m */,
 				EA68B0171C05D5E1008C22D2 /* UIView+Snapshot.h */,
 				EA68B0181C05D5E1008C22D2 /* UIView+Snapshot.m */,
+				EAF619161C0ED57A00537F75 /* UIImage+Color.h */,
+				EAF619171C0ED57A00537F75 /* UIImage+Color.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -869,6 +874,7 @@
 				EAB43A421C0C51FF000F83F0 /* NSMutableArray+pieEx.m in Sources */,
 				C34BC9371C04505B007E75CD /* PersonalStatsViewController.m in Sources */,
 				C34BC91E1C044F88007E75CD /* MealsMenuViewController.m in Sources */,
+				EAF619181C0ED57A00537F75 /* UIImage+Color.m in Sources */,
 				C38E0E0F1C0465F0008FA999 /* Person.m in Sources */,
 				C76B5B241C06F2600035FDD9 /* Eating.m in Sources */,
 				C34BC92D1C045015007E75CD /* WaterViewController.m in Sources */,

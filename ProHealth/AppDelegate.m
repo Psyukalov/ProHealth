@@ -17,6 +17,7 @@
 
 //tmp
 #import "RecipeDetailsViewController.h"
+#import "UIImage+Color.h"
 
 NSString *const isNotFirstRun = @"YES";
 
@@ -71,8 +72,9 @@ NSString *const isNotFirstRun = @"YES";
     [[DataManager sharedManager] saveContext];
 }
 
-- (void)applyDesign {
-    [[UINavigationBar appearance] setBarTintColor:RGB(44, 62, 80)];
+- (void)applyDesign
+{
+    //[[UINavigationBar appearance] setBarTintColor:RGB(44, 62, 80)];
     [[UINavigationBar appearance] setTranslucent:NO];
     NSDictionary *navbarTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor],
                                            NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue-Light" size:18]};
