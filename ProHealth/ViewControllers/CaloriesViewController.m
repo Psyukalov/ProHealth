@@ -61,8 +61,7 @@
 
 - (IBAction)buttonAdd_Tap:(UIButton *)sender {
     UIWindow *mainWindow = [[UIApplication sharedApplication].delegate window];
-    UIColor *tintColor = RGBAlpha(44, 62, 80, 0.84);//[UIColor colorWithRed:44/255.0f green:62/255.0f blue:80/255.0f alpha:0.84];
-    UIImage *snapshot = [mainWindow blurredSnapshotWithRadius:4.0f tintColor:tintColor];
+    UIImage *snapshot = [mainWindow blurredSnapshot];
     MainMenuViewController *mainMenuVC = [[MainMenuViewController alloc] init];
     mainMenuVC.snapshotImage = snapshot;
     mainMenuVC.modalPresentationStyle = UIModalPresentationOverCurrentContext;

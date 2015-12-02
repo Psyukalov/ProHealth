@@ -9,6 +9,10 @@
 #import "UIView+Snapshot.h"
 #import "UIImageEffects.h"
 
+#define kSnapshotDefaultTintColor RGBAlpha(44, 62, 80, 0.84)
+
+static const CGFloat kSnapshotDefaulrBlurRadius = 4.0f;
+
 @implementation UIView (Snapshot)
 
 - (UIImage *)takeSnapshot {
@@ -27,5 +31,9 @@
     UIImage *snapshotImage = [self takeSnapshot];
     UIImage *blurredSnapshot = [UIImageEffects imageByApplyingBlurToImage:snapshotImage withRadius:radius tintColor:tintColor saturationDeltaFactor:1.0f maskImage:nil];
     return blurredSnapshot;
+}
+
+- (UIImage *)blurredSnapshot {
+    return [self blurredSnapshotWithRadius:kSnapshotDefaulrBlurRadius tintColor:kSnapshotDefaultTintColor];
 }
 @end

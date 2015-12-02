@@ -14,6 +14,7 @@
 
 //tmp
 #import "RecipeDetailsViewController.h"
+#import "UIImage+Color.h"
 
 @interface AppDelegate ()
 
@@ -36,8 +37,8 @@
     UINavigationController *navigationVC = [[UINavigationController alloc] initWithRootViewController:recipeDetailVC];
     
     //
-    
-    navigationVC.navigationBar.translucent = NO;
+    [self applyDesign];
+    //navigationVC.navigationBar.translucent = NO;
     self.window.rootViewController = navigationVC;
     [self.window makeKeyAndVisible];
     return YES;
@@ -69,11 +70,25 @@
 
 - (void)applyDesign
 {
-    [[UINavigationBar appearance] setBarTintColor:RGB(44, 62, 80)];
+    //[[UINavigationBar appearance] setBarTintColor:RGB(44, 62, 80)];
     [[UINavigationBar appearance] setTranslucent:NO];
+    NSShadow *shadow = [NSShadow new];
+    shadow.shadowColor = [UIColor clearColor];
+    shadow.shadowBlurRadius = .0f;
+    shadow.shadowOffset = CGSizeZero;
     NSDictionary *navbarTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor],
-                                           NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue-Light" size:18]};
+                                           NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue-Light" size:18],
+                                           NSShadowAttributeName : shadow};
     [[UINavigationBar appearance] setTitleTextAttributes:navbarTextAttributes];
+    [[UINavigationBar appearance] setShadowImage:[UIImage new]];
+    UIColor *navbarBackgroundColor = RGBAlpha(44, 62, 80, 1.0f);
+    UIImage *navbarBackgroundImage = [UIImage imageWithColor:navbarBackgroundColor height:44.0f];
+    UIImage *navbarBackgroundImage64 = [UIImage imageWithColor:navbarBackgroundColor height:64.0f];
+    [[UINavigationBar appearance] setBackgroundImage:navbarBackgroundImage forBarPosition:UIBarPositionTop barMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance] setBackgroundImage:navbarBackgroundImage64 forBarPosition:UIBarPositionTopAttached barMetrics:UIBarMetricsDefault];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+ 
+
 }
 
 @end
