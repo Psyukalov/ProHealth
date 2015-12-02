@@ -18,7 +18,7 @@
 
 @property (assign, nonatomic) BOOL hasViewSize;
 @property (strong, nonatomic) IBOutlet CaloriesPieChartView *caloriesPieChartView;
-@property (weak, nonatomic) IBOutlet UICountingLabel *labelCalories;
+@property (weak, nonatomic) IBOutlet UICountingLabel *labelCaloriesCount;
 @property (weak, nonatomic) IBOutlet UIButton *buttonAdd;
 
 @end
@@ -43,8 +43,8 @@
     [super viewDidLoad];
     
     [Helper applyCornerRadius:self.buttonAdd.bounds.size.width / 2 forViews:@[self.buttonAdd]];
-    self.labelCalories.format = @"%d\nккал";
-    self.labelCalories.method = UILabelCountingMethodLinear;
+    self.labelCaloriesCount.format = @"%d\nккал";
+    self.labelCaloriesCount.method = UILabelCountingMethodLinear;
     self.caloriesPieChartView.alpha = 0.0f;
     [UIView animateKeyframesWithDuration:1.0f delay:0 options:kNilOptions animations:^{
         self.caloriesPieChartView.alpha = 1.0f;
@@ -55,7 +55,9 @@
     [self.caloriesPieChartView.layer insertValues:@[full] atIndexes:@[@(0)] animated:NO];
     PieElement *calories = [PieElement pieElementWithValue:20 color:kCaloriesPieChartViewResultColor];
     [self.caloriesPieChartView.layer insertValues:@[calories] atIndexes:@[@(0)] animated:YES];
-    [self.labelCalories countFrom:0 to:2345 withDuration:1.5f];
+    [self.labelCaloriesCount countFrom:0 to:2345 withDuration:1.5f];
+    
+    
 }
 
 - (IBAction)buttonAdd_Tap:(UIButton *)sender {
