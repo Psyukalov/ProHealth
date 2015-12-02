@@ -19,4 +19,10 @@
 
 + (void)applyShadowForViews:(nonnull NSArray<UIView *> *)views;
 
++ (nonnull NSCalendar *)sharedCalendar;
++ (nonnull NSDateFormatter *)sharedDateFormatter;
+
++ (nonnull NSString *)currentMonthName;
++ (NSInteger)currentDay;
+
 @end
