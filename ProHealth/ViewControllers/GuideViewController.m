@@ -11,14 +11,12 @@
 #import "UIView+Snapshot.h"
 #import "MealsMenuViewController.h"
 #import "MealsMenuViewController.h"
-#import "UICountingLabel.h"
 
 @interface GuideViewController ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *imgBackground;
 @property (weak, nonatomic) IBOutlet UILabel *lblCaption;
 @property (weak, nonatomic) IBOutlet UIButton *btnStart;
-@property (weak, nonatomic) IBOutlet UICountingLabel *countingLabel;
 
 @property (strong, nonatomic) NSArray<NSString *> *imageNames;
 @property (strong, nonatomic) NSArray<NSString *> *captions;
@@ -47,17 +45,6 @@
     self.imageNames = @[@"guide_1", @"guide_2", @"guide_3"];
     self.captions = @[Local(@"Guide.Caption.EffectiveHelper"), Local(@"Guide.Caption.ForgotHungry"), Local(@"Guide.Caption.ExperiencedDietitian")];
     self.captionTexts = @[Local(@"Guide.Caption.EffectiveHelper.Text"), Local(@"Guide.Caption.ForgotHungry.Text"), Local(@"Guide.Caption.ExperiencedDietitian.Text")];
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    
-    self.countingLabel.format = @"%ld";
-    self.countingLabel.method = UILabelCountingMethodLinear;
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self.countingLabel countFrom:0 to:2500 withDuration:1.0f];
-    });
-    
 }
 
 #pragma mark - UI

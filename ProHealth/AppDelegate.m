@@ -31,16 +31,17 @@ NSString *const isNotFirstRun = @"YES";
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     UIViewController *viewController;
-    if (![[[NSUserDefaults standardUserDefaults] stringForKey:@"isNotFirstRun"] isEqual:@""]) {
+    if ([[[NSUserDefaults standardUserDefaults] stringForKey:@"isNotFirstRun"] isEqualToString:isNotFirstRun]) {
         StartViewController *startVC = [[StartViewController alloc] init];
         viewController = startVC;
+    
     } else {
         GuideViewController *guideVC = [[GuideViewController alloc] init];
-        [[NSUserDefaults standardUserDefaults] setObject:isNotFirstRun forKey:@"isNotFirstRun"];
         viewController = guideVC;
+        [[NSUserDefaults standardUserDefaults] setObject:isNotFirstRun forKey:@"isNotFirstRun"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
     }
-    RecipeDetailsViewController *recipeDetailVC = [[RecipeDetailsViewController alloc] init];
-    UINavigationController *navigationVC = [[UINavigationController alloc] initWithRootViewController:recipeDetailVC];
+    UINavigationController *navigationVC = [[UINavigationController alloc] initWithRootViewController:viewController];
     [self applyDesign];
     //navigationVC.navigationBar.translucent = NO;
     self.window.rootViewController = navigationVC;
