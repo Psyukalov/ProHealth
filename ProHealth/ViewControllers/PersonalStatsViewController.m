@@ -45,6 +45,7 @@
     self.date = [[NSCalendar currentCalendar] dateFromComponents:components];
     UIBarButtonItem *btnSetting = [[UIBarButtonItem alloc] init];
     [btnSetting setImage:[UIImage imageNamed:@"gear.png"]];
+    [btnSetting setTintColor:RGB(1, 225, 255)];
     [btnSetting setAction:@selector(btnSettings_Tab:)];
     [btnSetting setTarget:self];
     self.navigationController.navigationBar.topItem.rightBarButtonItem = btnSetting;

@@ -11,6 +11,7 @@
                 <outlet property="btnFoot" destination="fHF-ws-NL5" id="14m-EQ-E35"/>
                 <outlet property="btnWater" destination="e3f-s6-1ph" id="jTo-sM-nuF"/>
                 <outlet property="contentView" destination="WF8-sz-Pog" id="bFb-q3-TXI"/>
+                <outlet property="image" destination="CZN-U2-MBb" id="Prl-GY-IwI"/>
                 <outlet property="lblFire" destination="UnY-aJ-oJ4" id="12K-x5-3gY"/>
                 <outlet property="lblFoot" destination="zim-g2-60s" id="PJc-NM-gfd"/>
                 <outlet property="lblGreeting" destination="6RQ-1w-ylE" id="tkY-kS-LFj"/>
@@ -31,7 +32,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WF8-sz-Pog" userLabel="Content View">
                             <rect key="frame" x="20" y="20" width="374" height="696"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CZN-U2-MBb">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CZN-U2-MBb">
                                     <rect key="frame" x="20" y="12" width="334" height="156"/>
                                     <animations/>
                                     <constraints>
@@ -90,7 +91,7 @@
                                     </constraints>
                                     <state key="normal" image="icon_water.png"/>
                                     <connections>
-                                        <action selector="btnWater_Tab:" destination="-1" eventType="touchUpInside" id="o4t-bH-5dQ"/>
+                                        <action selector="btnWater_Tab:" destination="-1" eventType="touchUpInside" id="Qpd-3S-wKr"/>
                                     </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="КАЛОРИИ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UnY-aJ-oJ4">
@@ -136,7 +137,7 @@
                                     </constraints>
                                     <state key="normal" image="icon_foot.png"/>
                                     <connections>
-                                        <action selector="btnFoot_Tab:" destination="-1" eventType="touchUpInside" id="vCL-vV-orn"/>
+                                        <action selector="btnFoot_Tab:" destination="-1" eventType="touchUpInside" id="ouP-Fk-EyC"/>
                                     </connections>
                                 </button>
                             </subviews>

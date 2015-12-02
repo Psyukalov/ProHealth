@@ -58,6 +58,8 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         dateFormatter = [[NSDateFormatter alloc] init];
+        NSLocale *locale =[NSLocale localeWithLocaleIdentifier:@"ru_RU"];
+        dateFormatter.locale = locale;
     });
     return dateFormatter;
 }
@@ -67,11 +69,16 @@
     return comps.day;
 }
 
-+ (NSString *)currentMonthName {
-    NSDateComponents *comps = [[self sharedCalendar] components:NSCalendarUnitMonth fromDate:[NSDate date]];
-    NSArray *monthNames = [self sharedDateFormatter].monthSymbols;
-    return monthNames[comps.month - 1];
++ (NSString *)currentMonthNameWithStyle:(NSDateFormatterStyle)style withFormat:(NSString *)format {
+    [[self sharedDateFormatter] setDateStyle:style];
+    [[self sharedDateFormatter] setDateFormat:format];
+    NSString *month = [[self sharedDateFormatter] stringFromDate:[NSDate date]];
+    return month;
 }
 
++ (NSInteger)currentHour {
+    NSInteger hour = [[self sharedCalendar] component:NSCalendarUnitHour fromDate:[NSDate date]];
+    return hour;
+}
 
 @end
