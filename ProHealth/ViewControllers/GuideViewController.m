@@ -69,10 +69,6 @@
     MealsMenuViewController *mealsMenuVC = [[MealsMenuViewController alloc] init];
     mealsMenuVC.modalPresentationStyle = UIModalPresentationOverCurrentContext;
     [self presentViewController:mealsMenuVC animated:YES completion:nil];
-//    UIImage *blurredSnapshot = [self.navigationController.view blurredSnapshot];
-//    MealsMenuViewController *mealsMenuVC = [[MealsMenuViewController alloc] initWithBlurredSnapshot:blurredSnapshot];
-//    mealsMenuVC.modalPresentationStyle = UIModalPresentationOverCurrentContext;
-//    [self presentViewController:mealsMenuVC animated:YES completion:nil];
 }
 
 - (IBAction)swRecLeft_Swipe:(UISwipeGestureRecognizer *)sender {
@@ -88,7 +84,6 @@
         self.currentTipNumber -= 1;
         [self playAnimationWithTransition:UIViewAnimationTransitionFlipFromRight];
         [self refreshViewWithTipNumber:self.currentTipNumber];
-        
     }
 }
 

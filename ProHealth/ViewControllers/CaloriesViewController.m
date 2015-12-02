@@ -56,7 +56,6 @@
     PieElement *calories = [PieElement pieElementWithValue:20 color:kCaloriesPieChartViewResultColor];
     [self.caloriesPieChartView.layer insertValues:@[calories] atIndexes:@[@(0)] animated:YES];
     [self.labelCalories countFrom:0 to:2345 withDuration:1.5f];
-
 }
 
 - (IBAction)buttonAdd_Tap:(UIButton *)sender {
