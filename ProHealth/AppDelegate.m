@@ -12,12 +12,18 @@
 #import "SettingsViewController.h"
 #import "DataManager.h"
 
+#import "GuideViewController.h"
+#import "StartViewController.h"
+
 //tmp
 #import "RecipeDetailsViewController.h"
+
+NSString *const isNotFirstRun = @"YES";
 
 @interface AppDelegate ()
 
 @end
+
 
 @implementation AppDelegate
 
@@ -25,18 +31,16 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
-//    MainMenuViewController *mainMenuVC = [[MainMenuViewController alloc] init];
-    
-//    PersonalStatsViewController *personalStatsVC = [[PersonalStatsViewController alloc] init];
-//    UINavigationController *navigationVC = [[UINavigationController alloc] initWithRootViewController:personalStatsVC];
-//    
-    //tmp
-    
-    RecipeDetailsViewController *recipeDetailVC = [[RecipeDetailsViewController alloc] init];
-    UINavigationController *navigationVC = [[UINavigationController alloc] initWithRootViewController:recipeDetailVC];
-    
-    //
-    
+    UIViewController *viewController;
+    if (![[[NSUserDefaults standardUserDefaults] stringForKey:@"isNotFirstRun"] isEqual:@""]) {
+        StartViewController *startVC = [[StartViewController alloc] init];
+        viewController = startVC;
+    } else {
+        GuideViewController *guideVC = [[GuideViewController alloc] init];
+        [[NSUserDefaults standardUserDefaults] setObject:isNotFirstRun forKey:@"isNotFirstRun"];
+        viewController = guideVC;
+    }
+    UINavigationController *navigationVC = [[UINavigationController alloc] initWithRootViewController:viewController];
     navigationVC.navigationBar.translucent = NO;
     self.window.rootViewController = navigationVC;
     [self.window makeKeyAndVisible];
@@ -67,8 +71,7 @@
     [[DataManager sharedManager] saveContext];
 }
 
-- (void)applyDesign
-{
+- (void)applyDesign {
     [[UINavigationBar appearance] setBarTintColor:RGB(44, 62, 80)];
     [[UINavigationBar appearance] setTranslucent:NO];
     NSDictionary *navbarTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor],
