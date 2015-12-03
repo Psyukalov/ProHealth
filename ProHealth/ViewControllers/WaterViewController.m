@@ -105,7 +105,7 @@
 }
 
 - (IBAction)BtnConfirm_Tab:(UIButton *)sender {
-    //tmp
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 @end
