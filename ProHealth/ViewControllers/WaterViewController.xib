@@ -7,9 +7,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WaterViewController">
             <connections>
-                <outlet property="btnAddGlass" destination="bG2-OM-o1s" id="V5n-Uk-lhW"/>
                 <outlet property="btnConfirm" destination="rVV-of-B9e" id="mGq-VD-t1o"/>
+                <outlet property="contentBtnWaterView" destination="Lj9-Q6-MaZ" id="izJ-YR-kka"/>
                 <outlet property="contentView" destination="GHe-dw-PLL" id="Kpa-P7-RmW"/>
+                <outlet property="lblAllWater" destination="NIp-Qb-YyW" id="OT7-1X-ccb"/>
                 <outlet property="lblDay" destination="bRR-rq-nVk" id="u3m-DE-bac"/>
                 <outlet property="lblMonth" destination="REU-nc-0Tq" id="0AG-K4-Z0A"/>
                 <outlet property="lblTip" destination="jVn-dK-33N" id="tcd-VL-8fh"/>
@@ -36,14 +37,14 @@
                                         <constraint firstAttribute="width" constant="42" id="cqz-jN-uPe"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="36"/>
-                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7xS-Lp-Fr9">
-                                    <rect key="frame" x="105" y="60" width="164" height="71"/>
+                                    <rect key="frame" x="0.0" y="60" width="374" height="71"/>
                                     <animations/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="164" id="9mZ-ca-14p"/>
+                                        <constraint firstAttribute="width" constant="374" id="9mZ-ca-14p"/>
                                         <constraint firstAttribute="height" constant="71" id="VOD-Nb-yDK"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="72"/>
@@ -59,24 +60,6 @@
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="24"/>
                                     <color key="textColor" red="0.60392156862745094" green="0.60392156862745094" blue="0.60392156862745094" alpha="1" colorSpace="calibratedRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bG2-OM-o1s">
-                                    <rect key="frame" x="0.0" y="200" width="374" height="148"/>
-                                    <animations/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="148" id="R10-Wa-8eS"/>
-                                    </constraints>
-                                </button>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы достигли суточной нормы воды!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jVn-dK-33N">
-                                    <rect key="frame" x="74" y="360" width="226" height="92"/>
-                                    <animations/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="92" id="Y5D-jJ-Siz"/>
-                                        <constraint firstAttribute="width" constant="226" id="lva-Hr-Zyv"/>
-                                    </constraints>
-                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
-                                    <color key="textColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVV-of-B9e">
@@ -100,7 +83,23 @@
                                         <constraint firstAttribute="width" constant="66" id="FEP-8O-MIK"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
-                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lj9-Q6-MaZ" userLabel="Content View - Water Glass">
+                                    <rect key="frame" x="0.0" y="200" width="374" height="295"/>
+                                    <animations/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы достигли суточной нормы воды!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jVn-dK-33N">
+                                    <rect key="frame" x="74" y="507" width="226" height="42"/>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="42" id="Y5D-jJ-Siz"/>
+                                        <constraint firstAttribute="width" constant="226" id="lva-Hr-Zyv"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                    <color key="textColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
@@ -111,18 +110,19 @@
                                 <constraint firstAttribute="trailing" secondItem="bRR-rq-nVk" secondAttribute="trailing" constant="12" id="5uB-5M-RUm"/>
                                 <constraint firstItem="rVV-of-B9e" firstAttribute="centerX" secondItem="GHe-dw-PLL" secondAttribute="centerX" id="As9-FL-nfd"/>
                                 <constraint firstItem="7xS-Lp-Fr9" firstAttribute="centerX" secondItem="GHe-dw-PLL" secondAttribute="centerX" id="I0V-iq-BNF"/>
-                                <constraint firstItem="bG2-OM-o1s" firstAttribute="leading" secondItem="GHe-dw-PLL" secondAttribute="leading" id="LNg-Cz-BNn"/>
                                 <constraint firstItem="REU-nc-0Tq" firstAttribute="top" secondItem="bRR-rq-nVk" secondAttribute="bottom" id="Pvd-zu-gih"/>
-                                <constraint firstItem="jVn-dK-33N" firstAttribute="top" secondItem="bG2-OM-o1s" secondAttribute="bottom" constant="12" id="XwG-3r-6Zj"/>
                                 <constraint firstAttribute="height" constant="696" id="bGp-kx-HZ0"/>
+                                <constraint firstItem="Lj9-Q6-MaZ" firstAttribute="leading" secondItem="GHe-dw-PLL" secondAttribute="leading" id="d7O-qS-gjm"/>
                                 <constraint firstItem="NIp-Qb-YyW" firstAttribute="top" secondItem="7xS-Lp-Fr9" secondAttribute="bottom" constant="8" id="fHv-y0-wWc"/>
+                                <constraint firstItem="rVV-of-B9e" firstAttribute="top" secondItem="jVn-dK-33N" secondAttribute="bottom" constant="32" id="kfD-v8-gyY"/>
                                 <constraint firstItem="bRR-rq-nVk" firstAttribute="top" secondItem="GHe-dw-PLL" secondAttribute="top" constant="12" id="knA-1G-6DC"/>
+                                <constraint firstItem="Lj9-Q6-MaZ" firstAttribute="top" secondItem="NIp-Qb-YyW" secondAttribute="bottom" constant="40" id="l1X-zJ-gLq"/>
                                 <constraint firstItem="NIp-Qb-YyW" firstAttribute="centerX" secondItem="GHe-dw-PLL" secondAttribute="centerX" id="ov4-ah-w5S"/>
                                 <constraint firstAttribute="trailing" secondItem="REU-nc-0Tq" secondAttribute="trailing" id="qdw-Wi-0Km"/>
+                                <constraint firstAttribute="trailing" secondItem="Lj9-Q6-MaZ" secondAttribute="trailing" id="sC4-0P-7eM"/>
                                 <constraint firstAttribute="bottom" secondItem="rVV-of-B9e" secondAttribute="bottom" constant="53" id="sPM-6b-r32"/>
-                                <constraint firstItem="bG2-OM-o1s" firstAttribute="top" secondItem="NIp-Qb-YyW" secondAttribute="bottom" constant="40" id="wnf-Az-qtd"/>
+                                <constraint firstItem="jVn-dK-33N" firstAttribute="top" secondItem="Lj9-Q6-MaZ" secondAttribute="bottom" constant="12" id="vaD-aa-oZr"/>
                                 <constraint firstItem="jVn-dK-33N" firstAttribute="centerX" secondItem="GHe-dw-PLL" secondAttribute="centerX" id="xaC-eu-wQj"/>
-                                <constraint firstAttribute="trailing" secondItem="bG2-OM-o1s" secondAttribute="trailing" id="zTk-37-ENH"/>
                             </constraints>
                         </view>
                     </subviews>

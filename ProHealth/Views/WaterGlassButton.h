@@ -14,10 +14,15 @@
 
 @property (strong, nonatomic) WaterGlassButton *previos;
 @property (strong, nonatomic) WaterGlassButton *next;
+@property (assign, nonatomic) BOOL isUsed;
 @property (strong, nonatomic) UIImage *emptyGlass;
 @property (strong, nonatomic) UIImage *addGlass;
 @property (strong, nonatomic) UIImage *fullGlass;
 
-- (void)addImage;
+- (id)initWithUsedGlass:(BOOL)isUsed;
+
+- (void)redrawImage;
+
+- (BOOL)useGlass;
 
 @end

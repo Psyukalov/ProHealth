@@ -14,24 +14,40 @@
 
 @synthesize previos = _previos;
 @synthesize next = _next;
+@synthesize isUsed = _isUsed;
 @synthesize emptyGlass = _emptyGlass;
 @synthesize addGlass = _addGlass;
 @synthesize fullGlass = _fullGlass;
 
-- (id)init {
+- (id)initWithUsedGlass:(BOOL)isUsed {
     self = [super init];
     if (self) {
-        [self setImage:[UIImage imageNamed:@"img_empty_glass.png"] forState:UIControlStateNormal];
+        _isUsed = isUsed;
     }
     return self;
 }
 
-- (void)addImage {
-    if (self.previos == nil) {
-        [self setImage:self.addGlass forState:UIControlStateNormal];
+- (void)redrawImage {
+    if (self.isUsed) {
+        [self setImage:self.fullGlass forState:UIControlStateNormal];
+        [self.next setImage:self.addGlass forState:UIControlStateNormal];
     } else {
-        [self setImage:self.emptyGlass forState:UIControlStateNormal];
+        if (self.previos == nil) {
+            [self setImage:self.addGlass forState:UIControlStateNormal];
+        }
+        [self.next setImage:self.emptyGlass forState:UIControlStateNormal];
     }
+}
+
+- (BOOL)useGlass {
+    BOOL result = NO;
+    if (!self.isUsed && (self.previos.isUsed || self.previos == nil)) {
+        self.isUsed = YES;
+        [self setImage:self.fullGlass forState:UIControlStateNormal];
+        [self.next setImage:self.addGlass forState:UIControlStateNormal];
+        result = YES;
+    }
+    return result;
 }
 
 @end
