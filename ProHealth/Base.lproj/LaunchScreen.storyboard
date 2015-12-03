@@ -35,13 +35,27 @@
                         <color key="backgroundColor" red="0.17254901960784313" green="0.24313725490196078" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="1CF-4x-axm" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="8mW-rd-ZNM"/>
+                            <constraint firstAttribute="trailing" secondItem="1CF-4x-axm" secondAttribute="trailing" constant="8" id="fqt-KZ-Nlv"/>
                             <constraint firstItem="1CF-4x-axm" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="jKL-vy-SRf"/>
+                            <constraint firstItem="1CF-4x-axm" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="9" id="wEV-dB-YyP"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="fqt-KZ-Nlv"/>
+                                <exclude reference="wEV-dB-YyP"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="fqt-KZ-Nlv"/>
+                                <include reference="wEV-dB-YyP"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.5" y="375"/>
         </scene>
     </scenes>
 </document>
