@@ -14,8 +14,8 @@
 #import "MainMenuViewController.h"
 #import "UIView+Snapshot.h"
 
-@interface CaloriesViewController ()
 
+@interface CaloriesViewController ()
 
 @property (weak, nonatomic) IBOutlet UIView *contentView;
 @property (assign, nonatomic) BOOL hasViewSize;
@@ -30,6 +30,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelProteinWarning;
 @property (weak, nonatomic) IBOutlet UIImageView *imgProteinStatus;
 
+@property (weak, nonatomic) IBOutlet UIView *viewCarbo;
 @property (weak, nonatomic) IBOutlet UILabel *labelCarboTitle;
 @property (weak, nonatomic) IBOutlet UILabel *labelCarbo;
 @property (weak, nonatomic) IBOutlet UILabel *labelCarboWarning;
@@ -42,7 +43,8 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *labelDay;
 @property (weak, nonatomic) IBOutlet UILabel *labelMonth;
-
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *cButtonAddBottom;
+@property (assign, nonatomic) BOOL isNotFirstLoad;
 @end
 
 @implementation CaloriesViewController
@@ -73,7 +75,6 @@
     [UIView animateKeyframesWithDuration:1.0f delay:0 options:kNilOptions animations:^{
         self.caloriesPieChartView.alpha = 1.0f;
     } completion:nil];
- 
 }
 
 - (void)loadLocalization {
@@ -94,6 +95,7 @@
     [self.caloriesPieChartView.layer insertValues:@[calories] atIndexes:@[@(0)] animated:YES];
     [self.labelCaloriesCount countFrom:0 to:1234 withDuration:0.7f];
 }
+
 #pragma mark - Actions
 
 - (IBAction)buttonAdd_Tap:(UIButton *)sender {

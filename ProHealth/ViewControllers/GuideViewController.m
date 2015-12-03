@@ -24,7 +24,6 @@
 
 @property (assign, nonatomic) NSInteger currentTipNumber;
 
-
 @end
 
 @implementation GuideViewController
