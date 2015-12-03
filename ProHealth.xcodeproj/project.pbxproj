@@ -85,6 +85,7 @@
 		C3F1BA9B1C04A03F005DF91B /* PersonalDataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3F1BA991C04A03F005DF91B /* PersonalDataViewController.xib */; };
 		C703300F1C0C52D3007A4734 /* Recipes.m in Sources */ = {isa = PBXBuildFile; fileRef = C703300E1C0C52D3007A4734 /* Recipes.m */; };
 		C72CD4BF1C04ADBB00DAE3D4 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C72CD4BE1C04ADBB00DAE3D4 /* DataManager.m */; };
+		C74DC9A11C10668A0055EF29 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C74DC9A01C10668A0055EF29 /* AVKit.framework */; };
 		C76B5B231C06F2600035FDD9 /* Eating+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = C76B5B201C06F2600035FDD9 /* Eating+CoreDataProperties.m */; };
 		C76B5B241C06F2600035FDD9 /* Eating.m in Sources */ = {isa = PBXBuildFile; fileRef = C76B5B221C06F2600035FDD9 /* Eating.m */; };
 		C7FEDAC81C0F30AA002B81BE /* WaterGlassButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C7FEDAC71C0F30AA002B81BE /* WaterGlassButton.m */; };
@@ -250,6 +251,7 @@
 		C703300E1C0C52D3007A4734 /* Recipes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recipes.m; sourceTree = "<group>"; };
 		C72CD4BD1C04ADBB00DAE3D4 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
 		C72CD4BE1C04ADBB00DAE3D4 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
+		C74DC9A01C10668A0055EF29 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		C76B5B1F1C06F2600035FDD9 /* Eating+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Eating+CoreDataProperties.h"; sourceTree = "<group>"; };
 		C76B5B201C06F2600035FDD9 /* Eating+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Eating+CoreDataProperties.m"; sourceTree = "<group>"; };
 		C76B5B211C06F2600035FDD9 /* Eating.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Eating.h; sourceTree = "<group>"; };
@@ -328,6 +330,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C74DC9A11C10668A0055EF29 /* AVKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +347,7 @@
 		C34BC8DC1C044E40007E75CD = {
 			isa = PBXGroup;
 			children = (
+				C74DC9A01C10668A0055EF29 /* AVKit.framework */,
 				C34BC8E71C044E40007E75CD /* ProHealth */,
 				C34BC9041C044E41007E75CD /* ProHealthTests */,
 				C34BC8E61C044E40007E75CD /* Products */,

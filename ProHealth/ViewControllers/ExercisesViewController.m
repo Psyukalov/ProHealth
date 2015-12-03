@@ -10,13 +10,14 @@
 
 @interface ExercisesViewController ()
 
+@property (weak, nonatomic) IBOutlet UIView *playerView;
+
 @end
 
 @implementation ExercisesViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
 }
 
 @end
