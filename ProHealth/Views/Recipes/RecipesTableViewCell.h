@@ -12,6 +12,7 @@
 
 @interface RecipesTableViewCell : UITableViewCell
 
+@property (strong, nonatomic) NSString *recipeName;
 
 + (void)registerFor:(UITableView *)tableView;
 

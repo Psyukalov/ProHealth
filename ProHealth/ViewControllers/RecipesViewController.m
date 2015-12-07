@@ -8,11 +8,12 @@
 
 #import "RecipesViewController.h"
 #import "RecipesTableViewCell.h"
+#import "Recipe.h"
 
 @interface RecipesViewController ()
 
 @property (weak, nonatomic) IBOutlet UITableView *tableRecipes;
-@property (strong, nonatomic) NSArray *recipes;
+@property (strong, nonatomic) NSArray <Recipe *> *recipes;
 
 @end
 
@@ -26,6 +27,7 @@
 }
 
 #pragma mark - UITableViewDataSource, UITableViewDelegate
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     NSInteger numberOfRows = self.recipes.count;
     return numberOfRows;
@@ -33,8 +35,14 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     RecipesTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kRecipesTableViewCellReuseID forIndexPath:indexPath];
-    // TODO: fill cell with data
+    cell.recipeName = self.recipes[indexPath.row].name;
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    Recipe *selectedRecipe = self.recipes[indexPath.row];
+    NSLog(@"selected recipe: %@", selectedRecipe);
+    // TODO: go to recipe details view controller
 }
 
 @end

@@ -10,12 +10,12 @@
 #import <Foundation/Foundation.h>
 
 
-@interface Recipes : NSObject
+@interface Recipe : NSObject
 
 @property (assign, nonatomic) NSInteger identifier;
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSString *imagePathURL;
-@property (strong, nonatomic) NSString *formula;
+@property (strong, nonatomic) NSString *text;
 @property (strong, nonatomic) NSMutableArray <NSDictionary *> *ingredients;
 @property (strong, nonatomic) NSMutableArray <NSDictionary *> *nutritional;
 

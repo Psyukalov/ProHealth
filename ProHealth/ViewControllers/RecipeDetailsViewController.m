@@ -14,7 +14,7 @@
 
 @interface RecipeDetailsViewController ()
 
-@property (strong, nonatomic) Recipes *recipe;
+@property (strong, nonatomic) Recipe *recipe;
 @property (strong, nonatomic) DataManager *context;
 @property (weak, nonatomic) IBOutlet UIView *contentView;
 @property (weak, nonatomic) IBOutlet UIView *contentImageView;

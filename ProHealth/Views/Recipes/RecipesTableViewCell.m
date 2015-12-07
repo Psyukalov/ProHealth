@@ -8,6 +8,12 @@
 
 #import "RecipesTableViewCell.h"
 
+@interface RecipesTableViewCell ()
+
+@property (weak, nonatomic) IBOutlet UILabel *labelRecipeName;
+
+@end
+
 @implementation RecipesTableViewCell
 
 #pragma mark - Lifecycle
@@ -20,6 +26,14 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+#pragma mark - Custom accessors
+- (void)setRecipeName:(NSString *)recipeName {
+    _recipeName = recipeName;
+    
+    // Update UI
+    self.labelRecipeName.text = recipeName;
 }
 
 #pragma mark - Static methods
