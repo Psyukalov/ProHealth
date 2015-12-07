@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+#define kRecipesTableViewCellReuseID @"RecipesTableViewCell"
+
 @interface RecipesTableViewCell : UITableViewCell
+
+
++ (void)registerFor:(UITableView *)tableView;
 
 @end

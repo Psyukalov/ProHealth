@@ -7,8 +7,12 @@
 //
 
 #import "RecipesViewController.h"
+#import "RecipesTableViewCell.h"
 
 @interface RecipesViewController ()
+
+@property (weak, nonatomic) IBOutlet UITableView *tableRecipes;
+@property (strong, nonatomic) NSArray *recipes;
 
 @end
 
@@ -16,7 +20,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    [RecipesTableViewCell registerFor:self.tableRecipes];
+    [self.tableRecipes reloadData];
+}
+
+#pragma mark - UITableViewDataSource, UITableViewDelegate
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    NSInteger numberOfRows = self.recipes.count;
+    return numberOfRows;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    RecipesTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kRecipesTableViewCellReuseID forIndexPath:indexPath];
+    // TODO: fill cell with data
+    return cell;
 }
 
 @end

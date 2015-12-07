@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
@@ -7,16 +7,35 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecipesViewController">
             <connections>
+                <outlet property="tableRecipes" destination="5lx-B5-y3N" id="LQq-o5-Omc"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5lx-B5-y3N" userLabel="Table View - Recipes">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="pQY-ya-2RU"/>
+                        <outlet property="delegate" destination="-1" id="WMb-3h-gsl"/>
+                    </connections>
+                </tableView>
+            </subviews>
             <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-            <point key="canvasLocation" x="271" y="436"/>
+            <constraints>
+                <constraint firstItem="5lx-B5-y3N" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="2PC-jN-fI8"/>
+                <constraint firstItem="5lx-B5-y3N" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="JBv-jc-Hpk"/>
+                <constraint firstAttribute="trailing" secondItem="5lx-B5-y3N" secondAttribute="trailing" id="NTl-Nx-OMM"/>
+                <constraint firstAttribute="bottom" secondItem="5lx-B5-y3N" secondAttribute="bottom" id="n0u-Gi-5xn"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="270.5" y="435.5"/>
         </view>
     </objects>
 </document>
