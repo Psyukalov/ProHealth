@@ -39,10 +39,10 @@
     [super viewDidLoad];
     
     //tmp
-    self.recipe = [[Recipes alloc] init];
+    self.recipe = [[Recipe alloc] init];
     self.recipe.name = @"САЛАТ С МОРКОВКОЙ";
     self.recipe.imagePathURL = @"https://semseo.md/images/https2210.jpg";
-    self.recipe.formula = @"Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+    self.recipe.text = @"Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
     self.recipe.nutritional = [[NSMutableArray alloc] init];
     NSDictionary *newDic = @{@"name" : @"Калории",
                              @"value" : [NSNumber numberWithInt:100]};
@@ -145,7 +145,7 @@
     [btnBack addTarget:self action:@selector(btnBack_Tab) forControlEvents:UIControlEventTouchUpInside];
     [btnBack setImage:[UIImage imageNamed:@"arrow_back.png"] forState:UIControlStateNormal];
     [self.nutritionalView addSubview:btnBack];
-    [_textFormula setText:self.recipe.formula];
+    [_textFormula setText:self.recipe.text];
     [self.view layoutIfNeeded];
     CGRect frame = _contentView.frame;
     CGSize size = [_textFormula sizeThatFits:CGSizeMake(SCREEN_WIDTH - 40, FLT_MAX)];
