@@ -15,13 +15,16 @@
 @property (strong, nonatomic) NSArray<NSString *> *menuItems;
 @property (weak, nonatomic) IBOutlet UIButton *buttonClose;
 @property (weak, nonatomic) IBOutlet UIImageView *imgSnapshotView;
+@property (strong, nonatomic) UIImage *blurredSnapshotImage;
+@property (weak, nonatomic) UINavigationController *mainNavigationController;
+@property (weak, nonatomic) UIViewController *viewController;
 
 @end
 
 @implementation MainMenuViewController
 
 #pragma mark - Lifecycle
-- (instancetype)init {
+- (instancetype)initWithMainNavigationController:(UINavigationController *)mainNavigationController blurredSnapshotImage:(UIImage *)blurredSnapshotImage {
     if (self = [super init]) {
         NSMutableArray *menuItems = [NSMutableArray array];
         for (int i = 1; i <= kMainMenuItemsCount; ++i) {
@@ -29,14 +32,15 @@
             [menuItems addObject:NSLocalizedString(localizationKey, nil)];
         }
         _menuItems = [[NSArray alloc] initWithArray:menuItems];
+        _blurredSnapshotImage = blurredSnapshotImage;
+        _mainNavigationController = mainNavigationController;
     }
     return self;
 }
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.imgSnapshotView.image = self.snapshotImage;
+    self.imgSnapshotView.image = self.blurredSnapshotImage;
     [MainMenuTableViewCell registerFor:self.tableMenu];
     [self.tableMenu reloadData];
 
