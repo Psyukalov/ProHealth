@@ -40,7 +40,7 @@
     //
     [Helper applyCornerRadius:6 forViews:@[_contentView]];
     [Helper applyCornerRadius:_btnConfirm.frame.size.height / 2 forViews:@[_btnConfirm]];
-    [_lblDay setText:[NSString stringWithFormat:@"%d", [Helper currentDay]]];
+    [_lblDay setText:[NSString stringWithFormat:@"%ld", (long)[Helper currentDay]]];
     NSString *newMonth = [Helper currentMonthNameWithStyle:NSDateFormatterShortStyle
                                                 withFormat:@"MMM"];
     NSMutableString *month = [NSMutableString stringWithString:newMonth];

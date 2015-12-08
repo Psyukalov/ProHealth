@@ -40,7 +40,7 @@
     [super viewDidLoad];
     [Helper applyCornerRadius:6 forViews:@[_contentView]];
     [Helper applyCornerRadius:_btnFire.frame.size.height / 2 forViews:@[_btnFire, _btnWater, _btnFoot]];
-    [_lblToday setText:[NSString stringWithFormat:@"%@ %d %@", Local(@"Start.LblToday"), [Helper currentDay], [Helper currentMonthNameWithStyle:NSDateFormatterLongStyle withFormat:@"MMMM"]]];
+    [_lblToday setText:[NSString stringWithFormat:@"%@ %ld %@", Local(@"Start.LblToday"), (long)[Helper currentDay], [Helper currentMonthNameWithStyle:NSDateFormatterLongStyle withFormat:@"MMMM"]]];
     [_lblFire setText:Local(@"Start.BtnFire")];
     [_lblWater setText:Local(@"Start.BtnWater")];
     [_lblFoot setText:Local(@"Start.BtnFoot")];
