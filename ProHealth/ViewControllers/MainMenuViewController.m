@@ -18,7 +18,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imgSnapshotView;
 @property (strong, nonatomic) UIImage *blurredSnapshotImage;
 @property (weak, nonatomic) UINavigationController *mainNavigationController;
-@property (weak, nonatomic) UIViewController *currentController;
+
 
 @end
 
@@ -70,10 +70,7 @@
 - (void)loadSelectedViewController:(UIViewController *)selectedViewController {
     __weak MainMenuViewController *_weakSelf = self;
     [self dismissViewControllerAnimated:YES completion:^{
-        if (![self.currentController isEqual:selectedViewController]) {
-            _weakSelf.currentController = selectedViewController;
-            [_weakSelf.mainNavigationController setViewControllers:@[selectedViewController] animated:YES];
-        }
+        [_weakSelf.mainNavigationController setViewControllers:@[selectedViewController] animated:YES];
     }];
 }
 #pragma mark - Actions
