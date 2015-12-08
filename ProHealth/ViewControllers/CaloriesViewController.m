@@ -101,9 +101,8 @@
 - (IBAction)buttonAdd_Tap:(UIButton *)sender {
     // Show menu with blurred image of snapshot of current window
     UIWindow *mainWindow = [[UIApplication sharedApplication].delegate window];
-    UIImage *snapshot = [mainWindow blurredSnapshot];
-    MainMenuViewController *mainMenuVC = [[MainMenuViewController alloc] init];
-    mainMenuVC.snapshotImage = snapshot;
+    UIImage *snapshotImage = [mainWindow blurredSnapshot];
+    MainMenuViewController *mainMenuVC = [[MainMenuViewController alloc] initWithMainNavigationController:self.navigationController blurredSnapshotImage:snapshotImage];
     mainMenuVC.modalPresentationStyle = UIModalPresentationOverCurrentContext;
     mainMenuVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     [self presentViewController:mainMenuVC animated:YES completion:nil];
