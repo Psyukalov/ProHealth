@@ -6,9 +6,13 @@
 //  Copyright © 2015 Natalia Zubareva. All rights reserved.
 //
 
+
 #import "TipsViewController.h"
 
+
 @interface TipsViewController ()
+
+@property (weak, nonatomic) IBOutlet UIView *contentView;
 
 @end
 
@@ -16,7 +20,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
 }
 
 @end

@@ -7,7 +7,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ExerciseDetailsViewController">
             <connections>
+                <outlet property="btnConfirm" destination="q7F-Ae-OoI" id="beB-j7-SJa"/>
+                <outlet property="btnPlay" destination="ZaP-3A-zfK" id="OFZ-5q-mhD"/>
+                <outlet property="contentView" destination="aLT-4x-Anf" id="ZWJ-zb-oJo"/>
                 <outlet property="lblDescription" destination="Lzq-YH-ogD" id="Kd0-zb-F8Z"/>
+                <outlet property="lblName" destination="lD4-2S-F38" id="8mp-f4-2gN"/>
                 <outlet property="lblRepeat" destination="k1W-SY-v8D" id="zph-nW-dn2"/>
                 <outlet property="lblTimer" destination="k5J-DG-7Q8" id="ZKd-Ku-Tb9"/>
                 <outlet property="playerView" destination="tze-oO-9J5" id="pG8-vc-hLo"/>
@@ -27,12 +31,41 @@
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tze-oO-9J5" userLabel="Player View">
                                     <rect key="frame" x="0.0" y="0.0" width="374" height="254"/>
+                                    <subviews>
+                                        <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZaP-3A-zfK">
+                                            <rect key="frame" x="141" y="81" width="92" height="92"/>
+                                            <animations/>
+                                            <color key="backgroundColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="92" id="K7M-a3-QJ9"/>
+                                                <constraint firstAttribute="height" constant="92" id="wbH-FZ-n8D"/>
+                                            </constraints>
+                                            <inset key="imageEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            <state key="normal" image="play.png"/>
+                                            <connections>
+                                                <action selector="btnPlay_Tab:" destination="-1" eventType="touchUpInside" id="SFs-Yl-YRx"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
                                     <animations/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="254" id="Rus-ht-SAA"/>
+                                        <constraint firstItem="ZaP-3A-zfK" firstAttribute="centerX" secondItem="tze-oO-9J5" secondAttribute="centerX" id="exT-ex-SC6"/>
+                                        <constraint firstItem="ZaP-3A-zfK" firstAttribute="centerY" secondItem="tze-oO-9J5" secondAttribute="centerY" id="pEu-vP-g1F"/>
                                     </constraints>
                                 </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="УПРАЖНЕНИЕ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lD4-2S-F38">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
+                                    <animations/>
+                                    <color key="backgroundColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="34" id="UH4-Rb-bxz"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_timer.png" translatesAutoresizingMaskIntoConstraints="NO" id="o9y-Y5-Oex">
                                     <rect key="frame" x="18" y="272" width="24" height="32"/>
                                     <animations/>
@@ -60,12 +93,12 @@
                                         <constraint firstAttribute="width" constant="30" id="NsI-1a-Z1A"/>
                                     </constraints>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="130 сек" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k1W-SY-v8D">
-                                    <rect key="frame" x="210" y="277" width="82" height="21"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3-4 повтора" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k1W-SY-v8D">
+                                    <rect key="frame" x="210" y="277" width="104" height="21"/>
                                     <animations/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="21" id="lmQ-Cb-Z8j"/>
-                                        <constraint firstAttribute="width" constant="82" id="stA-IO-Cuh"/>
+                                        <constraint firstAttribute="width" constant="104" id="stA-IO-Cuh"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <color key="textColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -84,7 +117,7 @@
                                         <action selector="btnConfirm_Tab:" destination="-1" eventType="touchUpInside" id="O0P-jD-yoG"/>
                                     </connections>
                                 </button>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lzq-YH-ogD">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lzq-YH-ogD">
                                     <rect key="frame" x="18" y="336" width="338" height="206"/>
                                     <animations/>
                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -95,7 +128,9 @@
                             <animations/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
+                                <constraint firstItem="lD4-2S-F38" firstAttribute="top" secondItem="aLT-4x-Anf" secondAttribute="top" id="5Os-YH-99u"/>
                                 <constraint firstItem="o9y-Y5-Oex" firstAttribute="top" secondItem="tze-oO-9J5" secondAttribute="bottom" constant="18" id="8Nw-ul-Hkr"/>
+                                <constraint firstAttribute="trailing" secondItem="lD4-2S-F38" secondAttribute="trailing" id="8P3-FQ-A3c"/>
                                 <constraint firstItem="q7F-Ae-OoI" firstAttribute="top" secondItem="Lzq-YH-ogD" secondAttribute="bottom" constant="32" id="8sM-0a-wsY"/>
                                 <constraint firstItem="tze-oO-9J5" firstAttribute="leading" secondItem="aLT-4x-Anf" secondAttribute="leading" id="As0-gq-elv"/>
                                 <constraint firstAttribute="height" constant="696" id="DLl-fs-CNb"/>
@@ -111,6 +146,7 @@
                                 <constraint firstItem="k5J-DG-7Q8" firstAttribute="top" secondItem="tze-oO-9J5" secondAttribute="bottom" constant="23" id="cyG-2T-U2P"/>
                                 <constraint firstItem="0Vh-lu-A2u" firstAttribute="top" secondItem="tze-oO-9J5" secondAttribute="bottom" constant="21" id="fBp-vi-ZJN"/>
                                 <constraint firstItem="tze-oO-9J5" firstAttribute="top" secondItem="aLT-4x-Anf" secondAttribute="top" id="ntk-W0-Pza"/>
+                                <constraint firstItem="lD4-2S-F38" firstAttribute="leading" secondItem="aLT-4x-Anf" secondAttribute="leading" id="skC-gG-hkr"/>
                                 <constraint firstItem="k1W-SY-v8D" firstAttribute="leading" secondItem="0Vh-lu-A2u" secondAttribute="trailing" constant="8" id="tho-hq-Jnz"/>
                                 <constraint firstItem="k1W-SY-v8D" firstAttribute="top" secondItem="tze-oO-9J5" secondAttribute="bottom" constant="23" id="z9g-hc-kZe"/>
                             </constraints>
@@ -143,5 +179,6 @@
         <image name="chek.png" width="39" height="28"/>
         <image name="img_repeat.png" width="31" height="28"/>
         <image name="img_timer.png" width="27" height="35"/>
+        <image name="play.png" width="48" height="47"/>
     </resources>
 </document>
