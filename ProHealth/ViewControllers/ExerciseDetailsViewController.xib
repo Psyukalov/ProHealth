@@ -7,6 +7,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ExerciseDetailsViewController">
             <connections>
+                <outlet property="btnConfirm" destination="q7F-Ae-OoI" id="beB-j7-SJa"/>
+                <outlet property="contentView" destination="aLT-4x-Anf" id="ZWJ-zb-oJo"/>
                 <outlet property="lblDescription" destination="Lzq-YH-ogD" id="Kd0-zb-F8Z"/>
                 <outlet property="lblRepeat" destination="k1W-SY-v8D" id="zph-nW-dn2"/>
                 <outlet property="lblTimer" destination="k5J-DG-7Q8" id="ZKd-Ku-Tb9"/>
@@ -60,12 +62,12 @@
                                         <constraint firstAttribute="width" constant="30" id="NsI-1a-Z1A"/>
                                     </constraints>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="130 сек" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k1W-SY-v8D">
-                                    <rect key="frame" x="210" y="277" width="82" height="21"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3-4 повтора" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k1W-SY-v8D">
+                                    <rect key="frame" x="210" y="277" width="104" height="21"/>
                                     <animations/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="21" id="lmQ-Cb-Z8j"/>
-                                        <constraint firstAttribute="width" constant="82" id="stA-IO-Cuh"/>
+                                        <constraint firstAttribute="width" constant="104" id="stA-IO-Cuh"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <color key="textColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -84,7 +86,7 @@
                                         <action selector="btnConfirm_Tab:" destination="-1" eventType="touchUpInside" id="O0P-jD-yoG"/>
                                     </connections>
                                 </button>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lzq-YH-ogD">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lzq-YH-ogD">
                                     <rect key="frame" x="18" y="336" width="338" height="206"/>
                                     <animations/>
                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>

@@ -14,6 +14,9 @@
 #import "WaterViewController.h"
 #import "UIView+Snapshot.h"
 
+//tmp
+#import "ExerciseDetailsViewController.h"
+
 
 @interface StartViewController ()
 
@@ -109,6 +112,9 @@
 
 - (IBAction)btnFoot_Tab:(id)sender {
     //Cooming soon
+    //tmp
+    ExerciseDetailsViewController *exerciseDetailrVC = [[ExerciseDetailsViewController alloc] init];
+    [self.navigationController pushViewController:exerciseDetailrVC animated:YES];
 }
 
 @end
