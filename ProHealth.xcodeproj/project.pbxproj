@@ -93,6 +93,10 @@
 		EA4ED95F1C0F1A61008CE79D /* dot_blue@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA4ED95B1C0F1A61008CE79D /* dot_blue@3x.png */; };
 		EA4ED9601C0F1A61008CE79D /* dot_red@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA4ED95C1C0F1A61008CE79D /* dot_red@2x.png */; };
 		EA4ED9611C0F1A61008CE79D /* dot_red@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA4ED95D1C0F1A61008CE79D /* dot_red@3x.png */; };
+		EA61D6951C16C43100BB2DE0 /* ExerciseDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA61D6931C16C43100BB2DE0 /* ExerciseDetailsViewController.m */; };
+		EA61D6961C16C43100BB2DE0 /* ExerciseDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA61D6941C16C43100BB2DE0 /* ExerciseDetailsViewController.xib */; };
+		EA61D69B1C16C4A000BB2DE0 /* ExercisesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA61D6991C16C4A000BB2DE0 /* ExercisesTableViewCell.m */; };
+		EA61D69C1C16C4A000BB2DE0 /* ExercisesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA61D69A1C16C4A000BB2DE0 /* ExercisesTableViewCell.xib */; };
 		EA68B0001C059905008C22D2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA68B0021C059905008C22D2 /* Localizable.strings */; };
 		EA68B0061C059FFF008C22D2 /* guide_1.png in Resources */ = {isa = PBXBuildFile; fileRef = EA68B0031C059FFF008C22D2 /* guide_1.png */; };
 		EA68B0071C059FFF008C22D2 /* guide_2.png in Resources */ = {isa = PBXBuildFile; fileRef = EA68B0041C059FFF008C22D2 /* guide_2.png */; };
@@ -262,6 +266,12 @@
 		EA4ED95B1C0F1A61008CE79D /* dot_blue@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dot_blue@3x.png"; sourceTree = "<group>"; };
 		EA4ED95C1C0F1A61008CE79D /* dot_red@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dot_red@2x.png"; sourceTree = "<group>"; };
 		EA4ED95D1C0F1A61008CE79D /* dot_red@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dot_red@3x.png"; sourceTree = "<group>"; };
+		EA61D6921C16C43100BB2DE0 /* ExerciseDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExerciseDetailsViewController.h; sourceTree = "<group>"; };
+		EA61D6931C16C43100BB2DE0 /* ExerciseDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExerciseDetailsViewController.m; sourceTree = "<group>"; };
+		EA61D6941C16C43100BB2DE0 /* ExerciseDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExerciseDetailsViewController.xib; sourceTree = "<group>"; };
+		EA61D6981C16C4A000BB2DE0 /* ExercisesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExercisesTableViewCell.h; sourceTree = "<group>"; };
+		EA61D6991C16C4A000BB2DE0 /* ExercisesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExercisesTableViewCell.m; sourceTree = "<group>"; };
+		EA61D69A1C16C4A000BB2DE0 /* ExercisesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExercisesTableViewCell.xib; sourceTree = "<group>"; };
 		EA68AFFD1C0598D2008C22D2 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		EA68B0031C059FFF008C22D2 /* guide_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guide_1.png; sourceTree = "<group>"; };
 		EA68B0041C059FFF008C22D2 /* guide_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guide_2.png; sourceTree = "<group>"; };
@@ -498,12 +508,18 @@
 				C34BC92F1C04502A007E75CD /* CaloriesViewController.h */,
 				C34BC9301C04502A007E75CD /* CaloriesViewController.m */,
 				C34BC9311C04502A007E75CD /* CaloriesViewController.xib */,
+				EA61D6921C16C43100BB2DE0 /* ExerciseDetailsViewController.h */,
+				EA61D6931C16C43100BB2DE0 /* ExerciseDetailsViewController.m */,
+				EA61D6941C16C43100BB2DE0 /* ExerciseDetailsViewController.xib */,
 				C34BC9391C045095007E75CD /* ExercisesViewController.h */,
 				C34BC93A1C045095007E75CD /* ExercisesViewController.m */,
 				C34BC93B1C045095007E75CD /* ExercisesViewController.xib */,
 				C34BC9251C044FFA007E75CD /* GuideViewController.h */,
 				C34BC9261C044FFA007E75CD /* GuideViewController.m */,
 				C34BC9271C044FFA007E75CD /* GuideViewController.xib */,
+				EA9F65F31C05F569009A8F23 /* MainMenuViewController.h */,
+				EA9F65F41C05F569009A8F23 /* MainMenuViewController.m */,
+				EA9F65F51C05F569009A8F23 /* MainMenuViewController.xib */,
 				C34BC91B1C044F88007E75CD /* MealsMenuViewController.h */,
 				C34BC91C1C044F88007E75CD /* MealsMenuViewController.m */,
 				C34BC91D1C044F88007E75CD /* MealsMenuViewController.xib */,
@@ -531,9 +547,6 @@
 				C34BC92A1C045015007E75CD /* WaterViewController.h */,
 				C34BC92B1C045015007E75CD /* WaterViewController.m */,
 				C34BC92C1C045015007E75CD /* WaterViewController.xib */,
-				EA9F65F31C05F569009A8F23 /* MainMenuViewController.h */,
-				EA9F65F41C05F569009A8F23 /* MainMenuViewController.m */,
-				EA9F65F51C05F569009A8F23 /* MainMenuViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -542,9 +555,10 @@
 			isa = PBXGroup;
 			children = (
 				EAB43A461C0C521F000F83F0 /* Calories */,
-				C38E0E101C047EAD008FA999 /* PersonalDataHistogram */,
+				EA61D6971C16C48200BB2DE0 /* Exercises */,
 				C34BC9691C0452B4007E75CD /* MainMenu */,
 				C34BC95D1C045250007E75CD /* MealsMenu */,
+				C38E0E101C047EAD008FA999 /* PersonalDataHistogram */,
 				C34BC95E1C045250007E75CD /* Recipes */,
 				C7FEDAC61C0F30AA002B81BE /* WaterGlassButton.h */,
 				C7FEDAC71C0F30AA002B81BE /* WaterGlassButton.m */,
@@ -606,6 +620,16 @@
 				C72CD4BE1C04ADBB00DAE3D4 /* DataManager.m */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		EA61D6971C16C48200BB2DE0 /* Exercises */ = {
+			isa = PBXGroup;
+			children = (
+				EA61D6981C16C4A000BB2DE0 /* ExercisesTableViewCell.h */,
+				EA61D6991C16C4A000BB2DE0 /* ExercisesTableViewCell.m */,
+				EA61D69A1C16C4A000BB2DE0 /* ExercisesTableViewCell.xib */,
+			);
+			path = Exercises;
 			sourceTree = "<group>";
 		};
 		EA68B00F1C05AA94008C22D2 /* Utils */ = {
@@ -810,9 +834,11 @@
 				C38E0E031C0464D7008FA999 /* img_night@2x.png in Resources */,
 				EA68B0071C059FFF008C22D2 /* guide_2.png in Resources */,
 				C38E0E021C0464D7008FA999 /* img_morning@3x.png in Resources */,
+				EA61D69C1C16C4A000BB2DE0 /* ExercisesTableViewCell.xib in Resources */,
 				C38E0DF01C0464D7008FA999 /* gear@3x.png in Resources */,
 				EA9F66081C05FCB4009A8F23 /* btn_foot@2x.png in Resources */,
 				C34BC94C1C045102007E75CD /* RecipeDetailsViewController.xib in Resources */,
+				EA61D6961C16C43100BB2DE0 /* ExerciseDetailsViewController.xib in Resources */,
 				C38E0DF21C0464D7008FA999 /* icon_fire@3x.png in Resources */,
 				EA68B0331C05E766008C22D2 /* menu_lunch@2x.png in Resources */,
 				EAECB7DC1C0D8841002D8D06 /* MainMenuTableViewCell.xib in Resources */,
@@ -912,9 +938,11 @@
 				EA9F65F61C05F569009A8F23 /* MainMenuViewController.m in Sources */,
 				EA68B0131C05AC9E008C22D2 /* Helper.m in Sources */,
 				C72CD4BF1C04ADBB00DAE3D4 /* DataManager.m in Sources */,
+				EA61D69B1C16C4A000BB2DE0 /* ExercisesTableViewCell.m in Sources */,
 				C703300F1C0C52D3007A4734 /* Recipe.m in Sources */,
 				C7FEDAC81C0F30AA002B81BE /* WaterGlassButton.m in Sources */,
 				C34BC9741C0455C9007E75CD /* ProHealth.xcdatamodeld in Sources */,
+				EA61D6951C16C43100BB2DE0 /* ExerciseDetailsViewController.m in Sources */,
 				EA68B0191C05D5E1008C22D2 /* UIView+Snapshot.m in Sources */,
 				EAB43A451C0C51FF000F83F0 /* UICountingLabel.m in Sources */,
 				C3F1BA9A1C04A03F005DF91B /* PersonalDataViewController.m in Sources */,
