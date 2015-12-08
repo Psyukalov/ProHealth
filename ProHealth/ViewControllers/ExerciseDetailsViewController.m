@@ -11,14 +11,17 @@
 #import "Exercises.h"
 #import <AVKit/AVKit.h>
 #import <AVFoundation/AVFoundation.h>
+#import "UIViewController+CustomDraw.h"
 
 @interface ExerciseDetailsViewController ()
 
 @property (strong, nonatomic) Exercises *exercise;
 @property (weak, nonatomic) IBOutlet UIView *contentView;
+@property (weak, nonatomic) IBOutlet UIButton *btnPlay;
 @property (weak, nonatomic) IBOutlet UIButton *btnConfirm;
 @property (strong, nonatomic) AVPlayerViewController *playerVC;
 @property (strong, nonatomic) AVPlayer *avPlayer;
+@property (weak, nonatomic) IBOutlet UILabel *lblName;
 @property (strong, nonatomic) IBOutlet UIView *playerView;
 @property (weak, nonatomic) IBOutlet UILabel *lblTimer;
 @property (weak, nonatomic) IBOutlet UILabel *lblRepeat;
@@ -32,8 +35,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setNavigationBackButton];
     [Helper applyCornerRadius:6 forViews:@[_contentView]];
     [Helper applyCornerRadius:_btnConfirm.frame.size.height / 2 forViews:@[_btnConfirm]];
+    [Helper applyCornerRadius:_btnPlay.frame.size.height / 2 forViews:@[_btnPlay]];
     self.exercise = [[Exercises alloc] init];
     //tmp
     self.exercise.name = @"Приседания";
@@ -42,6 +47,7 @@
     self.exercise.exerDescript = @"Это упражнение направлено на укрепление мышц спины, преса и ног. Приступая к упражнению, помните о технике безопастности.";
     self.exercise.videoURL = @"https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4";
     //
+    [_lblName setText:self.exercise.name];
     [_lblTimer setText:[NSString stringWithFormat:@"%d %@", self.exercise.time, Local(@"ExerciseDetail.Sec")]];
     [_lblRepeat setText:self.exercise.repeats];
     [_lblDescription setText:self.exercise.exerDescript];
@@ -54,13 +60,19 @@
     self.playerVC = [[AVPlayerViewController alloc] init];
     self.playerVC.player = self.avPlayer;
     self.playerVC.view.frame = _playerView.frame;
-    [_playerView addSubview:self.playerVC.view];
+    [_playerView insertSubview:self.playerVC.view belowSubview:_btnPlay];
 }
 
-#pragma mark - Actions;
+#pragma mark - Actions
+
+- (IBAction)btnPlay_Tab:(UIButton *)sender {
+    [self.avPlayer play];
+    [_btnPlay setAlpha:0];
+    [_lblName setAlpha:0];
+}
 
 - (IBAction)btnConfirm_Tab:(UIButton *)sender {
-    
+    //
 }
 
 @end
