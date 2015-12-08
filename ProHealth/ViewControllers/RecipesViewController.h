@@ -10,4 +10,6 @@
 
 @interface RecipesViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
+- (instancetype)initWithName:(NSString *)name;
+
 @end

@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ExercisesViewController : UIViewController
+@interface ExercisesViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
+
 
 @end

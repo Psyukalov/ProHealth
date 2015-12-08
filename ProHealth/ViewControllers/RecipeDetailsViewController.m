@@ -10,7 +10,7 @@
 #import "RecipeDetailsViewController.h"
 #import "DataManager.h"
 #import "Helper.h"
-
+#import "UIViewController+CustomDraw.h"
 
 @interface RecipeDetailsViewController ()
 
@@ -28,6 +28,8 @@
 @property (weak, nonatomic) IBOutlet UITextView *textFormula;
 @property (weak, nonatomic) IBOutlet UIButton *btnAcceptRecipe;
 
+@property (copy, nonatomic) NSString *name;
+
 @end
 
 
@@ -35,9 +37,17 @@
 
 #pragma mark - Lifecycle
 
+- (instancetype)initWithName:(NSString *)name {
+    if (self = [super init]) {
+        _name = name;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self setNavigationBackButton];
+    self.title = self.name;
     //tmp
     self.recipe = [[Recipe alloc] init];
     self.recipe.name = @"САЛАТ С МОРКОВКОЙ";
@@ -87,9 +97,7 @@
     [Helper applyCornerRadius:6 forViews:@[_contentView]];
     [Helper applyCornerRadius:_btnMoreInfo.frame.size.width / 2 forViews:@[_btnMoreInfo, _btnAcceptRecipe]];
     [_lblName setText:self.recipe.name];
-    NSURL *imgURL = [NSURL URLWithString:self.recipe.imagePathURL];
-    NSData * imgData = [NSData dataWithContentsOfURL:imgURL];
-    _imageRecipe.image = [UIImage imageWithData:imgData scale:SCREEN_SCALE];
+
     self.context = [DataManager sharedManager];
     [self.context managedObjectContext];
     // Динамическое добавление labels пищевой ценности и ингридиентов
@@ -151,6 +159,21 @@
     CGSize size = [_textFormula sizeThatFits:CGSizeMake(SCREEN_WIDTH - 40, FLT_MAX)];
     frame.size.height += size.height - _textFormula.frame.size.height;
     [_heigntConstrMainContentView setConstant:frame.size.height];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBarHidden = NO;
+    NSURLSession *session = [NSURLSession sharedSession];
+    __weak RecipeDetailsViewController *_weakSelf = self;
+    NSURL *imgURL = [NSURL URLWithString:self.recipe.imagePathURL];
+    [[session dataTaskWithURL:imgURL completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if (!error) {
+            if (data && _weakSelf) {
+                _weakSelf.imageRecipe.image = [UIImage imageWithData:data scale:SCREEN_SCALE];
+            }
+        }
+    }] resume];
 }
 
 #pragma mark - Custom methods

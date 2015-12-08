@@ -10,4 +10,6 @@
 
 @interface MealsMenuViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
+@property (strong, nonatomic) UIImage *snapshotImage;
+
 @end

@@ -97,6 +97,8 @@
 		EA61D6961C16C43100BB2DE0 /* ExerciseDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA61D6941C16C43100BB2DE0 /* ExerciseDetailsViewController.xib */; };
 		EA61D69B1C16C4A000BB2DE0 /* ExercisesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA61D6991C16C4A000BB2DE0 /* ExercisesTableViewCell.m */; };
 		EA61D69C1C16C4A000BB2DE0 /* ExercisesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA61D69A1C16C4A000BB2DE0 /* ExercisesTableViewCell.xib */; };
+		EA61D6A21C16F34A00BB2DE0 /* UIButton+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = EA61D69F1C16F34A00BB2DE0 /* UIButton+Block.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		EA61D6A31C16F34A00BB2DE0 /* UIViewController+CustomDraw.m in Sources */ = {isa = PBXBuildFile; fileRef = EA61D6A11C16F34A00BB2DE0 /* UIViewController+CustomDraw.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		EA68B0001C059905008C22D2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA68B0021C059905008C22D2 /* Localizable.strings */; };
 		EA68B0061C059FFF008C22D2 /* guide_1.png in Resources */ = {isa = PBXBuildFile; fileRef = EA68B0031C059FFF008C22D2 /* guide_1.png */; };
 		EA68B0071C059FFF008C22D2 /* guide_2.png in Resources */ = {isa = PBXBuildFile; fileRef = EA68B0041C059FFF008C22D2 /* guide_2.png */; };
@@ -272,6 +274,10 @@
 		EA61D6981C16C4A000BB2DE0 /* ExercisesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExercisesTableViewCell.h; sourceTree = "<group>"; };
 		EA61D6991C16C4A000BB2DE0 /* ExercisesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExercisesTableViewCell.m; sourceTree = "<group>"; };
 		EA61D69A1C16C4A000BB2DE0 /* ExercisesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExercisesTableViewCell.xib; sourceTree = "<group>"; };
+		EA61D69E1C16F34A00BB2DE0 /* UIButton+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Block.h"; sourceTree = "<group>"; };
+		EA61D69F1C16F34A00BB2DE0 /* UIButton+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Block.m"; sourceTree = "<group>"; };
+		EA61D6A01C16F34A00BB2DE0 /* UIViewController+CustomDraw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CustomDraw.h"; sourceTree = "<group>"; };
+		EA61D6A11C16F34A00BB2DE0 /* UIViewController+CustomDraw.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CustomDraw.m"; sourceTree = "<group>"; };
 		EA68AFFD1C0598D2008C22D2 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		EA68B0031C059FFF008C22D2 /* guide_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guide_1.png; sourceTree = "<group>"; };
 		EA68B0041C059FFF008C22D2 /* guide_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guide_2.png; sourceTree = "<group>"; };
@@ -635,15 +641,19 @@
 		EA68B00F1C05AA94008C22D2 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				EA68B0141C05D15D008C22D2 /* UIImageEffects.h */,
-				EA68B0151C05D15D008C22D2 /* UIImageEffects.m */,
-				EA68B0101C05AA94008C22D2 /* Macros.h */,
 				EA68B0111C05AC9E008C22D2 /* Helper.h */,
 				EA68B0121C05AC9E008C22D2 /* Helper.m */,
-				EA68B0171C05D5E1008C22D2 /* UIView+Snapshot.h */,
-				EA68B0181C05D5E1008C22D2 /* UIView+Snapshot.m */,
+				EA68B0101C05AA94008C22D2 /* Macros.h */,
+				EA61D69E1C16F34A00BB2DE0 /* UIButton+Block.h */,
+				EA61D69F1C16F34A00BB2DE0 /* UIButton+Block.m */,
 				EAF619161C0ED57A00537F75 /* UIImage+Color.h */,
 				EAF619171C0ED57A00537F75 /* UIImage+Color.m */,
+				EA68B0141C05D15D008C22D2 /* UIImageEffects.h */,
+				EA68B0151C05D15D008C22D2 /* UIImageEffects.m */,
+				EA68B0171C05D5E1008C22D2 /* UIView+Snapshot.h */,
+				EA68B0181C05D5E1008C22D2 /* UIView+Snapshot.m */,
+				EA61D6A01C16F34A00BB2DE0 /* UIViewController+CustomDraw.h */,
+				EA61D6A11C16F34A00BB2DE0 /* UIViewController+CustomDraw.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -929,6 +939,8 @@
 				C38E0E0F1C0465F0008FA999 /* Person.m in Sources */,
 				C76B5B241C06F2600035FDD9 /* Eating.m in Sources */,
 				C34BC92D1C045015007E75CD /* WaterViewController.m in Sources */,
+				EA61D6A21C16F34A00BB2DE0 /* UIButton+Block.m in Sources */,
+				EA61D6A31C16F34A00BB2DE0 /* UIViewController+CustomDraw.m in Sources */,
 				C34BC9231C044FC7007E75CD /* StartViewController.m in Sources */,
 				C76B5B231C06F2600035FDD9 /* Eating+CoreDataProperties.m in Sources */,
 				EA9F65FB1C05F88B009A8F23 /* MealsMenuTableViewCell.m in Sources */,

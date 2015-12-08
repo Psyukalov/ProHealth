@@ -10,7 +10,6 @@
 #import "Helper.h"
 #import "UIView+Snapshot.h"
 #import "MealsMenuViewController.h"
-#import "MealsMenuViewController.h"
 
 @interface GuideViewController ()
 
@@ -65,9 +64,15 @@
 
 - (IBAction)btnStart_Tap:(UIButton *)sender {
     // TODO: load start screen
+    UIWindow *mainWindow = [[UIApplication sharedApplication].delegate window];
+    UIImage *snapshotImage = [mainWindow blurredSnapshot];
     MealsMenuViewController *mealsMenuVC = [[MealsMenuViewController alloc] init];
-    mealsMenuVC.modalPresentationStyle = UIModalPresentationOverCurrentContext;
-    [self presentViewController:mealsMenuVC animated:YES completion:nil];
+    mealsMenuVC.snapshotImage = snapshotImage;
+    UINavigationController *navigationVC = [[UINavigationController alloc] initWithRootViewController:mealsMenuVC];
+    navigationVC.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+    navigationVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    navigationVC.view.backgroundColor = [UIColor clearColor];
+    [self presentViewController:navigationVC animated:YES completion:nil];
 }
 
 - (IBAction)swRecLeft_Swipe:(UISwipeGestureRecognizer *)sender {

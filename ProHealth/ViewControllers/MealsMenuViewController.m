@@ -8,6 +8,9 @@
 
 #import "MealsMenuViewController.h"
 #import "MealsMenuTableViewCell.h"
+#import "RecipesViewController.h"
+
+#import "UIViewController+CustomDraw.h"
 
 static const NSInteger kMenuItemsCount = 4;
 
@@ -16,7 +19,7 @@ static const NSInteger kMenuItemsCount = 4;
 @property (weak, nonatomic) IBOutlet UITableView *tblMenu;
 @property (strong, nonatomic) NSMutableArray<NSString *> *menuItemNames;
 @property (strong, nonatomic) NSArray<NSString *> *menuItemImages;
-@property (weak, nonatomic) IBOutlet UIVisualEffectView *blurView;
+@property (weak, nonatomic) IBOutlet UIImageView *imgSnapshotView;
 
 @end
 
@@ -25,11 +28,17 @@ static const NSInteger kMenuItemsCount = 4;
 #pragma mark - Lifecycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.imgSnapshotView.image = self.snapshotImage;
+    self.navigationController.navigationBarHidden = YES;
     // Do any additional setup after loading the view from its nib.
     [self loadResources];
     [MealsMenuTableViewCell registerFor:self.tblMenu];
     [self.tblMenu reloadData];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBarHidden = YES;
 }
 
 - (void)loadResources
@@ -54,6 +63,12 @@ static const NSInteger kMenuItemsCount = 4;
     MealsMenuTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kMealsMenuTableViewCellReuseID forIndexPath:indexPath];
     [cell fillWithImageName:self.menuItemImages[indexPath.row] text:self.menuItemNames[indexPath.row]];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSString *menuItemName = self.menuItemNames[indexPath.row];
+    RecipesViewController *recipesVC = [[RecipesViewController alloc] initWithName:menuItemName];
+    [self.navigationController pushViewController:recipesVC animated:YES];
 }
 
 @end

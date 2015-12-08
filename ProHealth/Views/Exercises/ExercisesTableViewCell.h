@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+#define kExercisesTableViewCellReuseID @"ExercisesTableViewCell"
+
 @interface ExercisesTableViewCell : UITableViewCell
+
+@property (copy, nonatomic) NSString *exerciseName;
+
++ (void)registerFor:(UITableView *)tableView;
 
 @end
