@@ -36,4 +36,5 @@ static const CGFloat kSnapshotDefaulrBlurRadius = 4.0f;
 - (UIImage *)blurredSnapshot {
     return [self blurredSnapshotWithRadius:kSnapshotDefaulrBlurRadius tintColor:kSnapshotDefaultTintColor];
 }
+
 @end
