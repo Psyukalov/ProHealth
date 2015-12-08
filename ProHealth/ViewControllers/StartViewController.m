@@ -38,9 +38,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = Local(@"Start.Title");
+    self.navigationController.navigationBarHidden = NO;
     [Helper applyCornerRadius:6 forViews:@[_contentView]];
     [Helper applyCornerRadius:_btnFire.frame.size.height / 2 forViews:@[_btnFire, _btnWater, _btnFoot]];
-    [_lblToday setText:[NSString stringWithFormat:@"%@ %d %@", Local(@"Start.LblToday"), [Helper currentDay], [Helper currentMonthNameWithStyle:NSDateFormatterLongStyle withFormat:@"MMMM"]]];
+    [_lblToday setText:[NSString stringWithFormat:@"%@ %ld %@", Local(@"Start.LblToday"), (long)[Helper currentDay], [Helper currentMonthNameWithStyle:NSDateFormatterLongStyle withFormat:@"MMMM"]]];
     [_lblFire setText:Local(@"Start.BtnFire")];
     [_lblWater setText:Local(@"Start.BtnWater")];
     [_lblFoot setText:Local(@"Start.BtnFoot")];
@@ -79,16 +81,15 @@
     [btnMenu setTintColor:RGB(1, 225, 255)];
     [btnMenu setTarget:self];
     [btnMenu setAction:@selector(btnMenu_Tab)];
-     self.navigationController.navigationBar.topItem.leftBarButtonItem = btnMenu;
+    self.navigationItem.leftBarButtonItem = btnMenu;
 }
 
 #pragma mark - Custom methods
 
 - (void)btnMenu_Tab {
     UIWindow *mainWindow = [[UIApplication sharedApplication].delegate window];
-    UIImage *snapshot = [mainWindow blurredSnapshot];
-    MainMenuViewController *mainMenuVC = [[MainMenuViewController alloc] init];
-    mainMenuVC.snapshotImage = snapshot;
+    UIImage *snapshotImage = [mainWindow blurredSnapshot];
+    MainMenuViewController *mainMenuVC = [[MainMenuViewController alloc] initWithMainNavigationController:self.navigationController blurredSnapshotImage:snapshotImage];
     mainMenuVC.modalPresentationStyle = UIModalPresentationOverCurrentContext;
     mainMenuVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     [self presentViewController:mainMenuVC animated:YES completion:nil];

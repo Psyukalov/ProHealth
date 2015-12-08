@@ -9,7 +9,7 @@
 #import "GuideViewController.h"
 #import "Helper.h"
 #import "UIView+Snapshot.h"
-#import "MealsMenuViewController.h"
+#import "MainMenuViewController.h"
 
 @interface GuideViewController ()
 
@@ -66,9 +66,8 @@
     // TODO: load start screen
     UIWindow *mainWindow = [[UIApplication sharedApplication].delegate window];
     UIImage *snapshotImage = [mainWindow blurredSnapshot];
-    MealsMenuViewController *mealsMenuVC = [[MealsMenuViewController alloc] init];
-    mealsMenuVC.snapshotImage = snapshotImage;
-    UINavigationController *navigationVC = [[UINavigationController alloc] initWithRootViewController:mealsMenuVC];
+    MainMenuViewController *mainMenuVC = [[MainMenuViewController alloc] initWithMainNavigationController:self.navigationController blurredSnapshotImage:snapshotImage];
+    UINavigationController *navigationVC = [[UINavigationController alloc] initWithRootViewController:mainMenuVC];
     navigationVC.modalPresentationStyle = UIModalPresentationOverCurrentContext;
     navigationVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     navigationVC.view.backgroundColor = [UIColor clearColor];

@@ -48,6 +48,7 @@
 "Start.BtnFire" = "КАЛОРИИ";
 "Start.BtnWater" = "ВОДА";
 "Start.BtnFoot" = "ШАГИ";
+"Start.Title" = "NATALIA ZUBAREVA";
 
 /* WaterViewController */
 "WaterVC.Tip.1" = "Вы не достигли суточной нормы воды!";
