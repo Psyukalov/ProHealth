@@ -22,15 +22,60 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yi3-Ix-dNr" userLabel="Content View">
                             <rect key="frame" x="20" y="20" width="374" height="696"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M8L-ny-2aY">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="M8L-ny-2aY">
                                     <rect key="frame" x="0.0" y="0.0" width="374" height="254"/>
                                     <animations/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="254" id="ZeF-h5-cWp"/>
+                                    </constraints>
                                 </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ВРЕМЯ ОБЕДАТЬ" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z2Y-J5-f6m">
+                                    <rect key="frame" x="59" y="282" width="256" height="64"/>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="64" id="Pp7-8e-MT9"/>
+                                        <constraint firstAttribute="width" constant="256" id="ofz-dy-idV"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <color key="textColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wnq-xd-Eei">
+                                    <rect key="frame" x="40" y="364" width="294" height="178"/>
+                                    <animations/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDJ-vk-lZ9">
+                                    <rect key="frame" x="156" y="574" width="62" height="62"/>
+                                    <animations/>
+                                    <color key="backgroundColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="62" id="gwO-B1-goc"/>
+                                        <constraint firstAttribute="width" constant="62" id="x6L-eK-305"/>
+                                    </constraints>
+                                    <state key="normal" image="chek.png"/>
+                                </button>
                             </subviews>
                             <animations/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
+                                <constraint firstItem="Wnq-xd-Eei" firstAttribute="top" secondItem="Z2Y-J5-f6m" secondAttribute="bottom" constant="18" id="04I-h1-k0c"/>
+                                <constraint firstItem="Wnq-xd-Eei" firstAttribute="leading" secondItem="Yi3-Ix-dNr" secondAttribute="leading" constant="40" id="3V9-Ye-zy4"/>
                                 <constraint firstAttribute="height" constant="696" id="7jl-6N-49d"/>
+                                <constraint firstItem="DDJ-vk-lZ9" firstAttribute="centerX" secondItem="Yi3-Ix-dNr" secondAttribute="centerX" id="84k-IW-548"/>
+                                <constraint firstAttribute="trailing" secondItem="M8L-ny-2aY" secondAttribute="trailing" id="AG7-s3-8Uo"/>
+                                <constraint firstAttribute="trailing" secondItem="Wnq-xd-Eei" secondAttribute="trailing" constant="40" id="CRJ-0v-1eD"/>
+                                <constraint firstItem="M8L-ny-2aY" firstAttribute="top" secondItem="Yi3-Ix-dNr" secondAttribute="top" id="DAy-B0-qxh"/>
+                                <constraint firstItem="Wnq-xd-Eei" firstAttribute="leading" secondItem="Yi3-Ix-dNr" secondAttribute="leading" constant="40" id="FKh-xi-e4a"/>
+                                <constraint firstItem="Z2Y-J5-f6m" firstAttribute="centerX" secondItem="Yi3-Ix-dNr" secondAttribute="centerX" id="HFT-TK-qms"/>
+                                <constraint firstAttribute="bottom" secondItem="DDJ-vk-lZ9" secondAttribute="bottom" constant="60" id="We0-sh-uk4"/>
+                                <constraint firstAttribute="trailing" secondItem="Wnq-xd-Eei" secondAttribute="trailing" constant="40" id="fb2-Li-XWn"/>
+                                <constraint firstItem="M8L-ny-2aY" firstAttribute="leading" secondItem="Yi3-Ix-dNr" secondAttribute="leading" id="i96-y3-ner"/>
+                                <constraint firstItem="Z2Y-J5-f6m" firstAttribute="top" secondItem="M8L-ny-2aY" secondAttribute="bottom" constant="28" id="niu-dh-KLT"/>
+                                <constraint firstItem="Wnq-xd-Eei" firstAttribute="top" secondItem="Z2Y-J5-f6m" secondAttribute="bottom" constant="18" id="teu-vJ-0yI"/>
+                                <constraint firstItem="DDJ-vk-lZ9" firstAttribute="top" secondItem="Wnq-xd-Eei" secondAttribute="bottom" constant="32" id="wna-85-tuv"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -57,4 +102,7 @@
             <point key="canvasLocation" x="157" y="384"/>
         </view>
     </objects>
+    <resources>
+        <image name="chek.png" width="39" height="28"/>
+    </resources>
 </document>
