@@ -12,7 +12,6 @@ static const NSInteger kMainMenuItemsCount = 6;
 
 @interface MainMenuViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
-- (id)initWithMainNavigationController:(UINavigationController *)navigationController blurredSnapshotImage:(UIImage *)blurredSnapshotImage;
-
+- (instancetype)initWithMainNavigationController:(UINavigationController *)navigationController blurredSnapshotImage:(UIImage *)blurredSnapshotImage;
 
 @end

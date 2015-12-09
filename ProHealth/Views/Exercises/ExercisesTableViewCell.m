@@ -22,10 +22,11 @@
     // Initialization code
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+- (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated {
+    [super setHighlighted:highlighted animated:animated];
+    
+    self.contentView.backgroundColor = highlighted ? [UIColor whiteColor] : [UIColor clearColor];
+    self.labelExerciseName.textColor = highlighted ? RGB(44, 80, 62) : [UIColor whiteColor];
 }
 
 #pragma mark - Custom accessors
@@ -34,7 +35,7 @@
     _exerciseName = exerciseName;
     
     // Update UI
-    self.labelExerciseName.text = _exerciseName;
+    self.labelExerciseName.text = _exerciseName.uppercaseString;
 }
 
 #pragma mark - Static methods

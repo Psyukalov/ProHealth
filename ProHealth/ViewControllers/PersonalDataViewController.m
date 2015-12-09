@@ -25,7 +25,6 @@
 
 @end
 
-
 @implementation PersonalDataViewController
 
 #pragma mark - Lifecycle
@@ -73,7 +72,7 @@
     }
 }
 
-#pragma mark - Picker View
+#pragma mark - UIPickerViewDataSource, UIPickerViewDelegate
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
     return 1;
@@ -97,17 +96,13 @@
 }
 
 - (IBAction)stepperChangeWeight:(UIStepper *)sender {
-    
     self.person.weight = _stepperWeight.value;
     _lblWeight.text = [NSString stringWithFormat:@"Вес %1.1f кг", self.person.weight];
-    
 }
 
 - (IBAction)stepperChangeGrowth:(UIStepper *)sender {
-    
     self.person.growth = _stepperGrowth.value;
     _lblGrowth.text = [NSString stringWithFormat:@"Рост %1.2f м", self.person.growth];
-    
 }
 
 @end

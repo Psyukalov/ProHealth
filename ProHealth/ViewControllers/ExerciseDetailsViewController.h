@@ -10,4 +10,6 @@
 
 @interface ExerciseDetailsViewController : UIViewController
 
+- (instancetype)initWithName:(NSString *)name;
+
 @end

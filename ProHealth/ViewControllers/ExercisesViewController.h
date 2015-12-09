@@ -10,6 +10,4 @@
 
 @interface ExercisesViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
-
-
 @end

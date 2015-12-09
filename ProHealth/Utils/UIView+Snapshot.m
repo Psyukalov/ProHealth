@@ -11,16 +11,16 @@
 
 #define kSnapshotDefaultTintColor RGBAlpha(44, 62, 80, 0.84)
 
-static const CGFloat kSnapshotDefaulrBlurRadius = 4.0f;
+static const CGFloat kSnapshotDefaultBlurRadius = 4.0f;
 
 @implementation UIView (Snapshot)
 
 - (UIImage *)takeSnapshot {
     UIGraphicsBeginImageContextWithOptions(self.bounds.size, NO, [UIScreen mainScreen].scale);
     
-    [self drawViewHierarchyInRect:self.bounds afterScreenUpdates:YES];
+    [self drawViewHierarchyInRect:self.bounds afterScreenUpdates:NO];
     
-    // old style [self.layer renderInContext:UIGraphicsGetCurrentContext()];
+    //[self.layer renderInContext:UIGraphicsGetCurrentContext()];
     
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
@@ -34,7 +34,7 @@ static const CGFloat kSnapshotDefaulrBlurRadius = 4.0f;
 }
 
 - (UIImage *)blurredSnapshot {
-    return [self blurredSnapshotWithRadius:kSnapshotDefaulrBlurRadius tintColor:kSnapshotDefaultTintColor];
+    return [self blurredSnapshotWithRadius:kSnapshotDefaultBlurRadius tintColor:kSnapshotDefaultTintColor];
 }
 
 @end

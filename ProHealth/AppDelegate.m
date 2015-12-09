@@ -26,6 +26,8 @@ NSString *const isNotFirstRun = @"YES";
 
 @implementation AppDelegate
 
+#pragma mark - Application lifecycle
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
@@ -38,8 +40,8 @@ NSString *const isNotFirstRun = @"YES";
     } else {
         GuideViewController *guideVC = [[GuideViewController alloc] init];
         viewController = guideVC;
-       // [[NSUserDefaults standardUserDefaults] setObject:isNotFirstRun forKey:@"isNotFirstRun"];
-        //[[NSUserDefaults standardUserDefaults] synchronize];
+        [[NSUserDefaults standardUserDefaults] setObject:isNotFirstRun forKey:@"isNotFirstRun"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
     }
     UINavigationController *navigationVC = [[UINavigationController alloc] initWithRootViewController:viewController];
     [self applyDesign];
@@ -73,6 +75,8 @@ NSString *const isNotFirstRun = @"YES";
     [[DataManager sharedManager] saveContext];
 }
 
+#pragma mark - UI 
+
 - (void)applyDesign
 {
     // Apply common navbar design
@@ -92,8 +96,9 @@ NSString *const isNotFirstRun = @"YES";
     [[UINavigationBar appearance] setBackgroundImage:navbarBackgroundImage forBarPosition:UIBarPositionTop barMetrics:UIBarMetricsDefault];
     [[UINavigationBar appearance] setBackgroundImage:navbarBackgroundImage64 forBarPosition:UIBarPositionTopAttached barMetrics:UIBarMetricsDefault];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-    
-    
 }
+
+#pragma mark - Notifications
+// There will me methods for registering and handling push notifications
 
 @end

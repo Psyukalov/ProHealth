@@ -10,7 +10,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface Exercises : NSObject
+@interface Exercise : NSObject
 
 @property (assign, nonatomic) NSInteger identifier;
 @property (strong, nonatomic) NSString  *name;

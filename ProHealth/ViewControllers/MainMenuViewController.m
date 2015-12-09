@@ -8,7 +8,14 @@
 
 #import "MainMenuViewController.h"
 #import "MainMenuTableViewCell.h"
-#import "StartViewController.h"
+#import "UIView+Snapshot.h"
+
+#import "AppDelegate.h"
+
+#import "MealsMenuViewController.h"
+#import "ExercisesViewController.h"
+#import "TipsViewController.h"
+#import "PersonalStatsViewController.h"
 
 @interface MainMenuViewController ()
 
@@ -47,6 +54,26 @@
 
 }
 
+#pragma mark - Functionality
+
+- (void)loadSelectedViewController:(UIViewController *)selectedViewController {
+    if (selectedViewController) {
+        __weak MainMenuViewController *_weakSelf = self;
+        if (![selectedViewController isKindOfClass:[MealsMenuViewController class]]) {
+            [_weakSelf dismissViewControllerAnimated:YES completion:^{
+                [_weakSelf.mainNavigationController pushViewController:selectedViewController animated:YES];
+            }];
+        } else {
+            [_weakSelf dismissViewControllerAnimated:YES completion:^{
+                selectedViewController.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+                selectedViewController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+                NSLog(@"topViewController: %@", _weakSelf.mainNavigationController.topViewController);
+                [_weakSelf.mainNavigationController.topViewController presentViewController:selectedViewController animated:YES completion:nil];
+            }];
+        }
+    }
+}
+
 #pragma UITableViewDataSource, UITableViewDelegate
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -62,15 +89,38 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // TODO: go to other controllers
     // there will be routing code for loading controllers
-    UIViewController *selectedViewController = [[StartViewController alloc] init];
-    [self loadSelectedViewController:selectedViewController];
-}
-
-- (void)loadSelectedViewController:(UIViewController *)selectedViewController {
-    __weak MainMenuViewController *_weakSelf = self;
-    [self dismissViewControllerAnimated:YES completion:^{
-        [_weakSelf.mainNavigationController setViewControllers:@[selectedViewController] animated:YES];
-    }];
+    MainMenuItem selectedMenuItem = (MainMenuItem)indexPath.row + 1;
+    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    
+    // Prevent selection of menu item that already selected
+    if (selectedMenuItem == appDelegate.selectedMenuItem)
+        return;
+    UIViewController *selectedVC = nil;
+    switch (selectedMenuItem) {
+        case MainMenuItemRecipes:
+            selectedVC = [[MealsMenuViewController alloc] initWithMainNavigationController:self.mainNavigationController blurredSnapshotImage:self.blurredSnapshotImage];
+            break;
+        case MainMenuItemExercises:
+            selectedVC = [[ExercisesViewController alloc] init];
+            break;
+        case MainMenuItemTips:
+            selectedVC = [[TipsViewController alloc] init];
+            break;
+        case MainMenuItemConsult:
+            // Not now
+            selectedVC = nil;
+            break;
+        case MainMenuItemPersonalData:
+            selectedVC = [[PersonalStatsViewController alloc] init];
+            break;
+        case MainMenuItemHelp:
+            selectedVC = nil;
+            break;
+        default:
+            selectedVC = nil;
+            break;
+    }
+    [self loadSelectedViewController:selectedVC];
 }
 
 #pragma mark - Actions

@@ -13,9 +13,6 @@
 
 @interface RecipeDetailsViewController : UIViewController
 
-- (void)playAnimationForView:(UIView *)view
-              WithTransition:(UIViewAnimationTransition)transition;
-
 - (instancetype)initWithName:(NSString *)name;
 
 @end

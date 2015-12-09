@@ -35,8 +35,8 @@
     self.title = self.name;
 
     [RecipesTableViewCell registerFor:self.tableRecipes];
-    NSArray *testRecipesnNames = @[@"Рецепт 1", @"Рецепт 2 подлиннее", @"Очень длинное название рецепта номер три, проверяем перенос строк и размеры", @"Рецепт 4", @"Рецепт 5", @"Длинный рецепт 6, чтобы занял пару строк", @"Рецепт 7", @"Рецепт 8", @"Рецепт 9", @"Рецепт 10"];
-    self.recipes = testRecipesnNames;
+    NSArray *testRecipesNames = @[@"Рецепт 1", @"Рецепт 2 подлиннее", @"Очень длинное название рецепта номер три, проверяем перенос строк и размеры", @"Рецепт 4", @"Рецепт 5", @"Длинный рецепт 6, чтобы занял пару строк", @"Рецепт 7", @"Рецепт 8", @"Рецепт 9", @"Рецепт 10"];
+    self.recipes = testRecipesNames;
     self.tableRecipes.estimatedRowHeight = 64.0f;
     self.tableRecipes.rowHeight = UITableViewAutomaticDimension;
     
