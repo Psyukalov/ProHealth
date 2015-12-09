@@ -10,6 +10,7 @@
 #import "Helper.h"
 #import "UIView+Snapshot.h"
 #import "MainMenuViewController.h"
+#import "StartViewController.h"
 
 @interface GuideViewController ()
 
@@ -63,15 +64,8 @@
 #pragma mark - Actions
 
 - (IBAction)btnStart_Tap:(UIButton *)sender {
-    // TODO: load start screen
-    UIWindow *mainWindow = [[UIApplication sharedApplication].delegate window];
-    UIImage *snapshotImage = [mainWindow blurredSnapshot];
-    MainMenuViewController *mainMenuVC = [[MainMenuViewController alloc] initWithMainNavigationController:self.navigationController blurredSnapshotImage:snapshotImage];
-    UINavigationController *navigationVC = [[UINavigationController alloc] initWithRootViewController:mainMenuVC];
-    navigationVC.modalPresentationStyle = UIModalPresentationOverCurrentContext;
-    navigationVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-    navigationVC.view.backgroundColor = [UIColor clearColor];
-    [self presentViewController:navigationVC animated:YES completion:nil];
+    StartViewController *startVC = [[StartViewController alloc] init];
+    [self.navigationController setViewControllers:@[startVC] animated:YES];
 }
 
 - (IBAction)swRecLeft_Swipe:(UISwipeGestureRecognizer *)sender {

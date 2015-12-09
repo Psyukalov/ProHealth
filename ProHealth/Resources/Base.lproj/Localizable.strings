@@ -65,3 +65,11 @@
 /* ExerciseDetailsViewController */
 "ExerciseDetail.Sec" = "сек";
 
+/* PersonalStatsViewController */
+"PersonalStats.Title" = "ЛИЧНЫЙ КАБИНЕТ";
+
+/* SettingsViewController */
+"Settings.Title" = "НАСТРОЙКИ";
+
+/* ExercisesViewController */
+"Exercises.Title" = "УПРАЖНЕНИЯ";

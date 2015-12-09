@@ -12,7 +12,7 @@
 #import "DataManager.h"
 #import "Eating+CoreDataProperties.h"
 #import "Eating.h"
-
+#import "UIViewController+CustomDraw.h"
 
 @interface PersonalStatsViewController ()
 
@@ -38,22 +38,28 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = Local(@"PersonalStats.Title");
+   
+    
     self.context = [DataManager sharedManager];
     [self.context managedObjectContext];
     self.calendar = [NSCalendar currentCalendar];
     NSDateComponents *components = [[NSCalendar currentCalendar] components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:[NSDate date]];
     self.date = [[NSCalendar currentCalendar] dateFromComponents:components];
+    
     UIBarButtonItem *btnSetting = [[UIBarButtonItem alloc] init];
     [btnSetting setImage:[UIImage imageNamed:@"gear.png"]];
     [btnSetting setTintColor:RGB(1, 225, 255)];
-    [btnSetting setAction:@selector(btnSettings_Tab:)];
+    [btnSetting setAction:@selector(btnSettings_Tap:)];
     [btnSetting setTarget:self];
-    self.navigationController.navigationBar.topItem.rightBarButtonItem = btnSetting;
-    [self.navigationController.navigationBar setBackgroundColor:RGB(1, 225, 255)];
+    self.navigationItem.rightBarButtonItem = btnSetting;
+    //[self.navigationController.navigationBar setBackgroundColor:RGB(1, 225, 255)];
+     [self setNavigationBackButton];
     [Helper applyCornerRadius:6 forViews:@[_contentView]];
     [Helper applyShadowForViews:@[_contentView]];
     [Helper applyTransparentLayerFormImage:_imageRectAvatar withColor:RGB(0, 0, 0)];
     [Helper applyCornerRadius:_imageCircleAvatar.frame.size.width / 2 forViews:@[_imageCircleAvatar]];
+    
     self.person = [Person sharedPerson];
     _imageRectAvatar.image = [UIImage imageWithData:self.person.avatar];
     _imageCircleAvatar.image = [UIImage imageWithData:self.person.avatar];
@@ -100,9 +106,10 @@
             break;
     }
     
+    newDate = [self.calendar dateByAddingComponents:dateComponent toDate:self.date options:0];
     NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Eating"];
     request.predicate = [NSPredicate predicateWithFormat:@"date >= %@", newDate];
-    newDate = [self.calendar dateByAddingComponents:dateComponent toDate:self.date options:0];
+    
     
     NSError *fetchRequestError;
     self.calories = [[self.context.managedObjectContext executeFetchRequest:request error:&fetchRequestError] mutableCopy];
@@ -141,7 +148,7 @@
 
 #pragma mark - Actions
 
-- (void)btnSettings_Tab:(UIBarButtonItem *)sender {
+- (void)btnSettings_Tap:(UIBarButtonItem *)sender {
     SettingsViewController *settingsVC = [[SettingsViewController alloc] init];
     [self.navigationController pushViewController:settingsVC animated:YES];
 }

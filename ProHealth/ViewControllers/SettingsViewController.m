@@ -8,6 +8,7 @@
 
 #import "SettingsViewController.h"
 #import "PersonalDataViewController.h"
+#import "UIViewController+CustomDraw.h"
 
 @interface SettingsViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
@@ -34,10 +35,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.person = [Person sharedPerson];
+    self.title = Local(@"Settings.Title");
+    [self setNavigationBackButton];
     [Helper applyCornerRadius:6 forViews:@[_contentView, _btnChangeAvatar, _btnEdit, _btnFullVersion]];
     [Helper applyShadowForViews:@[_contentView]];
     [Helper applyTransparentLayerFormImage:_imageRectAvatar withColor:RGB(0, 0, 0)];
     [Helper applyCornerRadius:_imageCircleAvatar.frame.size.width / 2 forViews:@[_imageCircleAvatar]];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {

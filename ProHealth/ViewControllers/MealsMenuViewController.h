@@ -10,6 +10,6 @@
 
 @interface MealsMenuViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
-@property (strong, nonatomic) UIImage *snapshotImage;
+- (instancetype)initWithMainNavigationController:(UINavigationController *)mainNavigationController blurredSnapshotImage:(UIImage *)blurredSnapshotImage;
 
 @end

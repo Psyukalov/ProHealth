@@ -7,9 +7,9 @@
 //
 
 
-#import "Exercises.h"
+#import "Exercise.h"
 
 
-@implementation Exercises
+@implementation Exercise
 
 @end

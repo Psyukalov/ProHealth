@@ -8,14 +8,18 @@
 
 #import "ExerciseDetailsViewController.h"
 #import "Helper.h"
-#import "Exercises.h"
+#import "Exercise.h"
 #import <AVKit/AVKit.h>
 #import <AVFoundation/AVFoundation.h>
 #import "UIViewController+CustomDraw.h"
 
+static void *playerContext = &playerContext;
+static NSString * const playerRatePropertyName = @"rate";
+
 @interface ExerciseDetailsViewController ()
 
-@property (strong, nonatomic) Exercises *exercise;
+@property (copy, nonatomic) NSString *name;
+@property (strong, nonatomic) Exercise *exercise;
 @property (weak, nonatomic) IBOutlet UIView *contentView;
 @property (weak, nonatomic) IBOutlet UIButton *btnPlay;
 @property (weak, nonatomic) IBOutlet UIButton *btnConfirm;
@@ -33,20 +37,28 @@
 
 #pragma mark - Lifecycle 
 
+- (instancetype)initWithName:(NSString *)name {
+    if (self = [super init]) {
+        _name = name;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = self.name.uppercaseString;
     [self setNavigationBackButton];
     [Helper applyCornerRadius:6 forViews:@[_contentView]];
     [Helper applyCornerRadius:_btnConfirm.frame.size.height / 2 forViews:@[_btnConfirm]];
     [Helper applyCornerRadius:_btnPlay.frame.size.height / 2 forViews:@[_btnPlay]];
-    self.exercise = [[Exercises alloc] init];
+    self.exercise = [[Exercise alloc] init];
     
     //TODO: test code
-    self.exercise.name = @"Приседания";
+    self.exercise.name = self.name;
     self.exercise.time = 130;
-    self.exercise.repeats = @"3-4 раза";
-    self.exercise.exerDescript = @"Это упражнение направлено на укрепление мышц спины, преса и ног. Приступая к упражнению, помните о технике безопастности.";
+    self.exercise.repeats = @"3-4 повтора";
+    self.exercise.exerDescript = @"Это упражнение направлено на укрепление мышц спины, пресса и ног. Приступая к упражнению, помните о технике безопастности.";
     self.exercise.videoURL = @"https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4";
     //
     
@@ -64,27 +76,34 @@
     self.playerVC.player = self.avPlayer;
     self.playerVC.view.frame = _playerView.frame;
     [_playerView insertSubview:self.playerVC.view belowSubview:_btnPlay];
+    
+    // Register for KVO
     [self.playerVC.player addObserver:self
-                           forKeyPath:@"rate"
+                           forKeyPath:playerRatePropertyName
                               options:(NSKeyValueObservingOptionNew |
                                        NSKeyValueObservingOptionOld)
-                              context:NULL];
+                              context:playerContext];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
-    [self.playerVC.player removeObserver:self forKeyPath:@"rate"];
+    // Unregister for KVO
+    [self.playerVC.player removeObserver:self forKeyPath:playerRatePropertyName context:playerContext];
     [super viewDidDisappear:animated];
 }
 
+#pragma mark - KVO
 - (void)observeValueForKeyPath:(NSString *)keyPath
                       ofObject:(id)object
                         change:(NSDictionary *)change
                        context:(void *)context {
-    if ([keyPath isEqual:@"rate"]) {
-        float newRate = [change[NSKeyValueChangeNewKey] floatValue];
-        if (newRate == 0) {
-            [_btnPlay setHidden:NO];
-            [_lblName setHidden:NO];
+    
+    if (context == playerContext) {
+        if ([keyPath isEqual:playerRatePropertyName]) {
+            float newRate = [change[NSKeyValueChangeNewKey] floatValue];
+            if (newRate == 0) {
+                [_btnPlay setHidden:NO];
+                [_lblName setHidden:NO];
+            }
         }
     }
 }

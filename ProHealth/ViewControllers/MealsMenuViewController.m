@@ -20,25 +20,31 @@ static const NSInteger kMenuItemsCount = 4;
 @property (strong, nonatomic) NSMutableArray<NSString *> *menuItemNames;
 @property (strong, nonatomic) NSArray<NSString *> *menuItemImages;
 @property (weak, nonatomic) IBOutlet UIImageView *imgSnapshotView;
+@property (weak, nonatomic) IBOutlet UIButton *buttonClose;
+@property (strong, nonatomic) UIImage *blurredSnapshotImage;
+@property (weak, nonatomic) UINavigationController *mainNavigationController;
 
 @end
 
 @implementation MealsMenuViewController
 
 #pragma mark - Lifecycle
+
+- (instancetype)initWithMainNavigationController:(UINavigationController *)mainNavigationController blurredSnapshotImage:(UIImage *)blurredSnapshotImage {
+    if (self = [super init]) {
+        _blurredSnapshotImage = blurredSnapshotImage;
+        _mainNavigationController = mainNavigationController;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.imgSnapshotView.image = self.snapshotImage;
-    self.navigationController.navigationBarHidden = YES;
+    self.imgSnapshotView.image = self.blurredSnapshotImage;
     // Do any additional setup after loading the view from its nib.
     [self loadResources];
     [MealsMenuTableViewCell registerFor:self.tblMenu];
     [self.tblMenu reloadData];
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    self.navigationController.navigationBarHidden = YES;
 }
 
 - (void)loadResources
@@ -53,6 +59,7 @@ static const NSInteger kMenuItemsCount = 4;
 }
 
 #pragma mark - UITableViewDataSource, UITableViewDelegate
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return kMenuItemsCount;
@@ -68,7 +75,17 @@ static const NSInteger kMenuItemsCount = 4;
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *menuItemName = self.menuItemNames[indexPath.row];
     RecipesViewController *recipesVC = [[RecipesViewController alloc] initWithName:menuItemName];
-    [self.navigationController pushViewController:recipesVC animated:YES];
+    __weak MealsMenuViewController *_weakSelf = self;
+    [_weakSelf dismissViewControllerAnimated:YES completion:nil];
+    [self.mainNavigationController pushViewController:recipesVC animated:YES];
+}
+
+#pragma mark - Actions
+
+- (IBAction)buttonClose_Tap:(UIButton *)sender {
+    [self dismissViewControllerAnimated:YES completion:^{
+        NSLog(@"MealsMenu dismiss completed");
+    }];
 }
 
 @end
