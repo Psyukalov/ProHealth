@@ -27,7 +27,7 @@
 }
 
 + (nonnull NSString *)applyRussianStyleForDate:(nonnull NSDate *)date {
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    NSDateFormatter *formatter = [self sharedDateFormatter];
     [formatter setDateFormat:@"dd.MM.yyyy"];
     return [formatter stringFromDate:date];
 }

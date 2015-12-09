@@ -13,6 +13,7 @@
 #import "ExercisesViewController.h"
 #import "WaterViewController.h"
 #import "UIView+Snapshot.h"
+#import "CaloriesViewController.h"
 
 //tmp
 #import "ExerciseDetailsViewController.h"
@@ -101,8 +102,8 @@
 #pragma mark - Actions
 
 - (IBAction)btnFire_Tab:(UIButton *)sender {
-    ExercisesViewController *exercisesVC = [[ExercisesViewController alloc] init];
-    [self.navigationController pushViewController:exercisesVC animated:YES];
+    CaloriesViewController *caloriesVC = [[CaloriesViewController alloc] init];
+    [self.navigationController pushViewController:caloriesVC animated:YES];
 }
 
 - (IBAction)btnWater_Tab:(UIButton *)sender {
