@@ -35,6 +35,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     [self setNavigationBackButton];
     [Helper applyCornerRadius:6 forViews:@[_contentView]];
     [Helper applyCornerRadius:_btnConfirm.frame.size.height / 2 forViews:@[_btnConfirm]];
@@ -63,14 +64,37 @@
     self.playerVC.player = self.avPlayer;
     self.playerVC.view.frame = _playerView.frame;
     [_playerView insertSubview:self.playerVC.view belowSubview:_btnPlay];
+    [self.playerVC.player addObserver:self
+                           forKeyPath:@"rate"
+                              options:(NSKeyValueObservingOptionNew |
+                                       NSKeyValueObservingOptionOld)
+                              context:NULL];
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [self.playerVC.player removeObserver:self forKeyPath:@"rate"];
+    [super viewDidDisappear:animated];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath
+                      ofObject:(id)object
+                        change:(NSDictionary *)change
+                       context:(void *)context {
+    if ([keyPath isEqual:@"rate"]) {
+        float newRate = [change[NSKeyValueChangeNewKey] floatValue];
+        if (newRate == 0) {
+            [_btnPlay setHidden:NO];
+            [_lblName setHidden:NO];
+        }
+    }
 }
 
 #pragma mark - Actions
 
 - (IBAction)btnPlay_Tab:(UIButton *)sender {
     [self.avPlayer play];
-    [_btnPlay setAlpha:0];
-    [_lblName setAlpha:0];
+    [_btnPlay setHidden:YES];
+    [_lblName setHidden:YES];
 }
 
 - (IBAction)btnConfirm_Tab:(UIButton *)sender {
