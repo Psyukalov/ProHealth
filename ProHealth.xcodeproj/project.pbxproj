@@ -84,6 +84,7 @@
 		C3F1BA9B1C04A03F005DF91B /* PersonalDataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3F1BA991C04A03F005DF91B /* PersonalDataViewController.xib */; };
 		C703300F1C0C52D3007A4734 /* Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = C703300E1C0C52D3007A4734 /* Recipe.m */; };
 		C72CD4BF1C04ADBB00DAE3D4 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C72CD4BE1C04ADBB00DAE3D4 /* DataManager.m */; };
+		C74517531C1822AD00BC7440 /* Tip.m in Sources */ = {isa = PBXBuildFile; fileRef = C74517521C1822AD00BC7440 /* Tip.m */; };
 		C74DC9A11C10668A0055EF29 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C74DC9A01C10668A0055EF29 /* AVKit.framework */; };
 		C76B5B231C06F2600035FDD9 /* Eating+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = C76B5B201C06F2600035FDD9 /* Eating+CoreDataProperties.m */; };
 		C76B5B241C06F2600035FDD9 /* Eating.m in Sources */ = {isa = PBXBuildFile; fileRef = C76B5B221C06F2600035FDD9 /* Eating.m */; };
@@ -262,6 +263,8 @@
 		C703300E1C0C52D3007A4734 /* Recipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recipe.m; sourceTree = "<group>"; };
 		C72CD4BD1C04ADBB00DAE3D4 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
 		C72CD4BE1C04ADBB00DAE3D4 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
+		C74517511C1822AD00BC7440 /* Tip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tip.h; sourceTree = "<group>"; };
+		C74517521C1822AD00BC7440 /* Tip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tip.m; sourceTree = "<group>"; };
 		C74DC9A01C10668A0055EF29 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		C76B5B1F1C06F2600035FDD9 /* Eating+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Eating+CoreDataProperties.h"; sourceTree = "<group>"; };
 		C76B5B201C06F2600035FDD9 /* Eating+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Eating+CoreDataProperties.m"; sourceTree = "<group>"; };
@@ -441,6 +444,8 @@
 				C38E0E0E1C0465F0008FA999 /* Person.m */,
 				C703300D1C0C52D3007A4734 /* Recipe.h */,
 				C703300E1C0C52D3007A4734 /* Recipe.m */,
+				C74517511C1822AD00BC7440 /* Tip.h */,
+				C74517521C1822AD00BC7440 /* Tip.m */,
 			);
 			path = DataClasses;
 			sourceTree = "<group>";
@@ -965,6 +970,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAB43A421C0C51FF000F83F0 /* NSMutableArray+pieEx.m in Sources */,
+				C74517531C1822AD00BC7440 /* Tip.m in Sources */,
 				C34BC9371C04505B007E75CD /* PersonalStatsViewController.m in Sources */,
 				C34BC91E1C044F88007E75CD /* MealsMenuViewController.m in Sources */,
 				EAF619181C0ED57A00537F75 /* UIImage+Color.m in Sources */,

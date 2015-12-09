@@ -12,6 +12,10 @@
 #import <AVKit/AVKit.h>
 #import <AVFoundation/AVFoundation.h>
 #import "UIViewController+CustomDraw.h"
+//tmp
+#import "TipsViewController.h"
+//
+
 
 @interface ExerciseDetailsViewController ()
 
@@ -98,7 +102,9 @@
 }
 
 - (IBAction)btnConfirm_Tab:(UIButton *)sender {
-    //
+//    [self.navigationController popToRootViewControllerAnimated:YES];
+    TipsViewController *tipsVC = [[TipsViewController alloc] init];
+    [self.navigationController pushViewController:tipsVC animated:YES];
 }
 
 @end
