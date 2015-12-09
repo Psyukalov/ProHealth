@@ -19,7 +19,6 @@
 @property (strong, nonatomic) UIImage *blurredSnapshotImage;
 @property (weak, nonatomic) UINavigationController *mainNavigationController;
 
-
 @end
 
 @implementation MainMenuViewController
@@ -61,7 +60,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // TODO: go to other controller
+    // TODO: go to other controllers
     // there will be routing code for loading controllers
     UIViewController *selectedViewController = [[StartViewController alloc] init];
     [self loadSelectedViewController:selectedViewController];
@@ -73,6 +72,7 @@
         [_weakSelf.mainNavigationController setViewControllers:@[selectedViewController] animated:YES];
     }];
 }
+
 #pragma mark - Actions
 
 - (IBAction)buttonClose_Tap:(UIButton *)sender {

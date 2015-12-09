@@ -75,7 +75,7 @@ NSString *const isNotFirstRun = @"YES";
 
 - (void)applyDesign
 {
-    //[[UINavigationBar appearance] setBarTintColor:RGB(44, 62, 80)];
+    // Apply common navbar design
     [[UINavigationBar appearance] setTranslucent:NO];
     NSShadow *shadow = [NSShadow new];
     shadow.shadowColor = [UIColor clearColor];

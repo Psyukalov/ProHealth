@@ -41,13 +41,15 @@
     [Helper applyCornerRadius:_btnConfirm.frame.size.height / 2 forViews:@[_btnConfirm]];
     [Helper applyCornerRadius:_btnPlay.frame.size.height / 2 forViews:@[_btnPlay]];
     self.exercise = [[Exercises alloc] init];
-    //tmp
+    
+    //TODO: test code
     self.exercise.name = @"Приседания";
     self.exercise.time = 130;
     self.exercise.repeats = @"3-4 раза";
     self.exercise.exerDescript = @"Это упражнение направлено на укрепление мышц спины, преса и ног. Приступая к упражнению, помните о технике безопастности.";
     self.exercise.videoURL = @"https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4";
     //
+    
     [_lblName setText:self.exercise.name];
     [_lblTimer setText:[NSString stringWithFormat:@"%ld %@", (long)self.exercise.time, Local(@"ExerciseDetail.Sec")]];
     [_lblRepeat setText:self.exercise.repeats];

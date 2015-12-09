@@ -99,17 +99,24 @@
         default:
             break;
     }
+    
     NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Eating"];
+    request.predicate = [NSPredicate predicateWithFormat:@"date >= %@", newDate];
     newDate = [self.calendar dateByAddingComponents:dateComponent toDate:self.date options:0];
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"date >= %@", newDate];
-    [request setPredicate:predicate];
-    self.calories = [[self.context.managedObjectContext executeFetchRequest:request error:nil] mutableCopy];
-    NSMutableArray *result = [[NSMutableArray alloc] init];
-    if (self.calories.count > 0) {
-        for (int i = 0; i <= self.calories.count - 1; i++) {
-            Eating *getCal = self.calories[i];
-            [result addObject:getCal.calories];
+    
+    NSError *fetchRequestError;
+    self.calories = [[self.context.managedObjectContext executeFetchRequest:request error:&fetchRequestError] mutableCopy];
+    
+    NSMutableArray *result = nil;
+    if (!fetchRequestError) {
+        if (self.calories.count > 0) {
+            result = [[NSMutableArray alloc] init];
+            for (Eating *eating in self.calories) {
+                [result addObject:eating.calories];
+            }
         }
+    } else {
+        NSLog(@"en error occured during executing fetch request: %@", fetchRequestError);
     }
     return result;
 }

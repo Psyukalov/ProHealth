@@ -13,7 +13,7 @@
 #import "Helper.h"
 #import "MainMenuViewController.h"
 #import "UIView+Snapshot.h"
-
+#import "UIViewController+CustomDraw.h"
 
 @interface CaloriesViewController ()
 
@@ -45,6 +45,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelMonth;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *cButtonAddBottom;
 @property (assign, nonatomic) BOOL isNotFirstLoad;
+
 @end
 
 @implementation CaloriesViewController
@@ -66,7 +67,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self loadLocalization];
-
+    [self setNavigationBackButton];
     [Helper applyCornerRadius:self.buttonAdd.bounds.size.width / 2 forViews:@[self.buttonAdd]];
     [Helper applyCornerRadius:6.0f forViews:@[self.contentView]];
     self.labelCaloriesCount.format = @"%d\nккал";
@@ -75,6 +76,8 @@
     [UIView animateKeyframesWithDuration:1.0f delay:0 options:kNilOptions animations:^{
         self.caloriesPieChartView.alpha = 1.0f;
     } completion:nil];
+    self.labelDay.text = [NSString stringWithFormat:@"%ld", (long)[Helper currentDay]];
+    self.labelMonth.text = [[Helper currentMonthNameWithStyle:NSDateFormatterMediumStyle withFormat:@"MMM"] uppercaseString];
 }
 
 - (void)loadLocalization {
@@ -86,6 +89,7 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
+    
     [super viewDidAppear:animated];
     
     //NSLog(@"pie chart frame: %@", NSStringFromCGRect(self.caloriesPieChartView.frame));

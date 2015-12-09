@@ -17,38 +17,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" text="Pro Health" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1CF-4x-axm">
-                                <rect key="frame" x="121" y="252" width="360" height="96"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_launchscreen.png" translatesAutoresizingMaskIntoConstraints="NO" id="zU2-r1-oko">
+                                <rect key="frame" x="10" y="467467" width="240" height="260"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" id="brn-lJ-2di"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" id="yb7-DX-jym"/>
+                                    <constraint firstAttribute="width" constant="258" id="dbP-ji-AaS"/>
+                                    <constraint firstAttribute="height" constant="260" id="pqK-b7-H1y"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <size key="shadowOffset" width="0.0" height="0.0"/>
-                            </label>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="dbP-ji-AaS"/>
+                                        <exclude reference="pqK-b7-H1y"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="dbP-ji-AaS"/>
+                                        <include reference="pqK-b7-H1y"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.17254901960784313" green="0.24313725490196078" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="1CF-4x-axm" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="8mW-rd-ZNM"/>
-                            <constraint firstAttribute="trailing" secondItem="1CF-4x-axm" secondAttribute="trailing" constant="8" id="fqt-KZ-Nlv"/>
-                            <constraint firstItem="1CF-4x-axm" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="jKL-vy-SRf"/>
-                            <constraint firstItem="1CF-4x-axm" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="9" id="wEV-dB-YyP"/>
+                            <constraint firstItem="zU2-r1-oko" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="ExY-6H-lfw"/>
+                            <constraint firstItem="zU2-r1-oko" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="GTc-jw-7uC"/>
                         </constraints>
                         <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="zU2-r1-oko"/>
+                            </mask>
                             <mask key="constraints">
-                                <exclude reference="fqt-KZ-Nlv"/>
-                                <exclude reference="wEV-dB-YyP"/>
+                                <exclude reference="ExY-6H-lfw"/>
+                                <exclude reference="GTc-jw-7uC"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="zU2-r1-oko"/>
+                            </mask>
                             <mask key="constraints">
-                                <include reference="fqt-KZ-Nlv"/>
-                                <include reference="wEV-dB-YyP"/>
+                                <include reference="ExY-6H-lfw"/>
+                                <include reference="GTc-jw-7uC"/>
                             </mask>
                         </variation>
                     </view>
@@ -58,4 +69,7 @@
             <point key="canvasLocation" x="52.5" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="img_launchscreen.png" width="258" height="260"/>
+    </resources>
 </document>
