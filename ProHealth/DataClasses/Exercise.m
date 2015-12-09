@@ -9,7 +9,6 @@
 
 #import "Exercise.h"
 
-
 @implementation Exercise
 
 @end

@@ -11,7 +11,6 @@
 #import "Person.h"
 #import "Helper.h"
 
-
-@interface SettingsViewController : UIViewController
+@interface SettingsViewController : UIViewController <UIImagePickerControllerDelegate>
 
 @end

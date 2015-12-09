@@ -54,6 +54,26 @@
 
 }
 
+#pragma mark - Functionality
+
+- (void)loadSelectedViewController:(UIViewController *)selectedViewController {
+    if (selectedViewController) {
+        __weak MainMenuViewController *_weakSelf = self;
+        if (![selectedViewController isKindOfClass:[MealsMenuViewController class]]) {
+            [_weakSelf dismissViewControllerAnimated:YES completion:^{
+                [_weakSelf.mainNavigationController pushViewController:selectedViewController animated:YES];
+            }];
+        } else {
+            [_weakSelf dismissViewControllerAnimated:YES completion:^{
+                selectedViewController.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+                selectedViewController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+                NSLog(@"topViewController: %@", _weakSelf.mainNavigationController.topViewController);
+                [_weakSelf.mainNavigationController.topViewController presentViewController:selectedViewController animated:YES completion:nil];
+            }];
+        }
+    }
+}
+
 #pragma UITableViewDataSource, UITableViewDelegate
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -101,24 +121,6 @@
             break;
     }
     [self loadSelectedViewController:selectedVC];
-}
-
-- (void)loadSelectedViewController:(UIViewController *)selectedViewController {
-    if (selectedViewController) {
-        __weak MainMenuViewController *_weakSelf = self;
-        if (![selectedViewController isKindOfClass:[MealsMenuViewController class]]) {
-            [_weakSelf dismissViewControllerAnimated:YES completion:^{
-                [_weakSelf.mainNavigationController pushViewController:selectedViewController animated:YES];
-            }];
-        } else {
-            [_weakSelf dismissViewControllerAnimated:YES completion:^{
-                selectedViewController.modalPresentationStyle = UIModalPresentationOverCurrentContext;
-                selectedViewController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-                NSLog(@"topViewController: %@", _weakSelf.mainNavigationController.topViewController);
-                [_weakSelf.mainNavigationController.topViewController presentViewController:selectedViewController animated:YES completion:nil];
-            }];
-        }
-    }
 }
 
 #pragma mark - Actions

@@ -40,8 +40,8 @@ NSString *const isNotFirstRun = @"YES";
     } else {
         GuideViewController *guideVC = [[GuideViewController alloc] init];
         viewController = guideVC;
-       // [[NSUserDefaults standardUserDefaults] setObject:isNotFirstRun forKey:@"isNotFirstRun"];
-        //[[NSUserDefaults standardUserDefaults] synchronize];
+        [[NSUserDefaults standardUserDefaults] setObject:isNotFirstRun forKey:@"isNotFirstRun"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
     }
     UINavigationController *navigationVC = [[UINavigationController alloc] initWithRootViewController:viewController];
     [self applyDesign];

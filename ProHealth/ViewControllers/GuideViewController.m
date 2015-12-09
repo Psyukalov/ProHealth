@@ -39,14 +39,14 @@
     [self refreshViewWithTipNumber:self.currentTipNumber];
 }
 
+#pragma mark - UI
+
 - (void)loadResources {
     self.title = NSLocalizedString(@"Guide.Title", @"NATALIA ZUBAREVA");
     self.imageNames = @[@"guide_1", @"guide_2", @"guide_3"];
     self.captions = @[Local(@"Guide.Caption.EffectiveHelper"), Local(@"Guide.Caption.ForgotHungry"), Local(@"Guide.Caption.ExperiencedDietitian")];
     self.captionTexts = @[Local(@"Guide.Caption.EffectiveHelper.Text"), Local(@"Guide.Caption.ForgotHungry.Text"), Local(@"Guide.Caption.ExperiencedDietitian.Text")];
 }
-
-#pragma mark - UI
 
 - (void)refreshViewWithTipNumber:(NSInteger)number {
     self.imgBackground.image = [UIImage imageNamed:self.imageNames[number]];

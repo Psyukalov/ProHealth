@@ -36,7 +36,6 @@
     [self.tableExercises reloadData];
     self.tableExercises.estimatedRowHeight = 64.0f;
     self.tableExercises.rowHeight = UITableViewAutomaticDimension;
-    
 }
 
 #pragma mark - UITableViewDataSource, UITableViewDelegate

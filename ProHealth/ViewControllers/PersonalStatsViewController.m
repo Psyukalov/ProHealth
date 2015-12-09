@@ -71,6 +71,7 @@
     float viewHeight = _histogramView.frame.size.height;
     float btnWidth = viewWidth / 4;
     float btnHeight = 84;
+    
     for (int i = 0; i <= 3; i++) {
         UIButton *newButton = [[UIButton alloc] initWithFrame:_histogramView.frame];
         newButton.frame = CGRectMake(i * btnWidth, viewHeight - btnHeight, btnWidth, btnHeight);
@@ -81,6 +82,7 @@
         [newButton setTitleColor:RGB(44, 62, 80) forState:UIControlStateNormal];
         [_histogramView insertSubview:newButton atIndex:1];
     }
+    
     [self drawHistogram:[self getArrayFromTag:0]];
 }
 

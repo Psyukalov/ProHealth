@@ -48,6 +48,7 @@
     [super viewDidLoad];
     [self setNavigationBackButton];
     self.title = self.name;
+    
     //tmp
     self.recipe = [[Recipe alloc] init];
     self.recipe.name = @"САЛАТ С МОРКОВКОЙ";
@@ -120,6 +121,7 @@
         [self.nutritionalView addSubview:newLblNutritional];
         [self.nutritionalView addSubview:newLblNutritionalWeight];
     }
+    
     // Расчет констрейна высоты для Content View - Ingridients
     NSUInteger count = self.recipe.ingredients.count;
     [_heightConstrIngridientsView setConstant:count * height + (count - 1) * y + 2 * x];
