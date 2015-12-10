@@ -12,13 +12,6 @@
 
 @implementation WaterGlassButton
 
-@synthesize previos = _previos;
-@synthesize next = _next;
-@synthesize isUsed = _isUsed;
-@synthesize emptyGlass = _emptyGlass;
-@synthesize addGlass = _addGlass;
-@synthesize fullGlass = _fullGlass;
-
 - (id)initWithUsedGlass:(BOOL)isUsed {
     self = [super init];
     if (self) {

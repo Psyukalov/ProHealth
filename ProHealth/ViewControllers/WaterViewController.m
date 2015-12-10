@@ -10,6 +10,7 @@
 #import "WaterViewController.h"
 #import "Helper.h"
 #import "WaterGlassButton.h"
+#import "UIViewController+CustomDraw.h"
 
 @interface WaterViewController ()
 
@@ -33,13 +34,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self setNavigationBackButton];
+    self.title = Local(@"WaterVC.Title");
+    
     //tmp
     self.countGlass = 20;
     self.countLines = 4;
     self.usedGlass = 0;
     //
+    
     [Helper applyCornerRadius:6 forViews:@[_contentView]];
     [Helper applyCornerRadius:_btnConfirm.frame.size.height / 2 forViews:@[_btnConfirm]];
+    
     [_lblDay setText:[NSString stringWithFormat:@"%ld", (long)[Helper currentDay]]];
     NSString *newMonth = [Helper currentMonthNameWithStyle:NSDateFormatterShortStyle
                                                 withFormat:@"MMM"];
@@ -47,7 +54,7 @@
     [month deleteCharactersInRange:[month rangeOfString:@"."]];
     month = [NSMutableString stringWithString:[month uppercaseString]];
     [_lblMonth setText:[NSString stringWithFormat:@"%@", month]];
-    [self setLebelTextUsedWater];
+    [self setLabelTextUsedWater];
     [_lblAllWater setText:[NSString stringWithFormat:@"из %d мл", self.countGlass * 250]];
     self.btnArray = [[NSMutableArray alloc] init];
     BOOL isUsed;
@@ -91,7 +98,7 @@
 
 #pragma mark - Custom methods
 
-- (void)setLebelTextUsedWater {
+- (void)setLabelTextUsedWater {
     [_lblWater setText:[NSString stringWithFormat:@"%d", self.usedGlass * 250]];
 }
 
@@ -100,7 +107,7 @@
 - (void)btnWaterGlass_Tab:(WaterGlassButton *)button {
     if ([button useGlass]) {
         self.usedGlass++;
-        [self setLebelTextUsedWater];
+        [self setLabelTextUsedWater];
     }
 }
 

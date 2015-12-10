@@ -8,7 +8,7 @@
 
 
 #import "TipsViewController.h"
-
+#import "UIViewController+CustomDraw.h"
 
 @interface TipsViewController ()
 
@@ -20,6 +20,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setNavigationBackButton];
+    self.title = Local(@"Tips.Title");
 }
 
 @end

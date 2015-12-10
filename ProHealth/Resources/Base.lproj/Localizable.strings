@@ -51,6 +51,7 @@
 "Start.Title" = "NATALIA ZUBAREVA";
 
 /* WaterViewController */
+"WaterVC.Title" = "ВОДА";
 "WaterVC.Tip.1" = "Вы не достигли суточной нормы воды!";
 "WaterVC.Tip.2" = "Вы почти достигли суточной нормы воды!";
 "WaterVC.Tip.3" = "Вы достигли суточной нормы воды!";
@@ -73,3 +74,6 @@
 
 /* ExercisesViewController */
 "Exercises.Title" = "УПРАЖНЕНИЯ";
+
+/* TipsViewController */
+"Tips.Title" = "СОВЕТЫ";
