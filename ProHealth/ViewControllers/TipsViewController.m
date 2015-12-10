@@ -37,11 +37,13 @@
     self.tips = [[NSMutableArray alloc] init];
     //tmp
     for (int i = 0; i <= 4; i++) {
-        self.tips[i] = [[Tip alloc] init];
-        self.tips[i].identifier = 0;
-        self.tips[i].name = [NSString stringWithFormat:@"TIME TO EAT, BITCH! - %d", i];
-        self.tips[i].text = @"Раз в сутки, суп должен быть в желудке. Приятного аппетита!";
-        self.tips[i].imageURL = @"https://semseo.md/images/https2210.jpg";
+        Tip *tip = [[Tip alloc] init];
+        tip = [[Tip alloc] init];
+        tip.identifier = 0;
+        tip.name = [NSString stringWithFormat:@"ВРЕМЯ ПОЕСТЬ! - %d", i];
+        tip.text = @"Раз в сутки суп должен быть в желудке. Приятного аппетита!";
+        tip.imageURL = @"https://s-media-cache-ak0.pinimg.com/736x/56/5e/69/565e698b5eae4fc0070731970839adc1.jpg";
+        [self.tips addObject:tip];
     }
     //
     [self loadTip:self.currentIndex];
@@ -52,6 +54,8 @@
 - (void)loadTip:(NSInteger)index {
     NSURL *imageURL = [NSURL URLWithString:self.tips[index].imageURL];
     //NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
+    
+    // Load image async
     __weak TipsViewController *_weakSelf = self;
     [[[NSURLSession sharedSession] dataTaskWithURL:imageURL completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
@@ -61,6 +65,7 @@
             });
         });
     }] resume];
+    
     //[_imageTip setImage:[UIImage imageWithData:imageData scale:SCREEN_SCALE]];
     [_lblName setText:self.tips[index].name];
     [_lblText setText:self.tips[index].text];
