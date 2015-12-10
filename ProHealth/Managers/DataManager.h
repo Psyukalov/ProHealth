@@ -18,6 +18,9 @@
 - (void)saveContext;
 
 - (instancetype) init __attribute__((unavailable("init is not available; use sharedManager instead")));
+
+- (NSArray *)requestEatingsFromDate:(NSDate *)date error:(NSError **)error;
+
 + (instancetype)sharedManager;
 
 @end

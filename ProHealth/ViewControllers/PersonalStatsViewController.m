@@ -17,7 +17,7 @@
 @interface PersonalStatsViewController ()
 
 @property (strong, nonatomic) Person *person;
-@property (strong, nonatomic) DataManager *context;
+@property (strong, nonatomic) DataManager *dataManager;
 @property (strong, nonatomic) NSCalendar *calendar;
 @property (strong, nonatomic) NSDate *date;
 @property (strong, nonatomic) NSMutableArray *calories;
@@ -40,9 +40,8 @@
     [super viewDidLoad];
     self.title = Local(@"PersonalStats.Title");
    
-    
-    self.context = [DataManager sharedManager];
-    [self.context managedObjectContext];
+    self.dataManager = [DataManager sharedManager];
+    [self.dataManager managedObjectContext];
     self.calendar = [NSCalendar currentCalendar];
     NSDateComponents *components = [[NSCalendar currentCalendar] components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:[NSDate date]];
     self.date = [[NSCalendar currentCalendar] dateFromComponents:components];
@@ -109,12 +108,8 @@
     }
     
     newDate = [self.calendar dateByAddingComponents:dateComponent toDate:self.date options:0];
-    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Eating"];
-    request.predicate = [NSPredicate predicateWithFormat:@"date >= %@", newDate];
-    
-    
     NSError *fetchRequestError;
-    self.calories = [[self.context.managedObjectContext executeFetchRequest:request error:&fetchRequestError] mutableCopy];
+    self.calories = [NSMutableArray arrayWithArray:[self.dataManager requestEatingsFromDate:newDate error:&fetchRequestError]];
     
     NSMutableArray *result = nil;
     if (!fetchRequestError) {

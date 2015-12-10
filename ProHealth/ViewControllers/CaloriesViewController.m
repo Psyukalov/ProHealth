@@ -77,7 +77,7 @@
         self.caloriesPieChartView.alpha = 1.0f;
     } completion:nil];
     self.labelDay.text = [NSString stringWithFormat:@"%ld", (long)[Helper currentDay]];
-    self.labelMonth.text = [[Helper currentMonthNameWithStyle:NSDateFormatterMediumStyle withFormat:@"MMM"] uppercaseString];
+    self.labelMonth.text = [[Helper currentMonthNameWithStyle:NSDateFormatterShortStyle withFormat:@"MMM"] uppercaseString];
 }
 
 - (void)loadLocalization {

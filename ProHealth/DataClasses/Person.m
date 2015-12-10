@@ -16,7 +16,6 @@
 
 @end
 
-
 @implementation Person
 
 @synthesize avatar = _avatar;

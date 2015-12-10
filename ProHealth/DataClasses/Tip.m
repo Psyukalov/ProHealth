@@ -9,7 +9,6 @@
 
 #import "Tip.h"
 
-
 @implementation Tip
 
 @end

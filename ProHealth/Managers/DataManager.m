@@ -99,6 +99,14 @@
     }
 }
 
+#pragma mark - Public methods
+- (NSArray *)requestEatingsFromDate:(NSDate *)date error:(NSError *__autoreleasing *)error {
+    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Eating"];
+    request.predicate = [NSPredicate predicateWithFormat:@"date >= %@", date];
+    NSArray *eatings = [self.managedObjectContext executeFetchRequest:request error:error];
+    return eatings;
+}
+
 #pragma mark - Static methods
 + (instancetype)sharedManager {
     static DataManager *dataManager = nil;

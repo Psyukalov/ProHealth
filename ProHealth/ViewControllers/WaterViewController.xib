@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WaterViewController">
@@ -31,7 +31,6 @@
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRR-rq-nVk">
                                     <rect key="frame" x="320" y="12" width="42" height="42"/>
-                                    <animations/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="42" id="U4P-vj-UJB"/>
                                         <constraint firstAttribute="width" constant="42" id="cqz-jN-uPe"/>
@@ -42,7 +41,6 @@
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7xS-Lp-Fr9">
                                     <rect key="frame" x="0.0" y="60" width="374" height="71"/>
-                                    <animations/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="374" id="9mZ-ca-14p"/>
                                         <constraint firstAttribute="height" constant="71" id="VOD-Nb-yDK"/>
@@ -53,7 +51,6 @@
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="из 2000 мл" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NIp-Qb-YyW">
                                     <rect key="frame" x="105" y="139" width="164" height="21"/>
-                                    <animations/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="21" id="6DW-vU-wiW"/>
                                         <constraint firstAttribute="width" constant="164" id="jXe-3k-euT"/>
@@ -64,7 +61,6 @@
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVV-of-B9e">
                                     <rect key="frame" x="156" y="581" width="62" height="62"/>
-                                    <animations/>
                                     <color key="backgroundColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="62" id="EqY-sV-OsE"/>
@@ -72,12 +68,11 @@
                                     </constraints>
                                     <state key="normal" image="chek.png"/>
                                     <connections>
-                                        <action selector="BtnConfirm_Tab:" destination="-1" eventType="touchUpInside" id="nMv-OR-gr2"/>
+                                        <action selector="BtnConfirm_Tap:" destination="-1" eventType="touchUpInside" id="dOg-AG-Ohc"/>
                                     </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="СЕН" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="REU-nc-0Tq">
                                     <rect key="frame" x="308" y="54" width="66" height="21"/>
-                                    <animations/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="21" id="68z-gx-51x"/>
                                         <constraint firstAttribute="width" constant="66" id="FEP-8O-MIK"/>
@@ -88,12 +83,10 @@
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lj9-Q6-MaZ" userLabel="Content View - Water Glass">
                                     <rect key="frame" x="0.0" y="200" width="374" height="295"/>
-                                    <animations/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы достигли суточной нормы воды!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jVn-dK-33N">
                                     <rect key="frame" x="74" y="507" width="226" height="42"/>
-                                    <animations/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="42" id="Y5D-jJ-Siz"/>
                                         <constraint firstAttribute="width" constant="226" id="lva-Hr-Zyv"/>
@@ -103,7 +96,6 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
-                            <animations/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstItem="7xS-Lp-Fr9" firstAttribute="top" secondItem="GHe-dw-PLL" secondAttribute="top" constant="60" id="0s7-JT-dy9"/>
@@ -126,7 +118,6 @@
                             </constraints>
                         </view>
                     </subviews>
-                    <animations/>
                     <constraints>
                         <constraint firstItem="GHe-dw-PLL" firstAttribute="leading" secondItem="4zl-xs-bA2" secondAttribute="leading" constant="20" id="4Mp-sj-tP3"/>
                         <constraint firstAttribute="trailing" secondItem="GHe-dw-PLL" secondAttribute="trailing" constant="20" id="Gfe-P2-3W4"/>
@@ -136,7 +127,6 @@
                     </constraints>
                 </scrollView>
             </subviews>
-            <animations/>
             <color key="backgroundColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="4zl-xs-bA2" secondAttribute="bottom" id="EE3-Jc-Ory"/>

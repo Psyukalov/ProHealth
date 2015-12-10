@@ -59,8 +59,8 @@
     self.btnArray = [[NSMutableArray alloc] init];
     BOOL isUsed;
     NSInteger count = 0;
-    CGFloat delWidth = (SCREEN_WIDTH - 40) / (self.countGlass / self.countLines) - 40;
-    CGFloat delHeight = _contentBtnWaterView.frame.size.height / self.countLines - 62;
+    CGFloat deltaWidth = (SCREEN_WIDTH - 40) / (self.countGlass / self.countLines) - 40;
+    CGFloat deltaHeight = _contentBtnWaterView.frame.size.height / self.countLines - 62;
     for (int j = 0; j <= self.countLines - 1; j++) {
         for (int i = 0; i <= self.countGlass / self.countLines - 1; i++) {
             if (count < self.usedGlass) {
@@ -69,8 +69,8 @@
                 isUsed = NO;
             }
             WaterGlassButton *btnWaterGlass = [[WaterGlassButton alloc] initWithUsedGlass:isUsed];
-            [btnWaterGlass addTarget:self action:@selector(btnWaterGlass_Tab:) forControlEvents:UIControlEventTouchUpInside];
-            [btnWaterGlass setFrame:CGRectMake(delWidth / 2 + i * 40 + i * delWidth, delHeight / 2 + j * 62 + j * delHeight, 40, 62)];
+            [btnWaterGlass addTarget:self action:@selector(btnWaterGlass_Tap:) forControlEvents:UIControlEventTouchUpInside];
+            [btnWaterGlass setFrame:CGRectMake(deltaWidth / 2 + i * 40 + i * deltaWidth, deltaHeight / 2 + j * 62 + j * deltaHeight, 40, 62)];
             btnWaterGlass.emptyGlass = [UIImage imageNamed:@"img_empty_glass.png"];
             btnWaterGlass.addGlass = [UIImage imageNamed:@"img_add_glass.png"];
             btnWaterGlass.fullGlass = [UIImage imageNamed:@"img_full_glass.png"];
@@ -80,15 +80,16 @@
         }
     }
     for (int i = 0; i <= self.countGlass - 1; i++) {
+        WaterGlassButton *button = self.btnArray[i];
         if (i == 0) {
-            self.btnArray[i].previos = nil;
-            self.btnArray[i].next = self.btnArray[i + 1];
+            button.previos = nil;
+            button.next = self.btnArray[i + 1];
         } else if (i == self.countGlass - 1) {
-            self.btnArray[i].previos = self.btnArray[i - 1];
-            self.btnArray[i].next = nil;
+            button.previos = self.btnArray[i - 1];
+            button.next = nil;
         } else {
-            self.btnArray[i].previos = self.btnArray[i - 1];
-            self.btnArray[i].next = self.btnArray[i + 1];
+            button.previos = self.btnArray[i - 1];
+            button.next = self.btnArray[i + 1];
         }
     }
     for (int i = 0; i <= self.countGlass - 1; i++) {
@@ -104,15 +105,15 @@
 
 #pragma mark - Actions
 
-- (void)btnWaterGlass_Tab:(WaterGlassButton *)button {
+- (void)btnWaterGlass_Tap:(WaterGlassButton *)button {
     if ([button useGlass]) {
         self.usedGlass++;
         [self setLabelTextUsedWater];
     }
 }
 
-- (IBAction)BtnConfirm_Tab:(UIButton *)sender {
-    [self.navigationController popToRootViewControllerAnimated:YES];
+- (IBAction)BtnConfirm_Tap:(UIButton *)sender {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end

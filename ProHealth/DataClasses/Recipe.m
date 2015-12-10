@@ -12,11 +12,4 @@
 
 @implementation Recipe
 
-//@synthesize identifier;
-//@synthesize name;
-//@synthesize imagePathURL;
-//@synthesize text;
-//@synthesize ingredients;
-//@synthesize nutritional;
-
 @end
