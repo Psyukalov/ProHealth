@@ -90,6 +90,7 @@
 
 #pragma mark - Custom methods
 
+#warning Not Tab, but Tap. It's a common gesture name
 - (void)btnMenu_Tab {
     UIWindow *mainWindow = [[UIApplication sharedApplication].delegate window];
     UIImage *snapshotImage = [mainWindow blurredSnapshot];

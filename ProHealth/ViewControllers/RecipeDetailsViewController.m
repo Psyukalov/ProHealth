@@ -45,6 +45,8 @@
 }
 
 - (void)viewDidLoad {
+    
+#warning Too big method implementation. UI related code and test code can be placed in other methods
     [super viewDidLoad];
     [self setNavigationBackButton];
     self.title = self.name;
@@ -169,6 +171,8 @@
     NSURLSession *session = [NSURLSession sharedSession];
     __weak RecipeDetailsViewController *_weakSelf = self;
     NSURL *imgURL = [NSURL URLWithString:self.recipe.imagePathURL];
+    
+#warning Using async methods to download image
     [[session dataTaskWithURL:imgURL completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (!error) {
             if (data && _weakSelf) {

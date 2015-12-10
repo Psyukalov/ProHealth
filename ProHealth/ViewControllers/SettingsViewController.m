@@ -47,15 +47,18 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-   self.imageRectAvatar.image = [UIImage imageWithData:self.person.avatar];
-   self.imageCircleAvatar.image = [UIImage imageWithData:self.person.avatar];
-   self.labelName.text = self.person.name;
+
+    [super viewWillAppear:animated];
+    
+    self.imageRectAvatar.image = [UIImage imageWithData:self.person.avatar];
+    self.imageCircleAvatar.image = [UIImage imageWithData:self.person.avatar];
+    self.labelName.text = self.person.name;
     NSString *startDate = [Helper applyRussianStyleForDate:self.person.startDate];
-   self.labelStartDate.text = [NSString stringWithFormat:@"Мы вместе с %@", startDate];
-   self.labelWeight.text = [NSString stringWithFormat:@"%1.1f кг", self.person.weight];
-   self.labelGrowth.text = [NSString stringWithFormat:@"%1.2f кг", self.person.growth];
-   self.labelBirthday.text = [Helper applyRussianStyleForDate:self.person.birthday];
-   self.labelGender.text = self.person.gender;
+    self.labelStartDate.text = [NSString stringWithFormat:@"Мы вместе с %@", startDate];
+    self.labelWeight.text = [NSString stringWithFormat:@"%1.1f кг", self.person.weight];
+    self.labelGrowth.text = [NSString stringWithFormat:@"%1.2f кг", self.person.growth];
+    self.labelBirthday.text = [Helper applyRussianStyleForDate:self.person.birthday];
+    self.labelGender.text = self.person.gender;
 }
 
 #pragma mark - UIImagePickerControllerDelegate

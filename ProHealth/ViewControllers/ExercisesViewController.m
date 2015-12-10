@@ -26,6 +26,7 @@
     [super viewDidLoad];
     
     [self setNavigationBackButton];
+    
     // Test code
     self.exercises = @[@"Приседания", @"Жим ногами", @"Армейский жим", @"Махи ногами", @"Разводка гантелей от груди", @"Французский жим"];
     //

@@ -37,6 +37,11 @@
     self.tips = [[NSMutableArray alloc] init];
     //tmp
     for (int i = 0; i <= 4; i++) {
+        
+#warning Too much of array access. Insted, there will be initialized Tip instance and in the end it will be placed to array. 
+        // self.tips[i] = [Tip alloc] init];
+        // self.tips[i].identifier = 0;
+        //...
         Tip *tip = [[Tip alloc] init];
         tip = [[Tip alloc] init];
         tip.identifier = 0;

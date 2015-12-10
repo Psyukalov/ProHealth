@@ -68,8 +68,10 @@
     [super viewDidLoad];
     [self loadLocalization];
     [self setNavigationBackButton];
+    
     [Helper applyCornerRadius:self.buttonAdd.bounds.size.width / 2 forViews:@[self.buttonAdd]];
     [Helper applyCornerRadius:6.0f forViews:@[self.contentView]];
+    
     self.labelCaloriesCount.format = @"%d\nккал";
     self.labelCaloriesCount.method = UILabelCountingMethodLinear;
     self.caloriesPieChartView.alpha = 0.0f;

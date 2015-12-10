@@ -66,7 +66,10 @@ static NSString * const playerRatePropertyName = @"rate";
     self.exercise.videoURL = @"https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4";
     //
     
-    [_lblName setText:self.exercise.name];
+#warning - Need to replace to "self.lblName.text = self.exercise.name"
+    //[_lblName setText:self.exercise.name];
+    self.lblName.text = self.exercise.name;
+    
     [_lblTimer setText:[NSString stringWithFormat:@"%ld %@", (long)self.exercise.time, Local(@"ExerciseDetail.Sec")]];
     [_lblRepeat setText:self.exercise.repeats];
     [_lblDescription setText:self.exercise.exerDescript];

@@ -43,7 +43,8 @@
     self.countLines = 4;
     self.usedGlass = 0;
     //
-    
+
+#warning No comments, no vertical spacing between logical pieces of code. Hard to read
     [Helper applyCornerRadius:6 forViews:@[_contentView]];
     [Helper applyCornerRadius:_btnConfirm.frame.size.height / 2 forViews:@[_btnConfirm]];
     
@@ -54,11 +55,15 @@
     [month deleteCharactersInRange:[month rangeOfString:@"."]];
     month = [NSMutableString stringWithString:[month uppercaseString]];
     [_lblMonth setText:[NSString stringWithFormat:@"%@", month]];
+    
+#warning Using methods with name started with set... is not a good idea. This is convinient name for property setters
     [self setLabelTextUsedWater];
     [_lblAllWater setText:[NSString stringWithFormat:@"из %d мл", self.countGlass * 250]];
     self.btnArray = [[NSMutableArray alloc] init];
     BOOL isUsed;
     NSInteger count = 0;
+    
+#pragma mark - Magic numbers. It must be constant values with some plain, simple and easy-to-read names 
     CGFloat deltaWidth = (SCREEN_WIDTH - 40) / (self.countGlass / self.countLines) - 40;
     CGFloat deltaHeight = _contentBtnWaterView.frame.size.height / self.countLines - 62;
     for (int j = 0; j <= self.countLines - 1; j++) {
