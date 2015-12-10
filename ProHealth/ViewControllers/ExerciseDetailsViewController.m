@@ -12,6 +12,10 @@
 #import <AVKit/AVKit.h>
 #import <AVFoundation/AVFoundation.h>
 #import "UIViewController+CustomDraw.h"
+//tmp
+#import "TipsViewController.h"
+//
+
 
 static void *playerContext = &playerContext;
 static NSString * const playerRatePropertyName = @"rate";
@@ -117,7 +121,9 @@ static NSString * const playerRatePropertyName = @"rate";
 }
 
 - (IBAction)btnConfirm_Tab:(UIButton *)sender {
-    //
+//    [self.navigationController popToRootViewControllerAnimated:YES];
+    TipsViewController *tipsVC = [[TipsViewController alloc] init];
+    [self.navigationController pushViewController:tipsVC animated:YES];
 }
 
 @end
