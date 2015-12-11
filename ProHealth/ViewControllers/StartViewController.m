@@ -17,6 +17,7 @@
 
 //tmp
 #import "ExerciseDetailsViewController.h"
+//
 
 
 @interface StartViewController ()
@@ -84,14 +85,13 @@
     [btnMenu setImage:[UIImage imageNamed:@"menu.png"]];
     [btnMenu setTintColor:RGB(1, 225, 255)];
     [btnMenu setTarget:self];
-    [btnMenu setAction:@selector(btnMenu_Tab)];
+    [btnMenu setAction:@selector(btnMenu_Tap)];
     self.navigationItem.leftBarButtonItem = btnMenu;
 }
 
 #pragma mark - Custom methods
 
-#warning Not Tab, but Tap. It's a common gesture name
-- (void)btnMenu_Tab {
+- (void)btnMenu_Tap {
     UIWindow *mainWindow = [[UIApplication sharedApplication].delegate window];
     UIImage *snapshotImage = [mainWindow blurredSnapshot];
     MainMenuViewController *mainMenuVC = [[MainMenuViewController alloc] initWithMainNavigationController:self.navigationController blurredSnapshotImage:snapshotImage];
@@ -102,21 +102,23 @@
 
 #pragma mark - Actions
 
-- (IBAction)btnFire_Tab:(UIButton *)sender {
+- (IBAction)btnFire_Tap:(UIButton *)sender {
     CaloriesViewController *caloriesVC = [[CaloriesViewController alloc] init];
     [self.navigationController pushViewController:caloriesVC animated:YES];
 }
 
-- (IBAction)btnWater_Tab:(UIButton *)sender {
+- (IBAction)btnWater_Tap:(UIButton *)sender {
     WaterViewController *waterVC = [[WaterViewController alloc] init];
     [self.navigationController pushViewController:waterVC animated:YES];
 }
 
-- (IBAction)btnFoot_Tab:(id)sender {
+- (IBAction)btnFoot_Tap:(id)sender {
     //Cooming soon
+    
     //tmp
     ExerciseDetailsViewController *exerciseDetailrVC = [[ExerciseDetailsViewController alloc] init];
     [self.navigationController pushViewController:exerciseDetailrVC animated:YES];
+    //
 }
 
 @end

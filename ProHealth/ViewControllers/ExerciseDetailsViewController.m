@@ -12,9 +12,6 @@
 #import <AVKit/AVKit.h>
 #import <AVFoundation/AVFoundation.h>
 #import "UIViewController+CustomDraw.h"
-//tmp
-#import "TipsViewController.h"
-//
 
 
 static void *playerContext = &playerContext;
@@ -66,13 +63,10 @@ static NSString * const playerRatePropertyName = @"rate";
     self.exercise.videoURL = @"https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4";
     //
     
-#warning - Need to replace to "self.lblName.text = self.exercise.name"
-    //[_lblName setText:self.exercise.name];
     self.lblName.text = self.exercise.name;
-    
-    [_lblTimer setText:[NSString stringWithFormat:@"%ld %@", (long)self.exercise.time, Local(@"ExerciseDetail.Sec")]];
-    [_lblRepeat setText:self.exercise.repeats];
-    [_lblDescription setText:self.exercise.exerDescript];
+    _lblTimer.text = [NSString stringWithFormat:@"%ld %@", (long)self.exercise.time, Local(@"ExerciseDetail.Sec")];
+    _lblRepeat.text = self.exercise.repeats;
+    _lblDescription.text = self.exercise.exerDescript;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -99,11 +93,11 @@ static NSString * const playerRatePropertyName = @"rate";
 }
 
 #pragma mark - KVO
+
 - (void)observeValueForKeyPath:(NSString *)keyPath
                       ofObject:(id)object
                         change:(NSDictionary *)change
                        context:(void *)context {
-    
     if (context == playerContext) {
         if ([keyPath isEqual:playerRatePropertyName]) {
             float newRate = [change[NSKeyValueChangeNewKey] floatValue];
@@ -117,16 +111,14 @@ static NSString * const playerRatePropertyName = @"rate";
 
 #pragma mark - Actions
 
-- (IBAction)btnPlay_Tab:(UIButton *)sender {
+- (IBAction)btnPlay_Tap:(UIButton *)sender {
     [self.avPlayer play];
     [_btnPlay setHidden:YES];
     [_lblName setHidden:YES];
 }
 
-- (IBAction)btnConfirm_Tab:(UIButton *)sender {
-//    [self.navigationController popToRootViewControllerAnimated:YES];
-    TipsViewController *tipsVC = [[TipsViewController alloc] init];
-    [self.navigationController pushViewController:tipsVC animated:YES];
+- (IBAction)btnConfirm_Tap:(UIButton *)sender {
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 @end

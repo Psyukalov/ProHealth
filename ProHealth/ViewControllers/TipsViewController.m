@@ -35,15 +35,10 @@
     [Helper applyCornerRadius:_btnConfirm.frame.size.height / 2 forViews:@[_btnConfirm]];
     self.currentIndex = 0;
     self.tips = [[NSMutableArray alloc] init];
+    
     //tmp
     for (int i = 0; i <= 4; i++) {
-        
-#warning Too much of array access. Insted, there will be initialized Tip instance and in the end it will be placed to array. 
-        // self.tips[i] = [Tip alloc] init];
-        // self.tips[i].identifier = 0;
-        //...
         Tip *tip = [[Tip alloc] init];
-        tip = [[Tip alloc] init];
         tip.identifier = 0;
         tip.name = [NSString stringWithFormat:@"ВРЕМЯ ПОЕСТЬ! - %d", i];
         tip.text = @"Раз в сутки суп должен быть в желудке. Приятного аппетита!";
@@ -51,6 +46,7 @@
         [self.tips addObject:tip];
     }
     //
+    
     [self loadTip:self.currentIndex];
 }
 
@@ -86,7 +82,7 @@
 
 #pragma mark - Actions
 
-- (IBAction)btnConfirm_Tab:(id)sender {
+- (IBAction)btnConfirm_Tap:(id)sender {
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 

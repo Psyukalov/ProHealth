@@ -6,6 +6,7 @@
 // Copyright © 2015 Natalia Zubareva. All rights reserved.
 //
 
+
 #import "AppDelegate.h"
 #import "MainMenuViewController.h"
 #import "PersonalStatsViewController.h"
@@ -17,6 +18,7 @@
 
 #import "RecipeDetailsViewController.h"
 #import "UIImage+Color.h"
+
 
 NSString *const isNotFirstRun = @"YES";
 

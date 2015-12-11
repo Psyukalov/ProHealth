@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
@@ -43,7 +43,7 @@
                                             <inset key="imageEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                             <state key="normal" image="play.png"/>
                                             <connections>
-                                                <action selector="btnPlay_Tab:" destination="-1" eventType="touchUpInside" id="SFs-Yl-YRx"/>
+                                                <action selector="btnPlay_Tap:" destination="-1" eventType="touchUpInside" id="WTG-hc-ArH"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -114,7 +114,7 @@
                                     </constraints>
                                     <state key="normal" image="chek.png"/>
                                     <connections>
-                                        <action selector="btnConfirm_Tab:" destination="-1" eventType="touchUpInside" id="O0P-jD-yoG"/>
+                                        <action selector="btnConfirm_Tap:" destination="-1" eventType="touchUpInside" id="EfL-ul-EIR"/>
                                     </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lzq-YH-ogD">

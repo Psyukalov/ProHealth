@@ -6,11 +6,18 @@
 //  Copyright © 2015 Natalia Zubareva. All rights reserved.
 //
 
-
+#import "AppDelegate.h"
 #import "WaterViewController.h"
 #import "Helper.h"
 #import "WaterGlassButton.h"
 #import "UIViewController+CustomDraw.h"
+
+CGFloat const marginFromSuperView = 20;
+int const glassVolume = 250;
+CGFloat const waterButtonWidth = 40;
+CGFloat const waterButtonHeight = 62;
+CGFloat const buttonWidthMargin = 40;
+CGFloat const buttonHeightMargin = 62;
 
 @interface WaterViewController ()
 
@@ -34,38 +41,38 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     [self setNavigationBackButton];
     self.title = Local(@"WaterVC.Title");
-    
     //tmp
     self.countGlass = 20;
     self.countLines = 4;
-    self.usedGlass = 0;
+    self.usedGlass = 1;
     //
-
-#warning No comments, no vertical spacing between logical pieces of code. Hard to read
     [Helper applyCornerRadius:6 forViews:@[_contentView]];
     [Helper applyCornerRadius:_btnConfirm.frame.size.height / 2 forViews:@[_btnConfirm]];
-    
-    [_lblDay setText:[NSString stringWithFormat:@"%ld", (long)[Helper currentDay]]];
+
+    // Delete dot in month
     NSString *newMonth = [Helper currentMonthNameWithStyle:NSDateFormatterShortStyle
                                                 withFormat:@"MMM"];
     NSMutableString *month = [NSMutableString stringWithString:newMonth];
     [month deleteCharactersInRange:[month rangeOfString:@"."]];
     month = [NSMutableString stringWithString:[month uppercaseString]];
-    [_lblMonth setText:[NSString stringWithFormat:@"%@", month]];
+    _lblMonth.text = [NSString stringWithFormat:@"%@", month];
     
-#warning Using methods with name started with set... is not a good idea. This is convinient name for property setters
-    [self setLabelTextUsedWater];
-    [_lblAllWater setText:[NSString stringWithFormat:@"из %d мл", self.countGlass * 250]];
+    _lblDay.text = [NSString stringWithFormat:@"%ld", (long)[Helper currentDay]];
+    _lblAllWater.text = [NSString stringWithFormat:@"из %d мл", self.countGlass * glassVolume];
+    [self applyLabelTextUsedWater];
+    [self createWaterButtons];
+}
+
+#pragma mark - Custom methods
+
+- (void)createWaterButtons {
     self.btnArray = [[NSMutableArray alloc] init];
     BOOL isUsed;
     NSInteger count = 0;
-    
-#pragma mark - Magic numbers. It must be constant values with some plain, simple and easy-to-read names 
-    CGFloat deltaWidth = (SCREEN_WIDTH - 40) / (self.countGlass / self.countLines) - 40;
-    CGFloat deltaHeight = _contentBtnWaterView.frame.size.height / self.countLines - 62;
+    CGFloat deltaWidth = (SCREEN_WIDTH - 2 * marginFromSuperView) / (self.countGlass / self.countLines) - buttonWidthMargin;
+    CGFloat deltaHeight = _contentBtnWaterView.frame.size.height / self.countLines - buttonHeightMargin;
     for (int j = 0; j <= self.countLines - 1; j++) {
         for (int i = 0; i <= self.countGlass / self.countLines - 1; i++) {
             if (count < self.usedGlass) {
@@ -74,8 +81,10 @@
                 isUsed = NO;
             }
             WaterGlassButton *btnWaterGlass = [[WaterGlassButton alloc] initWithUsedGlass:isUsed];
-            [btnWaterGlass addTarget:self action:@selector(btnWaterGlass_Tap:) forControlEvents:UIControlEventTouchUpInside];
-            [btnWaterGlass setFrame:CGRectMake(deltaWidth / 2 + i * 40 + i * deltaWidth, deltaHeight / 2 + j * 62 + j * deltaHeight, 40, 62)];
+            [btnWaterGlass addTarget:self
+                              action:@selector(btnWaterGlass_Tap:)
+                    forControlEvents:UIControlEventTouchUpInside];
+            [btnWaterGlass setFrame:CGRectMake(deltaWidth / 2 + i * buttonWidthMargin + i * deltaWidth, deltaHeight / 2 + j * buttonHeightMargin + j * deltaHeight, buttonWidthMargin, buttonHeightMargin)];
             btnWaterGlass.emptyGlass = [UIImage imageNamed:@"img_empty_glass.png"];
             btnWaterGlass.addGlass = [UIImage imageNamed:@"img_add_glass.png"];
             btnWaterGlass.fullGlass = [UIImage imageNamed:@"img_full_glass.png"];
@@ -102,10 +111,8 @@
     }
 }
 
-#pragma mark - Custom methods
-
-- (void)setLabelTextUsedWater {
-    [_lblWater setText:[NSString stringWithFormat:@"%d", self.usedGlass * 250]];
+- (void)applyLabelTextUsedWater {
+    [_lblWater setText:[NSString stringWithFormat:@"%d", self.usedGlass * glassVolume]];
 }
 
 #pragma mark - Actions
@@ -113,7 +120,7 @@
 - (void)btnWaterGlass_Tap:(WaterGlassButton *)button {
     if ([button useGlass]) {
         self.usedGlass++;
-        [self setLabelTextUsedWater];
+        [self applyLabelTextUsedWater];
     }
 }
 

@@ -78,7 +78,7 @@
                                     </constraints>
                                     <state key="normal" image="icon_fire.png"/>
                                     <connections>
-                                        <action selector="btnFire_Tab:" destination="-1" eventType="touchUpInside" id="jTd-4j-Ouc"/>
+                                        <action selector="btnFire_Tap:" destination="-1" eventType="touchUpInside" id="qI3-ei-0Ts"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e3f-s6-1ph">
@@ -91,7 +91,7 @@
                                     </constraints>
                                     <state key="normal" image="icon_water.png"/>
                                     <connections>
-                                        <action selector="btnWater_Tab:" destination="-1" eventType="touchUpInside" id="Qpd-3S-wKr"/>
+                                        <action selector="btnWater_Tap:" destination="-1" eventType="touchUpInside" id="sqc-mI-HD5"/>
                                     </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="КАЛОРИИ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UnY-aJ-oJ4">
@@ -137,7 +137,7 @@
                                     </constraints>
                                     <state key="normal" image="icon_foot.png"/>
                                     <connections>
-                                        <action selector="btnFoot_Tab:" destination="-1" eventType="touchUpInside" id="ouP-Fk-EyC"/>
+                                        <action selector="btnFoot_Tap:" destination="-1" eventType="touchUpInside" id="Fhw-7F-6Nu"/>
                                     </connections>
                                 </button>
                             </subviews>
